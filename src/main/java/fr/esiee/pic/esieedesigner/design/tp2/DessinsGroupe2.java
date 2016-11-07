@@ -1,6 +1,10 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
+import fr.esiee.pic.esieedesigner.api.shapes.Point;
+
 
 /**
  * Le groupe 2 ajoutera ses dessins dans cette classe.
@@ -25,7 +29,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	public void dessinerCorps(){
-		
+		Point pt1 = new Point(12, 12);
 	}
 	
 	public void dessinerCheveux(){
