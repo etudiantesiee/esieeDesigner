@@ -102,6 +102,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	public void dessinerInterieurVisage(){
 		dessinerYeux();
+		dessinerMasque();
 	}
 	
 	public void dessinerExterieurVisage(){
@@ -126,6 +127,32 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// On ajout à la liste des composants à déssiner
 		ajouterEllipse(yeuxGauche, Couleur.NOIR);	
 		ajouterEllipse(yeuxDroit, Couleur.NOIR);
-}
+	}
+	
+	public void dessinerMasque(){
+		//Dessin des yeux du bonhomme
+
+		Point YEUX_GAUCHE_EXTERIEURE_SUPERIEUR_MANGA = new Point(DECALAGE + pixels(3), pixels(3));		
+		Point YEUX_GAUCHE_EXTERIEURE_INFERIEUR_MANGA = new Point(DECALAGE + pixels(3), pixels(4));
+		Point YEUX_SUPERIEUR_MANGA = new Point(DECALAGE + pixels(7), pixels(3));
+		Point YEUX_INFERIEUR_MANGA = new Point(DECALAGE + pixels(7), pixels(4));
+		Point YEUX_DROIT_EXTERIEURE_SUPERIEUR_MANGA = new Point(DECALAGE + pixels(11), pixels(3));
+		Point YEUX_DROIT_EXTERIEURE_INFERIEUR_MANGA = new Point(DECALAGE + pixels(11), pixels(4));
+		
+		//ON trace les traits avec les points prédéfinis
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(YEUX_GAUCHE_EXTERIEURE_SUPERIEUR_MANGA)
+		.ajouter(YEUX_GAUCHE_EXTERIEURE_INFERIEUR_MANGA)
+		.ajouter(new Point(YEUX_GAUCHE_EXTERIEURE_INFERIEUR_MANGA.getX() + pixels(2), YEUX_GAUCHE_EXTERIEURE_INFERIEUR_MANGA.getY()+ pixels(1) ))
+		.ajouter(YEUX_INFERIEUR_MANGA)
+		.ajouter(new Point(YEUX_INFERIEUR_MANGA.getX() + pixels(2), YEUX_INFERIEUR_MANGA.getY()+ pixels(1) ))
+		.ajouter(YEUX_DROIT_EXTERIEURE_INFERIEUR_MANGA)
+		.ajouter(YEUX_DROIT_EXTERIEURE_SUPERIEUR_MANGA)
+		.ajouter(new Point(YEUX_SUPERIEUR_MANGA.getX() + pixels(2), YEUX_SUPERIEUR_MANGA.getY()- pixels(1) ))
+		.ajouter(YEUX_SUPERIEUR_MANGA)
+		.ajouter(new Point(YEUX_GAUCHE_EXTERIEURE_SUPERIEUR_MANGA.getX() + pixels(2), YEUX_GAUCHE_EXTERIEURE_SUPERIEUR_MANGA.getY()- pixels(1) ))
+		//REMPLISSAGE GRIS
+		.couleurDeFond(Couleur.GRIS);
+	}
 
 }
