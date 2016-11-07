@@ -14,7 +14,7 @@ import fr.esiee.pic.esieedesigner.api.shapes.Point;
  */
 public class DessinsGroupe2 extends CreateurDeForme {
 	
-	private static int DECALAGE = 750;
+	private static final int DECALAGE = 750;
 
 	@Override
 	public void dessiner() {
