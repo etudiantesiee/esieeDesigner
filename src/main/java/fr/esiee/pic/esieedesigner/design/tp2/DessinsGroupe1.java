@@ -12,9 +12,30 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
-		// Ajout vos dessins ici
-		// Pensez à désactiver les dessins de la démo 
-		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		binome1();
+		binome2();
+		binome3();
 	}
-
+	
+	/**
+	 * Dessin binome 1
+	 */
+	public void binome1() {
+		
+		
+	}
+	/**
+	 *  Dessin binome 2
+	 */
+	public void binome2() {
+		
+		
+	}
+	/**
+	 *  Dessin binome 3
+	 */
+	public void binome3() {
+		
+	}
 }
+
