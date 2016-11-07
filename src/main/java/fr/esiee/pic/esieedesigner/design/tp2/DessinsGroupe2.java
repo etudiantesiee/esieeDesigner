@@ -17,6 +17,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinerCorps();
+		dessinerCheveux();
+		dessinerInterieurVisage();
+		dessinerExterieurVisage();
+		dessinerMains();
 	}
 	
 	public void dessinerCorps(){
