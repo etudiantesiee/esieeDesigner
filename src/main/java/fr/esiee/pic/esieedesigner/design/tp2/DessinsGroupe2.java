@@ -21,6 +21,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinerCorps();
+		dessinerCheveux();
+		dessinerInterieurVisage();
+		dessinerExterieurVisage();
+		dessinerMains();
 	}
 	
 	public void dessinerCorps(){
@@ -92,7 +97,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	public void dessinerInterieurVisage(){
-		
+		dessinerYeux();
 	}
 	
 	public void dessinerExterieurVisage(){
@@ -106,5 +111,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public int pixels(int carreau){
 		return carreau*50;
 	}
+	
+	public void dessinerYeux(){
+		
+		//Dessin des yeux du bonhomme
+		// UN cercle pour les yeux
+		Ellipse yeuxGauche = new Ellipse(new Point(DECALAGE + pixels(6), pixels(4)), 10, 10);
+		Ellipse yeuxDroit = new Ellipse(new Point(DECALAGE + pixels(8), pixels(4)), 10, 10);
+			
+		// On ajout à la liste des composants à déssiner
+		ajouterEllipse(yeuxGauche, Couleur.NOIR);	
+		ajouterEllipse(yeuxDroit, Couleur.NOIR);
+}
 
 }
