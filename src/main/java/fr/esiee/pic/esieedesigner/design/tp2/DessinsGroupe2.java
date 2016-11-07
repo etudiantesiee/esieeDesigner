@@ -28,7 +28,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessinerMains();
 	}
 	
+	//Fonction dessin du corps
 	public void dessinerCorps(){
+		
+		//Declaration des points du corps
 		Point pt1 = new Point(DECALAGE + pixels(3), pixels(14));
 		Point pt2 = new Point(DECALAGE + pixels(6), pixels(14));
 		Point pt3 = new Point(DECALAGE + pixels(5), pixels(13));
@@ -58,6 +61,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point pt27 = new Point(DECALAGE + pixels(5), pixels(11));
 		Point pt28 = new Point(DECALAGE + pixels(4), pixels(13));
 		
+		//Dessin du corps a l'aide des points
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pt1)
 		.ajouter(pt2)
@@ -87,8 +91,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(pt26)
 		.ajouter(pt27)
 		.ajouter(pt28)
-		
 		.couleurDeFond(Couleur.GRIS);
+		//Ajout de la couleur
 		
 	}
 	
