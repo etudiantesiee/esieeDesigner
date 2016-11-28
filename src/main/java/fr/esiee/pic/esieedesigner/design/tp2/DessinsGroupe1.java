@@ -160,8 +160,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
         //bouche
-        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
-        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
+        Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
         Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
