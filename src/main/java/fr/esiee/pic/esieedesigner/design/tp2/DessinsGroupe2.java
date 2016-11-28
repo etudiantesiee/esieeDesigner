@@ -301,7 +301,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessiner main droite
 	 */
 	public void dessinerMainDroite() {
-		// Dessin main droite.
+		// Dessin main droite
 		Point p1 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*10, TORSE_HAUT_GAUCHE.getY() + CASE*2);
 		Point p2 = new Point(p1.getX() + CASE*1, p1.getY() + CASE*1);
 		Point p3 = new Point(p2.getX() - CASE*1, p2.getY());
