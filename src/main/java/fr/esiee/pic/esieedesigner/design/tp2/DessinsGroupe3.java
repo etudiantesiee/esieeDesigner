@@ -84,9 +84,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
         dessinerJambe();
 
-
-		dessineBrasDroit(); //Ajout du bras droit au dessin
-		dessineBrasGauche(); // Ajout du bras gauche au dessin
+      //Ajout du bras droit au dessin
+		dessineBrasDroit(); 
+		// Ajout du bras gauche au dessin
+		dessineBrasGauche(); 
 		dessinYeuxContour();
 
         dessinYeux();
@@ -345,14 +346,23 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	public void dessineBrasDroit(){
 		
 		//Création des points du bras droit
-		Point epaule1 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL); //Point 1 de l'épaule
-		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
-		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
-		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
-		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);//Point 2 de la main
-		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL); //Point 2 du poignet
-		Point coude2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 du coude
-		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 de l'epaule
+		
+		//Point 1 de l'épaule
+		Point epaule1 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL); 
+		//Point 1 du coude
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL); 
+		//Point 1 du poignet
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL); 
+		//Point 1 de la main
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL); 
+		//Point 2 de la main
+		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
+		//Point 2 du poignet
+		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL); 
+		//Point 2 du coude
+		Point coude2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL); 
+		//Point 2 de l'epaule
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL); 
 		
 		
 		// On ajoute à la liste des composants à déssiner
@@ -366,6 +376,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .ajouter(coude2)
         .ajouter(epaule2)
         .couleurDeFond(Couleur.GRIS);
+    	//On ajoute la couleur de fond à la fin
 		
 	}
 	
@@ -375,14 +386,23 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 public void dessineBrasGauche(){
 		
-	//Création des points du bras gauche	
-	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL); //Point 1 de l'épaule
-	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
-	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
-	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
-	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL); //Point 2 de la main
+	//Création des points du bras gauche
+	
+	//Point 1 de l'épaule
+	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL); 
+	//Point 1 du coude
+	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
+	//Point 1 du poignet
+	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
+	//Point 1 de la main
+	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL); 
+	//Point 2 de la main
+	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL); 
+	//Point 2 du poignet
 	Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
+	//Point 2 du coude
 	Point coude2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
+	//Point 2 de l'epaule
 	Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
 	
 	// On ajoute à la liste des composants à déssiner
@@ -396,6 +416,7 @@ public void dessineBrasGauche(){
     .ajouter(coude2)
     .ajouter(epaule2)
     .couleurDeFond(Couleur.GRIS);
+	//On ajoute la couleur de fond à la fin
 }
    
 }
