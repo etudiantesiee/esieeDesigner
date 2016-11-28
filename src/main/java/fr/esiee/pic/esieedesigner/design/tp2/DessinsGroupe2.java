@@ -23,7 +23,45 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
-
+		dessinerTorse();
 	}
-
+	
+	/**
+	 * Dessin torse
+	 */
+	public void dessinerTorse() {
+		// Dessin torse
+		Point p1 = new Point(ORIGIN + CASE*3, CASE*8);
+		Point p2 = new Point(ORIGIN + CASE*4, CASE*8);
+		Point p3 = new Point(ORIGIN + CASE*6, CASE*9);
+		Point p4 = new Point(ORIGIN + CASE*8, CASE*9);
+		Point p5 = new Point(ORIGIN + CASE*10, CASE*8);
+		Point p6 = new Point(ORIGIN + CASE*11, CASE*8);
+		Point p7 = new Point(ORIGIN + CASE*13, CASE*10);
+		Point p8 = new Point(ORIGIN + CASE*12, CASE*11);
+		Point p9 = new Point(ORIGIN + CASE*11, CASE*10);
+		Point p10 = new Point(ORIGIN + CASE*11, CASE*11);
+		Point p11 = new Point(ORIGIN + CASE*3, CASE*11);
+		Point p12 = new Point(ORIGIN + CASE*3, CASE*10);
+		Point p13 = new Point(ORIGIN + CASE*2, CASE*11);
+		Point p14 = new Point(ORIGIN + CASE*1, CASE*10);
+		Point p15 = new Point(ORIGIN + CASE*3, CASE*8);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.ajouter(p5)
+		.ajouter(p6)
+		.ajouter(p7)
+		.ajouter(p8)
+		.ajouter(p9)
+		.ajouter(p10)
+		.ajouter(p11)
+		.ajouter(p12)
+		.ajouter(p13)
+		.ajouter(p14)
+		.ajouter(p15);
+	}
 }
