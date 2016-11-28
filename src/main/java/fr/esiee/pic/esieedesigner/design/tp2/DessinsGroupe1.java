@@ -181,6 +181,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Thomas et Eve
 	 */
 	public void dessinerCheveux() {
+		
 		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
 		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
@@ -203,11 +204,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		
 		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(lunetteHautDroiteDroite)
-		.ajouter(lunetteHautDroiteHaut)
-		.ajouter(lunetteHautGaucheDroite)
-		.ajouter(lunetteHautGaucheHaut)
-		.ajouter(lunetteHautGaucheGauche)
 		.ajouter(pointeGauche1)
 		.ajouter(pointeGauche2)
 		.ajouter(pointeGauche3)
@@ -221,7 +217,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeDroite1)
 		.ajouter(pointeDroite2)
 		.ajouter(pointeDroite3)
-		.ajouter(pointeDroite4);
+		.ajouter(pointeDroite4)
+		.nePasRelierLesPointsExtreme();
 		
 	}
 	
