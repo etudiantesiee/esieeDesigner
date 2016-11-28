@@ -65,20 +65,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerCheveux() {
 
 		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
-		Point pointeGauche2 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 6) * UNITE_VERTICALE);
-		Point pointeGauche3 = new Point((ORIGINE.getX() + 2) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeGauche4 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point touffeGaucheMilieu = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGINE.getY() + 3) * UNITE_VERTICALE);
-		Point touffeGauche1 = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGINE.getY() + 1) * UNITE_VERTICALE);
-		Point touffeGauche2 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, ORIGINE.getY() * UNITE_VERTICALE);
-		Point touffeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, ORIGINE.getY() * UNITE_VERTICALE);
-		Point touffeDroite2 = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGINE.getY() + 1) * UNITE_VERTICALE);
-		Point touffeDroiteMilieu = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGINE.getY() + 3) * UNITE_VERTICALE);
-		Point pointeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeDroite2 = new Point((ORIGINE.getX() + 12) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeDroite3 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGINE.getY() + 6) * UNITE_VERTICALE);
-		Point pointeDroite4 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
-		
+		Point pointeGauche2 = new Point(pointeGauche1.getX(), pointeGauche1.getY() + (2 * UNITE_VERTICALE));
+		Point pointeGauche3 = new Point(pointeGauche2.getX() - (1 * UNITE_HORIZONTALE), pointeGauche2.getY() + (1 * UNITE_VERTICALE));
+		Point pointeGauche4 = new Point(pointeGauche3.getX() - (1 * UNITE_HORIZONTALE), pointeGauche3.getY());
+		Point touffeGaucheMilieu = new Point(pointeGauche4.getX() - (1 * UNITE_HORIZONTALE), pointeGauche4.getY() - (4 * UNITE_VERTICALE));
+		Point touffeGauche1 = new Point(touffeGaucheMilieu.getX(), touffeGaucheMilieu.getY() - (2 * UNITE_VERTICALE));
+		Point touffeGauche2 = new Point(touffeGauche1.getX() + (1 * UNITE_HORIZONTALE), touffeGauche1.getY() - (1 * UNITE_VERTICALE));
+		Point touffeDroite1 = new Point(touffeGauche2.getX() + (12 * UNITE_HORIZONTALE), touffeGauche2.getY());
+		Point touffeDroite2 = new Point(touffeDroite1.getX() + (1 * UNITE_HORIZONTALE), touffeDroite1.getY() + (1 * UNITE_VERTICALE));
+		Point touffeDroiteMilieu = new Point(touffeDroite2.getX(), touffeDroite2.getY() + (2 * UNITE_VERTICALE));
+		Point pointeDroite1 = new Point(touffeDroiteMilieu.getX() - (1 * UNITE_HORIZONTALE), touffeDroiteMilieu.getY() + (4 * UNITE_VERTICALE));
+		Point pointeDroite2 = new Point(pointeDroite1.getX() - (1 * UNITE_HORIZONTALE), pointeDroite1.getY());
+		Point pointeDroite3 = new Point(pointeDroite2.getX() - (1 * UNITE_HORIZONTALE), pointeDroite2.getY() - (1 * UNITE_VERTICALE));
+		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pointeGauche1)
@@ -160,13 +159,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
         //bouche
-        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
-        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
+        Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
-        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
-        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
+        Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
+        Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
@@ -207,7 +206,24 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point corps8 = new Point(corps7.getX(), corps7.getY() - 1 * UNITE_HORIZONTALE);
 		Point corps9 = new Point(corps8.getX() - 1 * UNITE_HORIZONTALE, corps8.getY() - 1 * UNITE_HORIZONTALE);
 		Point corps10 = new Point(corps9.getX() - 2 * UNITE_HORIZONTALE, corps9.getY() + 1 * UNITE_HORIZONTALE);
-
+		Point corps11 = new Point(corps10.getX() + 1 * UNITE_HORIZONTALE, corps10.getY() + 2 * UNITE_HORIZONTALE);
+		Point corps12 = new Point(corps11.getX() + 1 * UNITE_HORIZONTALE, corps11.getY() + 1 * UNITE_HORIZONTALE);
+		Point corps13 = new Point(corps12.getX() - 3 * UNITE_HORIZONTALE, corps12.getY());
+		Point corps14 = new Point(corps13.getX() + 1 * UNITE_HORIZONTALE, corps13.getY() - 1 * UNITE_HORIZONTALE);
+		Point corps15 = new Point(corps14.getX() - 1 * UNITE_HORIZONTALE, corps14.getY() - 1 * UNITE_HORIZONTALE);
+		Point corps16 = new Point(corps15.getX() - 2 * UNITE_HORIZONTALE, corps15.getY());
+		Point corps17 = new Point(corps16.getX() - 1 * UNITE_HORIZONTALE, corps16.getY() + 1 * UNITE_HORIZONTALE);
+		Point corps18 = new Point(corps17.getX() + 1 * UNITE_HORIZONTALE, corps17.getY() + 1 * UNITE_HORIZONTALE);
+		Point corps19 = new Point(corps18.getX() - 3 * UNITE_HORIZONTALE, corps18.getY());
+		Point corps20 = new Point(corps19.getX() + 1 * UNITE_HORIZONTALE, corps19.getY() - 1 * UNITE_HORIZONTALE);
+		Point corps21 = new Point(corps20.getX() + 1 * UNITE_HORIZONTALE, corps20.getY() - 2 * UNITE_HORIZONTALE);
+		Point corps22 = new Point(corps21.getX() - 2 * UNITE_HORIZONTALE, corps21.getY() - 1 * UNITE_HORIZONTALE);
+		Point corps23 = new Point(corps22.getX() - 1 * UNITE_HORIZONTALE, corps22.getY() + 1 * UNITE_HORIZONTALE);
+		Point corps24 = new Point(corps23.getX(), corps23.getY() + 1 * UNITE_HORIZONTALE);
+		Point corps25 = new Point(corps24.getX() - 1 * UNITE_HORIZONTALE, corps24.getY());
+		Point corps26 = new Point(corps25.getX(), corps25.getY() - 2 * UNITE_HORIZONTALE);
+		Point corps27 = new Point(corps26.getX() + 2 * UNITE_HORIZONTALE, corps26.getY() - 2 * UNITE_HORIZONTALE);
+		Point corps28 = new Point(corps27.getX() + 1 * UNITE_HORIZONTALE, corps27.getY());
 		
 		//Trace du dessin 
 		demarrerNouveauDessinAvecDesPoints()
@@ -221,10 +237,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps8)
 		.ajouter(corps9)
 		.ajouter(corps10)
-
+		.ajouter(corps11)
+		.ajouter(corps12)
+		.ajouter(corps13)
+		.ajouter(corps14)
+		.ajouter(corps15)
+		.ajouter(corps16)
+		.ajouter(corps17)
+		.ajouter(corps18)
+		.ajouter(corps19)
+		.ajouter(corps20)
+		.ajouter(corps21)
+		.ajouter(corps22)
+		.ajouter(corps23)
+		.ajouter(corps24)
+		.ajouter(corps25)
+		.ajouter(corps26)
+		.ajouter(corps27)
+		.ajouter(corps28)
 		.couleurDeFond(Couleur.GRIS);
 		
-		dessinerMains(corps7, corps6);
+		dessinerMains(corps25, corps7);
 	}
 	
 	/**

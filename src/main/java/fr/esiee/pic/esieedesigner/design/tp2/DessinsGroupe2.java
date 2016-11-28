@@ -22,22 +22,21 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Nombre de pixel d'une case
 	 */
 	private static final double CASE = 25;
+	
+	/**
+	 * Point torse_haut_gauche
+	 */
+	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
 
 	/**
 	 * Point cheveux extremité gauche
 	 */
-	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(ORIGIN + CASE*1, CASE*8);
+	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(TORSE_HAUT_GAUCHE.getX() - CASE*2, TORSE_HAUT_GAUCHE.getY());
 	
 	/**
 	 * Point joue extremité gauche exterieur
 	 */
 	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(ORIGIN + CASE*3, CASE*7);
-	
-	/**
-
-	 * Point torse_haut_gauche
-	 */
-	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
 	
 	/**
 	 * Point joue extremité droite exterieur
@@ -48,7 +47,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Point fixe pour dessiner le nez
 	 */
 	private static final Point NEZ_ORIGINE = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
-
 	
 	/**
 	 * Point fixe pour dessiner le premier oeil (gauche)
@@ -85,12 +83,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerJoueDroite() {
 		
-		// == Dessin de la joue droite
-		
-//		// Déclaration des points
-//		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
-//		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
-		
 		// == Objetive 3 Dessin de la joue droite
 		
 		// Déclaration des points
@@ -108,12 +100,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerJoueGauche() {
 		
-		// == Dessin de la joue gauche
-		
-//		// Déclaration des points
-//		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
-//		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
-		
 		// == Objetive 3 Dessin de la joue droite
 		
 		// Déclaration des points
@@ -130,40 +116,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Fonction qui dessine les cheveux
 	 */
 	public void dessinerCheveux() {
-		
-		// == Dessin des cheveux
-		
-//		// Déclaration des points
-//		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
-//		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
-//		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
-//		Point p4 = new Point(ORIGIN + CASE*5, CASE*0);
-//		Point p5 = new Point(ORIGIN + CASE*9, CASE*0);
-//		Point p6 = new Point(ORIGIN + CASE*11, CASE*1);
-//		Point p7 = new Point(ORIGIN + CASE*13, CASE*3);
-//		Point p8 = new Point(ORIGIN + CASE*13, CASE*8);
-//		Point p9 = new Point(ORIGIN + CASE*12, CASE*6);
-//		Point p10 = new Point(ORIGIN + CASE*12, CASE*4);
-//		Point p11 = new Point(ORIGIN + CASE*12, CASE*8);
-//		Point p12 = new Point(ORIGIN + CASE*11, CASE*6);
-//		Point p13 = new Point(ORIGIN + CASE*11, CASE*5);
-//		Point p14 = new Point(ORIGIN + CASE*11, CASE*7);
-//		Point p15 = new Point(ORIGIN + CASE*10, CASE*5);
-//		Point p16 = new Point(ORIGIN + CASE*10, CASE*4);
-//		Point p17 = new Point(ORIGIN + CASE*9, CASE*3);
-//		Point p18 = new Point(ORIGIN + CASE*8, CASE*3);
-//		Point p19 = new Point(ORIGIN + CASE*7, CASE*2);
-//		Point p20 = new Point(ORIGIN + CASE*6, CASE*3);
-//		Point p21 = new Point(ORIGIN + CASE*5, CASE*3);
-//		Point p22 = new Point(ORIGIN + CASE*4, CASE*4);
-//		Point p23 = new Point(ORIGIN + CASE*4, CASE*5);
-//		Point p24 = new Point(ORIGIN + CASE*3, CASE*7);
-//		Point p25 = new Point(ORIGIN + CASE*3, CASE*5);
-//		Point p26 = new Point(ORIGIN + CASE*3, CASE*6);
-//		Point p27 = new Point(ORIGIN + CASE*2, CASE*8);
-//		Point p28 = new Point(ORIGIN + CASE*2, CASE*4);
-//		Point p29 = new Point(ORIGIN + CASE*2, CASE*6);
-//		Point p30 = new Point(ORIGIN + CASE*1, CASE*8);
 		
 		// == Objetive 3 Dessin des cheveux
 		
