@@ -104,11 +104,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point jambebasDroit = dessinerJambeDroite(jambeHautDroit);
 		Point jambeBasGauche = dessinerBasTete(jambebasDroit);
 		Point jambeHautgauche = dessinerJambeGauche(jambeBasGauche);
-		//Point finalPoint = dessinerTeteBasGauche(jambeHautgauche);
+		Point finalPoint = dessinerTeteBasGauche(jambeHautgauche);
 
-		dessinerJambeDroite(POINT_BAS_BRAS_GAUCHE);
-        dessinerJambeGauche(POINT_BAS_BRAS_GAUCHE);
-        dessinerTeteBasGauche(POINT_BAS_BRAS_GAUCHE);
+	
 
 		// add eyes
         dessinYeux();
