@@ -197,14 +197,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(bouche5)
 		.ajouter(bouche6);
 		
-		// == Dessin des yeux
+		// == Dessin des deux yeux
 		
-		// Premier oeil (gauche)
+		// Dessin du premier oeil (gauche)
 		Point oeil1 = new Point(ORIGIN + CASE * 6, CASE * 4);
 		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
 		
-		// Second oeil (gauche)
+		// Dessin du second oeil (gauche)
 		Point oeil2 = new Point(ORIGIN + CASE * 8, CASE * 4);
 		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
