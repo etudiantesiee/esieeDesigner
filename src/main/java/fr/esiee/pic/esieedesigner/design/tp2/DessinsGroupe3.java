@@ -91,8 +91,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
 		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
-		Point brashautDroit = dessinerTeteHaut(brasGauche);
-		
+		Point brasHautDroit = dessinerTeteHaut(brasGauche);
+		Point jambeHautDroit = dessinerTeteBasDroit(brasGauche);
+
         dessinYeux();
         dessinBouche();
         dessinNez();
@@ -156,6 +157,15 @@ public class DessinsGroupe3 extends CreateurDeForme {
         return tete7;
 
     }
+    
+    public Point dessinerTeteBasDroit(Point pBase){
+    	
+    	Point tete1 = new Point(pBase.getX()-1*PIXEL, pBase.getY()+3*PIXEL);
+    	Point tete2 = new Point(tete1.getX()-1*PIXEL, tete1.getY()+1*PIXEL);
+    	return tete2;
+    }
+    
+
     
     /**
     * 
