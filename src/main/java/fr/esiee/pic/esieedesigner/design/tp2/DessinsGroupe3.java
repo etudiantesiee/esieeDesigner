@@ -136,7 +136,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         dessinYeuxContour();
         dessinYeux();
     }
-    
+
 	/**
 	 * @author philippe et harrison
 	 * Dessin du contour des yeux
@@ -151,7 +151,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point ptYeux6 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 7*PIXEL);
 		Point ptYeux7 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 7*PIXEL);
 		Point ptYeux8 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 6*PIXEL);
-		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);		
+		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);
+		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(ptYeux1)
@@ -249,7 +250,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
         dessinerCheveux2();
         dessinerCheveux3();
     }
-    
     
     /**
     * 
