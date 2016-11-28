@@ -3,9 +3,8 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
-import fr.esiee.pic.esieedesigner.api.shapes.Point;
+
 
 /**
  * Le groupe 3 ajoutera ses dessins dans cette classe.
@@ -114,7 +113,11 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+
+
+		dessineBrasDroit();
 		dessinYeuxContour();
+
 		dessinYeux();
 		dessinBouche();
 		dessinerTete();
@@ -200,6 +203,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * @author mathieu
 	 * Dessine le bras Droit
 	 */
-	public void DessineBrasDroit(){
+	public void dessineBrasDroit(){
+		
+		Point epaule = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 3*PIXEL);
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 2*PIXEL);
+		
+		
+		// On ajoute à la liste des composants à déssiner
+    	demarrerNouveauDessinAvecDesPoints()
+        .ajouter(epaule)
+        .ajouter(coude1)
+        .ajouter(poignet1)
+        .ajouter(main1);
+		
 	}
 }
