@@ -63,8 +63,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Thomas et Eve
 	 */
 	public void dessinerCheveux() {
-		
-		Point pointeGauche1 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+
+		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
 		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
 		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
 		Point pointeGauche4 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
