@@ -50,6 +50,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
+	 * Dessin des cheveux
 	 * @author Thomas et Eve
 	 */
 	public void dessinerCheveux() {
@@ -96,6 +97,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Point adjacent aux lunettes cote droit
 		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
+		
+		// Dessin de differents points constituant les cheveux
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pointeGauche1)
 		.ajouter(pointeGauche2)
@@ -113,6 +116,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeDroite4)
 		.nePasRelierLesPointsExtreme();
 		
+		// Appel de la fonction dessinant la partie suivante du dessin (les lunettes), en passant en argument les différents points nécessaires
 		dessinerLunettes(pointeGauche1, pointeDroite4, pointeGauche2, pointeDroite3);
 	}
 	
