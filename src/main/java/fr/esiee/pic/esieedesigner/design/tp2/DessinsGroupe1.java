@@ -50,6 +50,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
+	 * Dessin des cheveux
 	 * @author Thomas et Eve
 	 */
 	public void dessinerCheveux() {
@@ -96,6 +97,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Point adjacent aux lunettes cote droit
 		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
+		
+		// Dessin de differents points constituant les cheveux
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pointeGauche1)
 		.ajouter(pointeGauche2)
@@ -113,6 +116,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeDroite4)
 		.nePasRelierLesPointsExtreme();
 		
+		// Appel de la fonction dessinant la partie suivante du dessin (les lunettes), en passant en argument les différents points nécessaires
 		dessinerLunettes(pointeGauche1, pointeDroite4, pointeGauche2, pointeDroite3);
 	}
 	
@@ -120,6 +124,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Dessin des lunettes
 	 * 
 	 * @author Naji et Baptiste
+	 * @param pointeGauche1 Point Pointe des cheveux à gauche 1
+	 * @param pointeDroite4 Point Pointe des cheveux à droite 4
+	 * @param pointeGauche2 Point Pointe des cheveux à gauche 2
+	 * @param pointeDroite3 Point Pointe des cheveux à droite 3
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
 		// Bas des lunettes droite bas
@@ -175,12 +183,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * @author JL et Victor
 	 * Creation du visage en debutant par le pointeGauche2
+	 * 
+	 * @author JL et Victor
+	 * @param pointeGauche2
+	 * @param pointeDroite3
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
-		
+
 		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
 		//On s'appuie de visageCote pour creer visageCote2
@@ -229,22 +240,31 @@ public class DessinsGroupe1 extends CreateurDeForme {
         
         //dessin bouche
         demarrerNouveauDessinAvecDesPoints()
+        //Trace bouche
         .ajouter(bouche)
+        //Trace bouche2
         .ajouter(bouche2);
         
         //dessin nez
 		demarrerNouveauDessinAvecDesPoints()
+		//Trace nezGauche
 		.ajouter(nezGauche)
+		//Trace nezCentre
 		.ajouter(nezCentre)
+		//Trace nezDroite
 		.ajouter(nezDroite)
+		//Permet de ne pas relier les lignes
 		.nePasRelierLesPointsExtreme();
-        
+		
+		//Appelle la fonction corps
 		dessinerCorps(visageCote3, visageCote4);
 	}
 	
 	/**
 	 * Creation du corps 
 	 * @author Francois et Daphnee
+	 * @param visageCote3
+	 * @param visageCote4
 	 */
 	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		//Creation de tous les points du corps
@@ -335,6 +355,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
+		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
 		dessinerMains(corps25, corps7);
