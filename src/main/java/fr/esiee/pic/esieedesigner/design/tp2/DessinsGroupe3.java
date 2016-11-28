@@ -243,13 +243,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeux(){
 		// Dessin oeil droit
-		Point centreOeilDroit = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
+		Point centreOeilDroit = new Point(POINT_BAS_BRAS_GAUCHE.getX()+7*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-5*PIXEL);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 		// Dessin oeil gauche
-		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point centreOeilGauche = new Point(POINT_BAS_BRAS_GAUCHE.getX()+5*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-5*PIXEL);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
@@ -261,10 +261,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinBouche(){
 		// Initialisation des points
-		Point ptBouche1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
-		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
-		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
-		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+4*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-2*PIXEL);
+		Point ptBouche2 = new Point(ptBouche1.getX()+1*PIXEL,ptBouche1.getY()+2*PIXEL);
+		Point ptBouche3 = new Point(ptBouche2.getX()+2*PIXEL,ptBouche2.getY());
+		Point ptBouche4 = new Point(ptBouche3.getX()+1*PIXEL,ptBouche3.getY()-2*PIXEL);
 		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
