@@ -50,23 +50,50 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Thomas et Eve
+	 * @author Thomas et Eve
 	 */
 	public void dessinerCheveux() {
-
+		
+		// Point adjacent aux lunettes cote gauche
 		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
+		
+		// Point adjacent à la joue gauche
 		Point pointeGauche2 = new Point(pointeGauche1.getX(), pointeGauche1.getY() + (2 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux interieure gauche 
 		Point pointeGauche3 = new Point(pointeGauche2.getX() - (1 * UNITE_HORIZONTALE), pointeGauche2.getY() + (1 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux exterieure gauche 
 		Point pointeGauche4 = new Point(pointeGauche3.getX() - (1 * UNITE_HORIZONTALE), pointeGauche3.getY());
+		
+		// Point touffe laterale bas gauche
 		Point touffeGaucheMilieu = new Point(pointeGauche4.getX() - (1 * UNITE_HORIZONTALE), pointeGauche4.getY() - (4 * UNITE_VERTICALE));
+		
+		// Point touffe laterale haut gauche
 		Point touffeGauche1 = new Point(touffeGaucheMilieu.getX(), touffeGaucheMilieu.getY() - (2 * UNITE_VERTICALE));
+		
+		// Point crane gauche
 		Point touffeGauche2 = new Point(touffeGauche1.getX() + (1 * UNITE_HORIZONTALE), touffeGauche1.getY() - (1 * UNITE_VERTICALE));
+		
+		// Point crane droit
 		Point touffeDroite1 = new Point(touffeGauche2.getX() + (12 * UNITE_HORIZONTALE), touffeGauche2.getY());
+		
+		// Point touffe laterale haut droite
 		Point touffeDroite2 = new Point(touffeDroite1.getX() + (1 * UNITE_HORIZONTALE), touffeDroite1.getY() + (1 * UNITE_VERTICALE));
+		
+		// Point touffe laterale bas droite
 		Point touffeDroiteMilieu = new Point(touffeDroite2.getX(), touffeDroite2.getY() + (2 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux exterieure droite
 		Point pointeDroite1 = new Point(touffeDroiteMilieu.getX() - (1 * UNITE_HORIZONTALE), touffeDroiteMilieu.getY() + (4 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux interieure droite
 		Point pointeDroite2 = new Point(pointeDroite1.getX() - (1 * UNITE_HORIZONTALE), pointeDroite1.getY());
+		
+		// Point adjacent à la joue droite
 		Point pointeDroite3 = new Point(pointeDroite2.getX() - (1 * UNITE_HORIZONTALE), pointeDroite2.getY() - (1 * UNITE_VERTICALE));
+		
+		// Point adjacent aux lunettes cote droit
 		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
 		demarrerNouveauDessinAvecDesPoints()
