@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
@@ -95,6 +96,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 		dessinerTete();
+		dessinerCheveux();
 		
 	}
 	
@@ -129,6 +131,51 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinYeuxContour();
 		dessinYeux();
 	}
+	
+	public void dessinerCheveux(){
+		dessinerCheveux1();
+		dessinerCheveux2();
+		dessinerCheveux3();
+
+	}
+	
+	public void dessinerCheveux1(){
+		Point cheveux1 = new Point(BASE_GAUCHE+4*PIXEL, BASE_HAUT+3*PIXEL);
+		Point cheveux2 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_GAUCHE+5*PIXEL, BASE_HAUT+2.5*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	public void dessinerCheveux2(){
+		Point cheveux1 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+2*PIXEL);
+		Point cheveux2 = new Point(BASE_GAUCHE+7*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_GAUCHE+8*PIXEL, BASE_HAUT+2*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	public void dessinerCheveux3(){
+		Point cheveux1 = new Point(BASE_DROITE-4*PIXEL, BASE_HAUT+3*PIXEL);
+		Point cheveux2 = new Point(BASE_DROITE-6*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_DROITE-5*PIXEL, BASE_HAUT+2.5*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+
 	
 	/**
 	 * @author mathieu
