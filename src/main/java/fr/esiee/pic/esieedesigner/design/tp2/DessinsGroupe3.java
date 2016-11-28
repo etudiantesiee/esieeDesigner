@@ -151,6 +151,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 
 		dessineBrasDroit(); //Ajout du bras droit au dessin
+		dessineBrasGauche(); //Ajout du bras droit au dessin
 		dessinYeuxContour();
 
 		dessinYeux();
@@ -304,4 +305,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .ajouter(epaule2);
 		
 	}
+	
+	/**
+	 * @author mathieu
+	 * Dessine le bras Gauche
+	 */
+public void dessineBrasGauche(){
+		
+	//Création des points du bras gauche	
+	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL);
+	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
+	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 3*PIXEL);
+	
+	// On ajoute à la liste des composants à déssiner
+	demarrerNouveauDessinAvecDesPoints()
+    .ajouter(epaule1)
+    .ajouter(coude1)
+    .ajouter(poignet1);
+}
 }
