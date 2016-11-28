@@ -97,8 +97,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinYeuxContour();
 
 	
-		//dessinerJambeDroite();
-        //dessinerJambeGauche();
+		dessinerJambeDroite(POINT_BAS_BRAS_GAUCHE);
+        dessinerJambeGauche(POINT_BAS_BRAS_GAUCHE);
 
 
 		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 

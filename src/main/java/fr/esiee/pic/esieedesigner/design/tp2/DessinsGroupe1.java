@@ -26,16 +26,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Origine X
 	 */
-	private static final double ORIGIN_X = 30;
-	
-	/**
-	 * Origine Y
-	 */
-	private static final double ORIGIN_Y = 2;
-	
-	/**
-	 * Origine X
-	 */
 	private static final Point ORIGINE = new Point(30, 2);
 	
 	/**
@@ -100,19 +90,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Naji et Baptiste
+	 * Dessin des lunettes
+	 * 
+	 * @author Naji et Baptiste
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
-		// Bas des lunettes
+		// Bas des lunettes droite bas
 		Point lunetteBasDroiteBas = new Point(pointeDroite4.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY() + 1 * UNITE_VERTICALE);
+		// Bas des lunettes gauche droite
 		Point lunetteBasGaucheDroite = new Point(lunetteBasDroiteBas.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY());
+		// Bas des lunettes gauche bas
 		Point lunetteBasGaucheBas = new Point(pointeGauche1.getX() + 2 * UNITE_HORIZONTALE, pointeGauche1.getY() + 1 * UNITE_VERTICALE);
 		
-		// Haut des lunettes
+		// Haut des lunettes gauche gauche
 		Point lunetteHautGaucheGauche = new Point(pointeGauche1.getX(), pointeGauche1.getY() - 1 * UNITE_VERTICALE);
+		// Haut des lunettes gauche haut
 		Point lunetteHautGaucheHaut = new Point(lunetteBasGaucheBas.getX(), lunetteBasGaucheBas.getY() - 3 * UNITE_VERTICALE);
+		// Haut des lunettes gauche droite
 		Point lunetteHautGaucheDroite = new Point(lunetteBasGaucheDroite.getX(), lunetteBasGaucheDroite.getY() - 1 * UNITE_VERTICALE);
+		// Haut des lunettes droite haut
 		Point lunetteHautDroiteHaut = new Point(lunetteBasDroiteBas.getX(), lunetteBasDroiteBas.getY() - 3 * UNITE_VERTICALE);
+		// Haut des lunettes droite droite
 		Point lunetteHautDroiteDroite = new Point(pointeDroite4.getX(), lunetteBasGaucheDroite.getY() - 1 * UNITE_VERTICALE);
 		
 		// Dessin des lunettes
@@ -129,20 +127,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeGauche1)
 		.couleurDeFond(Couleur.GRIS);
 		
-		// Oeil gauche
-		Point centreOeilGauche = new Point(lunetteBasGaucheDroite.getX() - 1 * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		// Point centre oeil gauche
+		Point centreOeilGauche = new Point(lunetteBasGaucheDroite.getX() - 1 * UNITE_HORIZONTALE, lunetteBasGaucheDroite.getY());
+		// ellipse oeil gauche
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
 		// Dessin oeil gauche
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
-		// Oeil droit
+		// Point centre oeil droit
 		Point centreOeilDroit = new Point(lunetteBasGaucheDroite.getX() + 1 * UNITE_HORIZONTALE, centreOeilGauche.getY());
+		// ellipse oeil droit
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
+		// Appel suivant
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
@@ -193,36 +194,66 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * François et Daphnée
+	 * Creation du corps 
+	 * @author Francois et Daphnee
 	 */
 	public void dessinerCorps(Point visageCote3, Point visageCote4) {
+		//Creation de tous les points du corps
+		// 1er point du corps
 		Point corps1 = new Point(visageCote3.getX(), visageCote3.getY());
+		// 2e point du corps
 		Point corps2 = new Point(corps1.getX() + 2 * UNITE_HORIZONTALE , corps1.getY());
+		// 3e point du corps
 		Point corps3 = new Point(corps2.getX() + 2 * UNITE_HORIZONTALE, corps2.getY() - 2 * UNITE_HORIZONTALE);
+		// 4e point du corps
 		Point corps4 = new Point(corps3.getX() + 1 * UNITE_HORIZONTALE, corps3.getY());
+		// 5e point du corps
 		Point corps5 = new Point(corps4.getX() + 2 * UNITE_HORIZONTALE, corps4.getY() + 2 * UNITE_HORIZONTALE);
+		// 6e point du corps
 		Point corps6 = new Point(corps5.getX(), corps5.getY() + 2 * UNITE_HORIZONTALE);
+		// 7e point du corps
 		Point corps7 = new Point(corps6.getX() - 1 * UNITE_HORIZONTALE, corps6.getY());
+		// 8e point du corps
 		Point corps8 = new Point(corps7.getX(), corps7.getY() - 1 * UNITE_HORIZONTALE);
+		// 9e point du corps
 		Point corps9 = new Point(corps8.getX() - 1 * UNITE_HORIZONTALE, corps8.getY() - 1 * UNITE_HORIZONTALE);
+		// 10e point du corps
 		Point corps10 = new Point(corps9.getX() - 2 * UNITE_HORIZONTALE, corps9.getY() + 1 * UNITE_HORIZONTALE);
+		// 11e point du corps
 		Point corps11 = new Point(corps10.getX() + 1 * UNITE_HORIZONTALE, corps10.getY() + 2 * UNITE_HORIZONTALE);
+		// 12e point du corps
 		Point corps12 = new Point(corps11.getX() + 1 * UNITE_HORIZONTALE, corps11.getY() + 1 * UNITE_HORIZONTALE);
+		// 13e point du corps
 		Point corps13 = new Point(corps12.getX() - 3 * UNITE_HORIZONTALE, corps12.getY());
+		// 14e point du corps
 		Point corps14 = new Point(corps13.getX() + 1 * UNITE_HORIZONTALE, corps13.getY() - 1 * UNITE_HORIZONTALE);
+		// 15e point du corps
 		Point corps15 = new Point(corps14.getX() - 1 * UNITE_HORIZONTALE, corps14.getY() - 1 * UNITE_HORIZONTALE);
+		// 16e point du corps
 		Point corps16 = new Point(corps15.getX() - 2 * UNITE_HORIZONTALE, corps15.getY());
+		// 17e point du corps
 		Point corps17 = new Point(corps16.getX() - 1 * UNITE_HORIZONTALE, corps16.getY() + 1 * UNITE_HORIZONTALE);
+		// 18e point du corps
 		Point corps18 = new Point(corps17.getX() + 1 * UNITE_HORIZONTALE, corps17.getY() + 1 * UNITE_HORIZONTALE);
+		// 19e point du corps
 		Point corps19 = new Point(corps18.getX() - 3 * UNITE_HORIZONTALE, corps18.getY());
+		// 20e point du corps
 		Point corps20 = new Point(corps19.getX() + 1 * UNITE_HORIZONTALE, corps19.getY() - 1 * UNITE_HORIZONTALE);
+		// 21e point du corps
 		Point corps21 = new Point(corps20.getX() + 1 * UNITE_HORIZONTALE, corps20.getY() - 2 * UNITE_HORIZONTALE);
+		// 22e point du corps
 		Point corps22 = new Point(corps21.getX() - 2 * UNITE_HORIZONTALE, corps21.getY() - 1 * UNITE_HORIZONTALE);
+		// 23e point du corps
 		Point corps23 = new Point(corps22.getX() - 1 * UNITE_HORIZONTALE, corps22.getY() + 1 * UNITE_HORIZONTALE);
+		// 24e point du corps
 		Point corps24 = new Point(corps23.getX(), corps23.getY() + 1 * UNITE_HORIZONTALE);
+		// 25e point du corps
 		Point corps25 = new Point(corps24.getX() - 1 * UNITE_HORIZONTALE, corps24.getY());
+		// 26e point du corps
 		Point corps26 = new Point(corps25.getX(), corps25.getY() - 2 * UNITE_HORIZONTALE);
+		// 27e point du corps
 		Point corps27 = new Point(corps26.getX() + 2 * UNITE_HORIZONTALE, corps26.getY() - 2 * UNITE_HORIZONTALE);
+		// 28e point du corps
 		Point corps28 = new Point(corps27.getX() + 1 * UNITE_HORIZONTALE, corps27.getY());
 		
 		//Trace du dessin 
