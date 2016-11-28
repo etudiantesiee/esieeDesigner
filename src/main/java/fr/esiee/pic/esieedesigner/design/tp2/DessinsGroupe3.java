@@ -12,65 +12,63 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
+	
+	/**
+	 * Longueur une case
+	 */
+	private static final int PIXEL = 25;
+	
+	/**
+	 * Longueur page entière
+	 */
+	private static final int LONGUEUR_PAGE = 77 * PIXEL;
+	
+	/**
+	 * Largeur page entière
+	 */
+	private static final int LARGEUR_PAGE = 41 * PIXEL;
+	
+	/**
+	 * Largeur du personnage (cadre)
+	 */
+	private static final int LARGEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Longueur du personnage (cadre)
+	 */
+	private static final int LONGUEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Base Haut représente la composante y du cadre à partir du haut
+	 */
+	private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Bas représente la composante y du cadre à partir du bas
+	 */
+	private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Droite représente la composante x du cadre à partir du droite
+	 */
+	private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
+	
+	/**
+	 * Base Gauche représente la composante x du cadre à partir du gauche
+	 */
+
+	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
+	/**
+	 * Longueur des yeux
+	 */
+	private static final double LONGUEUR_DES_YEUX = 10;
+	/**
+	 * Largeur des yeux
+	 */
+	private static final double LARGEUR_DES_YEUX = 10;
+
     
-    
-    /**
-     * Longueur une case
-     */
-    private static final int PIXEL = 25;
-    
-    /**
-     * Longueur page entière
-     */
-    private static final int LONGUEUR_PAGE = 77 * PIXEL;
-    
-    /**
-     * Largeur page entière
-     */
-    private static final int LARGEUR_PAGE = 41 * PIXEL;
-    
-    /**
-     * Largeur du personnage (cadre)
-     */
-    private static final int LARGEUR_PERSO = 14 * PIXEL;
-    
-    /**
-     * Longueur du personnage (cadre)
-     */
-    private static final int LONGUEUR_PERSO = 14 * PIXEL;
-    
-    /**
-     * Base Haut représente la composante y du cadre à partir du haut
-     */
-    private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
-    
-    /**
-     * Base Bas représente la composante y du cadre à partir du bas
-     */
-    private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
-    
-    /**
-     * Base Droite représente la composante x du cadre à partir du droite
-     */
-    private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
-    
-    /**
-     * Base Gauche représente la composante x du cadre à partir du gauche
-     */
-    private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
-    
-    /**
-     * Longueur des yeux
-     */
-    private static final double LONGUEUR_DES_YEUX = 10;
-    
-    /**
-     * Largeur des yeux
-     */
-    private static final double LARGEUR_DES_YEUX = 10;
-    
-    
-    /**
+   /**
     * 
     * Override method from the extended class
     *
@@ -78,6 +76,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     * @version 1.0
     * @since   2016-11-28 
     */
+
     @Override
     public void dessiner() {
         // Ajout vos dessins ici
@@ -137,7 +136,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         dessinYeuxContour();
         dessinYeux();
     }
-       
+
 	/**
 	 * @author philippe et harrison
 	 * Dessin du contour des yeux
@@ -237,13 +236,21 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(ptMenton2)
 		.nePasRelierLesPointsExtreme();
 	}
-	
-	public void dessinerCheveux(){
-		dessinerCheveux1();
-		dessinerCheveux2();
-		dessinerCheveux3();
-	}
-	
+
+    /**
+    * 
+    * Method used to draw hairs of manga
+    *
+    * @author  DaRa ChauCour
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public void dessinerCheveux(){
+        dessinerCheveux1();
+        dessinerCheveux2();
+        dessinerCheveux3();
+    }
+    
     /**
     * 
     * Method used to draw hair on the left side
@@ -325,24 +332,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
 		
 		// Creer la forme ja
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(ja1)
-		.ajouter(ja2)
-		.ajouter(ja3)
-		.ajouter(ja4)
-		.ajouter(ja5)
-		.ajouter(ja6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(ja1).ajouter(ja2).ajouter(ja3).ajouter(ja4).ajouter(ja5).ajouter(ja6).couleurDeFond(Couleur.GRIS);
 			
 		// Creer la forme jb
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(jb1)
-		.ajouter(jb2)
-		.ajouter(jb3)
-		.ajouter(jb4)
-		.ajouter(jb5)
-		.ajouter(jb6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(jb1).ajouter(jb2).ajouter(jb3).ajouter(jb4).ajouter(jb5).ajouter(jb6).couleurDeFond(Couleur.GRIS);
 	}
 	
 	/**
@@ -383,13 +376,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 public void dessineBrasGauche(){
 		
 	//Création des points du bras gauche	
-	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL);
-	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
-	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
-	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL);
-	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL);
+	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL); //Point 1 de l'épaule
+	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
+	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
+	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
+	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL); //Point 2 de la main
 	Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
-	Point aisselle = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
+	Point coude2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
 	Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
 	
 	// On ajoute à la liste des composants à déssiner
@@ -400,7 +393,7 @@ public void dessineBrasGauche(){
     .ajouter(main1)
     .ajouter(main2)
     .ajouter(poignet2)
-    .ajouter(aisselle)
+    .ajouter(coude2)
     .ajouter(epaule2)
     .couleurDeFond(Couleur.GRIS);
 }
