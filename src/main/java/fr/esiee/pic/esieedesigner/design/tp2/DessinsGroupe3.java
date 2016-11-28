@@ -87,6 +87,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 
 		dessineBrasDroit(); //Ajout du bras droit au dessin
+		dessineBrasGauche(); // Ajout du bras gauche au dessin
 		dessinYeuxContour();
 
 		dessinYeux();
@@ -383,7 +384,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .ajouter(main2)
         .ajouter(poignet2)
         .ajouter(aisselle)
-        .ajouter(epaule2);
+        .ajouter(epaule2)
+        .couleurDeFond(Couleur.GRIS);
 		
 	}
 	
@@ -412,6 +414,7 @@ public void dessineBrasGauche(){
     .ajouter(main2)
     .ajouter(poignet2)
     .ajouter(aisselle)
-    .ajouter(epaule2);
+    .ajouter(epaule2)
+    .couleurDeFond(Couleur.GRIS);
 }
 }
