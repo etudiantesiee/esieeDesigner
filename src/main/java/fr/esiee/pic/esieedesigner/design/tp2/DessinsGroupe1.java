@@ -121,7 +121,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps25)
 		.ajouter(corps26)
 		.ajouter(corps27)
-		.ajouter(corps28);
+		.ajouter(corps28)
+		.couleurDeFond(Couleur.GRIS);;
 	}
 	
 	/**
