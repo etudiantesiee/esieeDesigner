@@ -198,14 +198,24 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * JL et Victor
 	 */
 	public void dessinerVisage() {
+		//menton
 		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
         Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
         Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
         Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
         Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
         Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-
         
+        //bouche
+        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        
+        //nez
+        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+
+        //dessin menton
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote)
         .ajouter(visageCote2);
@@ -221,6 +231,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote5)
         .ajouter(visageCote6);
+        
+        //dessin bouche
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(bouche)
+        .ajouter(bouche2);
+        
+        //dessin nez
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(nezGauche)
+		.ajouter(nezCentre)
+		.ajouter(nezDroite)
+		.nePasRelierLesPointsExtreme();
         
 	}
 
