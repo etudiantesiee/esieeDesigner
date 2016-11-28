@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -31,6 +32,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Origine Y
 	 */
 	private static final double ORIGIN_Y = 2;
+	
+	/**
+	 * Diametre des yeux
+	 */
+	private static final double DIAMETRE_DES_YEUX = 7;
 
 	@Override
 	public void dessiner() {
@@ -116,6 +122,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(lunetteBasGaucheBas)
 		.ajouter(lunetteBasGaucheGauche)
 		.couleurDeFond(Couleur.GRIS);
+		
+		Point centreOeilGauche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		Point centreOeilDroit = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 	}
 	
 	/**
