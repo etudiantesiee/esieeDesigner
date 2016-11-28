@@ -120,6 +120,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Dessin des lunettes
 	 * 
 	 * @author Naji et Baptiste
+	 * @param pointeGauche1 Point Pointe des cheveux à gauche 1
+	 * @param pointeDroite4 Point Pointe des cheveux à droite 4
+	 * @param pointeGauche2 Point Pointe des cheveux à gauche 2
+	 * @param pointeDroite3 Point Pointe des cheveux à droite 3
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
 		// Bas des lunettes droite bas
@@ -252,6 +256,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Creation du corps 
 	 * @author Francois et Daphnee
+	 * @param visageCote3
+	 * @param visageCote4
 	 */
 	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		//Creation de tous les points du corps
@@ -342,6 +348,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
+		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
 		dessinerMains(corps25, corps7);
