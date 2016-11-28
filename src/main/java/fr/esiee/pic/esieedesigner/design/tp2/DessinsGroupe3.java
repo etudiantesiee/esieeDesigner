@@ -86,7 +86,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
-		ajouterEllipse(oeilGauche, Couleur.JAUNE);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	}
 	
 	/**
@@ -126,6 +126,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.nePasRelierLesPointsExtreme();
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du menton
+	 */
+	public void dessinMenton(){
+		// Initialisation des points
+		Point ptMenton1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 11*PIXEL+15);
+		Point ptMenton2 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 11*PIXEL+15);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptMenton1)
+		.ajouter(ptMenton2)
+		.nePasRelierLesPointsExtreme();
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
@@ -140,6 +156,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinYeux();
 		dessinBouche();
 		dessinNez();
+		dessinMenton();
 		dessinerTete();
 		dessinerCheveux();
 	}
