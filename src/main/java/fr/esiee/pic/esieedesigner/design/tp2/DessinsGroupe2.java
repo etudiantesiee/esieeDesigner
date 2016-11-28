@@ -23,6 +23,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double CASE = 25;
 	
+	/**
+	 * Point torse_haut_gauche
+	 */
+	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
+	
+	
 	@Override
 	public void dessiner() {
 		dessinerCheveux();
@@ -150,8 +156,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerTorse() {
 		// Dessin torse
-		Point p1 = new Point(ORIGIN + CASE*3, CASE*8);
-		Point p2 = new Point(ORIGIN + CASE*4, CASE*8);
+		Point p1 = TORSE_HAUT_GAUCHE;
+		Point p2 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*1, TORSE_HAUT_GAUCHE.getY());
 		Point p3 = new Point(ORIGIN + CASE*6, CASE*9);
 		Point p4 = new Point(ORIGIN + CASE*8, CASE*9);
 		Point p5 = new Point(ORIGIN + CASE*10, CASE*8);
