@@ -44,11 +44,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
     
-    /**
-     * Base Bas représente la composante y du cadre à partir du bas
-     */
-    private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
-    
+
     /**
      * Base Droite représente la composante x du cadre à partir du droite
      */
@@ -104,7 +100,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point jambebasDroit = dessinerJambeDroite(jambeHautDroit);
 		Point jambeBasGauche = dessinerBasTete(jambebasDroit);
 		Point jambeHautgauche = dessinerJambeGauche(jambeBasGauche);
-		Point finalPoint = dessinerTeteBasGauche(jambeHautgauche);
+		dessinerTeteBasGauche(jambeHautgauche);
 
 	
 
