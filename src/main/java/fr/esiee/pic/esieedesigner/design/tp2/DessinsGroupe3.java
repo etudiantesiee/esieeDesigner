@@ -371,7 +371,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
 		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
 		Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
-		Point epaule2 = new Point(BASE_DROITE - 3.3*PIXEL, BASE_BAS - 6*PIXEL);
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
 		
 		
 		// On ajoute à la liste des composants à déssiner
@@ -396,12 +396,22 @@ public void dessineBrasGauche(){
 	//Création des points du bras gauche	
 	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL);
 	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
-	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 3*PIXEL);
+	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
+	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL);
+	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL);
+	Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
+	Point aisselle = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
+	Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
 	
 	// On ajoute à la liste des composants à déssiner
 	demarrerNouveauDessinAvecDesPoints()
     .ajouter(epaule1)
     .ajouter(coude1)
-    .ajouter(poignet1);
+    .ajouter(poignet1)
+    .ajouter(main1)
+    .ajouter(main2)
+    .ajouter(poignet2)
+    .ajouter(aisselle)
+    .ajouter(epaule2);
 }
 }
