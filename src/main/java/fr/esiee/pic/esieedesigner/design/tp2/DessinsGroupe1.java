@@ -164,9 +164,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
-        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
-        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
+        Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
+        Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
