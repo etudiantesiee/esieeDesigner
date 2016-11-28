@@ -13,35 +13,24 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
-	
+	// La taille de pixel
 	private static final int PIXEL = 25;
-	
 	private static final int LONGUEUR_PAGE = 77 * PIXEL;
-	
 	private static final int LARGEUR_PAGE = 41 * PIXEL;
-	
 	private static final int LARGEUR_PERSO = 14 * PIXEL;
-	
 	private static final int LONGUEUR_PERSO = 14 * PIXEL;
-
 	private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
-	
 	private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
-	
 	private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
-	
 	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
-	
 	/**
 	 * Longueur des yeux
 	 */
 	private static final double LONGUEUR_DES_YEUX = 10;
-	
 	/**
 	 * Largeur des yeux
 	 */
 	private static final double LARGEUR_DES_YEUX = 10;
-	
 	/**
 	 * @author philippe et harrison
 	 * Dessin du contour des yeux
@@ -56,8 +45,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point ptYeux6 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 7*PIXEL);
 		Point ptYeux7 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 7*PIXEL);
 		Point ptYeux8 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 6*PIXEL);
-		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);
-		
+		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(ptYeux1)
@@ -131,12 +119,11 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		
+	    // Dessiner les part de corp
 		dessinerJambe();
-
-
 		dessineBrasDroit();
 		dessinYeuxContour();
-
 		dessinYeux();
 		dessinBouche();
 		dessinNez();
@@ -238,24 +225,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
 		
 		// Creer la forme ja
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(ja1)
-		.ajouter(ja2)
-		.ajouter(ja3)
-		.ajouter(ja4)
-		.ajouter(ja5)
-		.ajouter(ja6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(ja1).ajouter(ja2).ajouter(ja3).ajouter(ja4).ajouter(ja5).ajouter(ja6).couleurDeFond(Couleur.GRIS);
 			
 		// Creer la forme jb
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(jb1)
-		.ajouter(jb2)
-		.ajouter(jb3)
-		.ajouter(jb4)
-		.ajouter(jb5)
-		.ajouter(jb6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(jb1).ajouter(jb2).ajouter(jb3).ajouter(jb4).ajouter(jb5).ajouter(jb6).couleurDeFond(Couleur.GRIS);
 	}
 	
 	/**
