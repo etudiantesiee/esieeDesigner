@@ -178,7 +178,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
-		// Appel suivant
+		// Appel suivant avec pointeGauche2 et pointeDroite3
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
@@ -186,8 +186,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Creation du visage en debutant par le pointeGauche2
 	 * 
 	 * @author JL et Victor
-	 * @param pointeGauche2
-	 * @param pointeDroite3
+	 * @param pointeGauche2 debut visage
+	 * @param pointeDroite3 fin visage
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
@@ -358,6 +358,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
+		//appel de la fonction de la fonction utilisant les parametres du corps
 		dessinerMains(corps25, corps7);
 	}
 	

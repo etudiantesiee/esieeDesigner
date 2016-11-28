@@ -8,7 +8,12 @@ import fr.esiee.pic.esieedesigner.api.shapes.Point;
 /**
  * Le groupe 2 ajoutera ses dessins dans cette classe.
  * 
- * @author etudiant
+ * @author Eric CHAN FSEUNG
+ * @author Valentin BELIN
+ * @author Arnaud LE
+ * @author Angelique PHAN
+ * @author Kail APRAHAMIAN
+ * @author Mehdi HOUACINE
  *
  */
 public class DessinsGroupe2 extends CreateurDeForme {
@@ -32,16 +37,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Point cheveux extremité gauche
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(TORSE_HAUT_GAUCHE.getX() - CASE*2, TORSE_HAUT_GAUCHE.getY());
 	
 	/**
 	 * Point joue extremité gauche exterieur
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX(), TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	/**
 	 * Point joue extremité droite exterieur
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*8, TORSE_HAUT_GAUCHE.getY() - CASE);
 	
@@ -63,8 +74,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// Dessin de la jupe
 		dessinerJupe();
 		
-		// Dessin des joues
+		// Dessin de la joue droite
 		dessinerJoueDroite();
+		
+		// Dessin de la joue gauche
 		dessinerJoueGauche();
 		
 		// Dessin des mains
@@ -78,6 +91,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Fonction qui dessine la joue droite
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerJoueDroite() {
 		
@@ -95,6 +110,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Fonction qui dessine la joue gauche
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerJoueGauche() {
 		
@@ -112,6 +129,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Fonction qui dessine les cheveux
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerCheveux() {
 		
@@ -205,6 +224,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Fonction pour dessiner le visage
 	 * Ordre torse_haut_gauche --> bouche --> nez --> yeux
+	 * 
+	 * @author Kaïl Aprahamian, Mehdi Houacine
 	 */
 	public void dessinerVisage() {
 		
