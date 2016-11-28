@@ -33,6 +33,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessinerJoueGauche();
 		dessinerMainDroite();
 		dessinerMainGauche();
+		dessinerPiedGauche();
+		dessinerPiedDroit();
 	}
 
 	/**
@@ -275,6 +277,40 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(p3)
 		.ajouter(p4)
 		.ajouter(p5);
+	}
+	
+	/**
+	 * Dessiner pied gauche
+	 */
+	public void dessinerPiedGauche() {
+		// Dessin pied gauche
+		Point p1 = new Point(ORIGIN + CASE*6, CASE*13);
+		Point p2 = new Point(ORIGIN + CASE*5, CASE*14);
+		Point p3 = new Point(ORIGIN + CASE*7, CASE*14);
+		Point p4 = new Point(ORIGIN + CASE*7, CASE*13);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4);
+	}
+
+	/**
+	 * Dessiner pied droit
+	 */
+	public void dessinerPiedDroit() {
+		// Dessin pied droit
+		Point p1 = new Point(ORIGIN + CASE*7, CASE*13);
+		Point p2 = new Point(ORIGIN + CASE*8, CASE*13);
+		Point p3 = new Point(ORIGIN + CASE*9, CASE*14);
+		Point p4 = new Point(ORIGIN + CASE*7, CASE*14);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4);
 	}
 
 }
