@@ -13,15 +13,51 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
-	// La taille de pixel
+	
+	/**
+	 * Longueur une case
+	 */
 	private static final int PIXEL = 25;
+	
+	/**
+	 * Longueur page entière
+	 */
 	private static final int LONGUEUR_PAGE = 77 * PIXEL;
+	
+	/**
+	 * Largeur page entière
+	 */
 	private static final int LARGEUR_PAGE = 41 * PIXEL;
+	
+	/**
+	 * Largeur du personnage (cadre)
+	 */
 	private static final int LARGEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Longueur du personnage (cadre)
+	 */
 	private static final int LONGUEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Base Haut représente la composante y du cadre à partir du haut
+	 */
 	private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Bas représente la composante y du cadre à partir du bas
+	 */
 	private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Droite représente la composante x du cadre à partir du droite
+	 */
 	private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
+	
+	/**
+	 * Base Gauche représente la composante x du cadre à partir du gauche
+	 */
+
 	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
 	/**
 	 * Longueur des yeux
@@ -74,7 +110,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
-		ajouterEllipse(oeilGauche, Couleur.JAUNE);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	}
 	
 	/**
@@ -114,6 +150,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.nePasRelierLesPointsExtreme();
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du menton
+	 */
+	public void dessinMenton(){
+		// Initialisation des points
+		Point ptMenton1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 11*PIXEL+15);
+		Point ptMenton2 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 11*PIXEL+15);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptMenton1)
+		.ajouter(ptMenton2)
+		.nePasRelierLesPointsExtreme();
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
@@ -122,11 +174,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		
 	    // Dessiner les part de corp
 		dessinerJambe();
-		dessineBrasDroit();
+		dessineBrasDroit(); //Ajout du bras droit au dessin
+		dessineBrasGauche(); //Ajout du bras droit au dessin
 		dessinYeuxContour();
 		dessinYeux();
 		dessinBouche();
 		dessinNez();
+		dessinMenton();
 		dessinerTete();
 		dessinerCheveux();
 	}
@@ -237,18 +291,55 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessineBrasDroit(){
 		
-		Point epaule = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
-		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
-		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 3*PIXEL);
-		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 2*PIXEL);
+		//Création des points du bras droit
+		Point epaule1 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL);
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL);
+		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
+		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
+		Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
 		
 		
 		// On ajoute à la liste des composants à déssiner
     	demarrerNouveauDessinAvecDesPoints()
-        .ajouter(epaule)
+        .ajouter(epaule1)
         .ajouter(coude1)
         .ajouter(poignet1)
-        .ajouter(main1);
+        .ajouter(main1)
+        .ajouter(main2)
+        .ajouter(poignet2)
+        .ajouter(aisselle)
+        .ajouter(epaule2);
 		
 	}
+	
+	/**
+	 * @author mathieu
+	 * Dessine le bras Gauche
+	 */
+public void dessineBrasGauche(){
+		
+	//Création des points du bras gauche	
+	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL);
+	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
+	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
+	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL);
+	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL);
+	Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
+	Point aisselle = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
+	Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+	
+	// On ajoute à la liste des composants à déssiner
+	demarrerNouveauDessinAvecDesPoints()
+    .ajouter(epaule1)
+    .ajouter(coude1)
+    .ajouter(poignet1)
+    .ajouter(main1)
+    .ajouter(main2)
+    .ajouter(poignet2)
+    .ajouter(aisselle)
+    .ajouter(epaule2);
+}
 }
