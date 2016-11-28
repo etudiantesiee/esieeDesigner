@@ -24,12 +24,32 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
-		dessiner_cheveux();
+		dessinerCheveux();
 		dessinerTorse();
 		dessinerVisage();
+		dessinerJoueDroite();
+		dessinerJoueGauche();
 	}
 
-	public void dessiner_cheveux() {
+	public void dessinerJoueDroite() {
+		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
+		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
+
+	    demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jd1)
+		.ajouter(jd2);
+	}
+	
+	public void dessinerJoueGauche() {
+		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
+		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
+
+	    demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jg1)
+		.ajouter(jg2);
+	}
+	
+	public void dessinerCheveux() {
 		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
 		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
 		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
