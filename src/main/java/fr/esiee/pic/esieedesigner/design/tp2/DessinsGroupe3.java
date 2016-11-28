@@ -3,9 +3,8 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
-import fr.esiee.pic.esieedesigner.api.shapes.Point;
+
 
 /**
  * Le groupe 3 ajoutera ses dessins dans cette classe.
@@ -90,14 +89,39 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		ajouterEllipse(oeilGauche, Couleur.JAUNE);
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin de la bouche
+	 */
+	public void dessinBouche(){
+		// Initialisation des points
+		Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptBouche1)
+		.ajouter(ptBouche2)
+		.ajouter(ptBouche3)
+		.ajouter(ptBouche4);
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+
+
+		dessineBrasDroit();
+		dessinYeuxContour();
+
+		dessinYeux();
+		dessinBouche();
 		dessinerTete();
 		dessinerCheveux();
-		
 	}
 	
 	public void dessinerTete(){
@@ -128,8 +152,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(tete10)
 		.ajouter(tete11)
 		.ajouter(tete12);
-		dessinYeuxContour();
-		dessinYeux();
 	}
 	
 	public void dessinerCheveux(){
@@ -181,6 +203,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * @author mathieu
 	 * Dessine le bras Droit
 	 */
-	public void DessineBrasDroit(){
+	public void dessineBrasDroit(){
+		
+		Point epaule = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 3*PIXEL);
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 2*PIXEL);
+		
+		
+		// On ajoute à la liste des composants à déssiner
+    	demarrerNouveauDessinAvecDesPoints()
+        .ajouter(epaule)
+        .ajouter(coude1)
+        .ajouter(poignet1)
+        .ajouter(main1);
+		
 	}
 }
