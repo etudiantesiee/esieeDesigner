@@ -313,8 +313,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
     
     /**
-     * Method pour la jambe.
-     */
+    * 
+    * Method used to draw the legs
+    *
+    * @author  idom inigo
+    * @version 1.0
+    * @since   2016-11-28 
+    */
     public void dessinerJambe() {
         // Jambe a gauche
         Point ja4 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+12*PIXEL);
