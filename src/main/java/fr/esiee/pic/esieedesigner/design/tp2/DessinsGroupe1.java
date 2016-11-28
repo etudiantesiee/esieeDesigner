@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -30,6 +32,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Origine Y
 	 */
 	private static final double ORIGIN_Y = 2;
+	
+	/**
+	 * Diametre des yeux
+	 */
+	private static final double DIAMETRE_DES_YEUX = 7;
 
 	@Override
 	public void dessiner() {
@@ -128,7 +135,39 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Naji et Baptiste
 	 */
 	public void dessinerLunettes() {
+		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point lunetteBasDroiteBas = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+		Point lunetteBasGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point lunetteBasGaucheBas = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+		Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(lunetteHautGaucheGauche)
+		.ajouter(lunetteHautGaucheHaut)
+		.ajouter(lunetteHautGaucheDroite)
+		.ajouter(lunetteHautDroiteHaut)
+		.ajouter(lunetteHautDroiteDroite)
+		.ajouter(lunetteBasDroiteDroite)
+		.ajouter(lunetteBasDroiteBas)
+		.ajouter(lunetteBasGaucheDroite)
+		.ajouter(lunetteBasGaucheBas)
+		.ajouter(lunetteBasGaucheGauche)
+		.couleurDeFond(Couleur.GRIS);
+		
+		Point centreOeilGauche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		Point centreOeilDroit = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 	}
 	
 	/**
@@ -151,7 +190,30 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * JL et Victor
 	 */
 	public void dessinerVisage() {
-		
+		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+        Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote)
+        .ajouter(visageCote2);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote2)
+        .ajouter(visageCote3);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote3)
+        .ajouter(visageCote4);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote4)
+        .ajouter(visageCote5);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote5)
+        .ajouter(visageCote6);
+        
 	}
 
 }
