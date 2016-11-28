@@ -109,6 +109,24 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(ptBouche4);
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du nez
+	 */
+	public void dessinNez(){
+		// Initialisation des points
+		Point ptNez1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 8*PIXEL+5);
+		Point ptNez2 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 8*PIXEL);
+		Point ptNez3 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 8*PIXEL+5);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptNez1)
+		.ajouter(ptNez2)
+		.ajouter(ptNez3)
+		.nePasRelierLesPointsExtreme();
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
@@ -117,6 +135,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		dessinYeuxContour();
 		dessinYeux();
 		dessinBouche();
+		dessinNez();
 		dessinerTete();
 		dessinerCheveux();
 	}
