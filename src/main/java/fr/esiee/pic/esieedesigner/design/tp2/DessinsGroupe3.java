@@ -582,6 +582,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	
 	
 	// On ajoute à la liste des composants à déssiner
+	//les points sont ajoutés dans l'ordre qu'ils sont déssinés.
 	demarrerNouveauDessinAvecDesPoints()
 	.ajouter(pointDepart)
 	.ajouter(main2)
