@@ -90,7 +90,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // Pensez à désactiver les dessins de la démo 
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
-		Point brasGauche =  new Point(pointBasBrasGauche.getX()+2*PIXEL, pointBasBrasGauche.getY()+4*PIXEL); 
+		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
 		Point brashautDroit = dessinerTeteHaut(brasGauche);
 		
         dessinYeux();
