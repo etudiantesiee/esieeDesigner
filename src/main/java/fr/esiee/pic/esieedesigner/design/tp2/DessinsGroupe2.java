@@ -202,5 +202,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point oeil1 = new Point(ORIGIN + CASE * 6, CASE * 4);
 		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
+		
+		// Second oeil (gauche)
+		Point oeil2 = new Point(ORIGIN + CASE * 8, CASE * 4);
+		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
+		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
 	}
 }
