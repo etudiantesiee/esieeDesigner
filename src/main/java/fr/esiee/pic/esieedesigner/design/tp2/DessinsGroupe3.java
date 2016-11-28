@@ -89,20 +89,72 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // Ajout vos dessins ici
         // Pensez à désactiver les dessins de la démo 
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
-        dessinerJambe();
 
-        //Ajout du bras droit au dessin
-		dessineBrasDroit(); 
-		// Ajout du bras gauche au dessin
-		dessineBrasGauche(); 
-		dessinYeuxContour();
-
+		Point brasGauche =  new Point(pointBasBrasGauche.getX()+2*PIXEL, pointBasBrasGauche.getY()+4*PIXEL); 
+		Point brashautDroit = dessinerTeteHaut(brasGauche);
+		
         dessinYeux();
         dessinBouche();
         dessinNez();
         dessinMenton();
         dessinerTete();
         dessinerCheveux();
+    }
+    
+    /**
+    * 
+    * Method used to draw head of manga
+    *
+    * @author  DaRa ChauCour
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public Point dessinerTeteHaut(Point pBase){
+        Point tete1 = new Point(pBase.getX(), pBase.getY()-2*PIXEL);
+        Point tete2 = new Point(tete1.getX()+PIXEL, tete1.getY()-2*PIXEL);
+        Point tete3 = new Point(tete2.getX()+2*PIXEL, tete2.getY()-1*PIXEL);
+        Point tete4 = new Point(tete3.getX()+2*PIXEL, tete3.getY()-0*PIXEL);
+        Point tete5 = new Point(tete4.getX()+2*PIXEL, tete4.getY()+1*PIXEL);
+        Point tete6 = new Point(tete5.getX()+1*PIXEL, tete5.getY()+2*PIXEL);
+        Point tete7 = new Point(tete6.getX()+0*PIXEL, tete6.getY()+2*PIXEL);
+        
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(pBase)
+	        .ajouter(tete1)
+	        .ajouter(tete2)
+	        .ajouter(tete3)
+	        .ajouter(tete4)
+	        .ajouter(tete5)
+	        .ajouter(tete6)
+	        .ajouter(tete7)
+	        .nePasRelierLesPointsExtreme();
+        
+        Point cheveux2 = new Point(tete2.getX()+2*PIXEL, tete2.getY()+1*PIXEL);
+        Point cheveux3 = new Point(cheveux2.getX()-1*PIXEL, cheveux2.getY()-1.5*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete2)
+	        .ajouter(cheveux2)
+	        .ajouter(cheveux3)
+	        .couleurDeFond(Couleur.GRIS);
+        
+        Point cheveux4 = new Point(tete3.getX()+1*PIXEL, tete3.getY()+2*PIXEL);
+        Point cheveux5 = new Point(cheveux4.getX()+1*PIXEL, cheveux4.getY()-2*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete3)
+	        .ajouter(cheveux4)
+	        .ajouter(cheveux5)
+	        .couleurDeFond(Couleur.GRIS);
+        
+        Point cheveux6 = new Point(tete5.getX()-2*PIXEL, tete5.getY()+1*PIXEL);
+        Point cheveux7 = new Point(cheveux6.getX()+1*PIXEL, cheveux6.getY()-1.5*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete5)
+	        .ajouter(cheveux6)
+	        .ajouter(cheveux7)
+	        .couleurDeFond(Couleur.GRIS);
+
+        return tete7;
+
     }
     
     /**
