@@ -89,13 +89,34 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		ajouterEllipse(oeilGauche, Couleur.JAUNE);
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin de la bouche
+	 */
+	public void dessinBouche(){
+		// Initialisation des points
+		Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptBouche1)
+		.ajouter(ptBouche2)
+		.ajouter(ptBouche3)
+		.ajouter(ptBouche4);
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinYeuxContour();
+		dessinYeux();
+		dessinBouche();
 		dessinerTete();
-		
 	}
 	
 	public void dessinerTete(){
@@ -126,8 +147,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(tete10)
 		.ajouter(tete11)
 		.ajouter(tete12);
-		dessinYeuxContour();
-		dessinYeux();
 	}
 	
 	/**
