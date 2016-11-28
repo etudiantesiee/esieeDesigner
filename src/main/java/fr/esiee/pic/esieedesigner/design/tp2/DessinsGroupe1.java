@@ -148,34 +148,56 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * JL et Victor
+	 * @author JL et Victor
+	 * Creation du visage en debutant par le pointeGauche2
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
+		
+		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
+		//On s'appuie de visageCote pour creer visageCote2
         Point visageCote2 = new Point(visageCote.getX(), (visageCote.getY()+ UNITE_VERTICALE));
+        //Creation visageCote3 a partir visageCote2 avec un deplacement horizontal de 2 et vertical de 3
         Point visageCote3 = new Point((visageCote2.getX()+ 3 * UNITE_HORIZONTALE), (visageCote2.getY()+ 3* UNITE_VERTICALE)); 
+        //Creation visageCote4 a partir visageCote3 avec un deplacement horizontal de 2 et vertical de 0
         Point visageCote4 = new Point ((visageCote3.getX()+ 2 * UNITE_HORIZONTALE), (visageCote3.getY()));
+        //Creation visageCote5 a partir visageCote4 avec un deplacement horizontal de 3 et vertical de 3
         Point visageCote5 = new Point ((visageCote4.getX()+ 3 * UNITE_HORIZONTALE), (visageCote4.getY()- 3* UNITE_VERTICALE));
+        //Creation visageCote6 a partir visageCote3 avec un deplacement horizontal de 0 et vertical de 0
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
         //bouche
+        
+        //On part du pointeGauche2
         Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
+        //Creation bouche2 a partir bouche avec un deplacement horizontal de 2 et vertical de 0
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
+        
+        //On part du pointeGauche2
         Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
+        //Creation nezGauche a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
+        //Creation nezDroite a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
+        //Trace visageCote
         .ajouter(visageCote)
+        //Trace visageCote2
         .ajouter(visageCote2)
+        //Trace visageCote3
         .ajouter(visageCote3)
+        //Trace visageCote4
         .ajouter(visageCote4)
+        //Trace visageCote5
         .ajouter(visageCote5)
+        //Trace visageCote6
         .ajouter(visageCote6)
+        //Permet de ne pas relier les lignes
         .nePasRelierLesPointsExtreme();
         
         //dessin bouche
