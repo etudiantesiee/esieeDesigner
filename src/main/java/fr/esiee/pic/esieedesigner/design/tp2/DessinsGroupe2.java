@@ -16,13 +16,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Point de départ groupe 2
 	 */
-	private static final double ORIGIN = 1400;
+	private static final double ORIGIN = 0;
 	
 	/**
 	 * Nombre de pixel d'une case
 	 */
 	private static final double CASE = 25;
-	
+
 	/**
 	 * Point cheveux extremité gauche
 	 */
@@ -37,6 +37,21 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Point joue extremité droite exterieur
 	 */
 	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
+	
+	/**
+	 * Point fixe pour dessiner le nez
+	 */
+	private static final Point NEZ_ORIGINE = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
+	
+	/**
+	 * Point fixe pour dessiner le premier oeil (gauche)
+	 */
+	private static final Point OEIL1_ORIGINE = new Point(ORIGIN + CASE * 6, CASE * 4);
+	
+	/**
+	 * Point fixe pour dessiner le deuxième oeil (droite)
+	 */
+	private static final Point OEIL2_ORIGINE = new Point(ORIGIN + CASE * 8, CASE * 4);
 	
 	/**
 	 * Fonction main qui dessine tout
@@ -107,6 +122,40 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessinerCheveux() {
 		
 		// == Dessin des cheveux
+		
+//		// Déclaration des points
+//		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
+//		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
+//		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
+//		Point p4 = new Point(ORIGIN + CASE*5, CASE*0);
+//		Point p5 = new Point(ORIGIN + CASE*9, CASE*0);
+//		Point p6 = new Point(ORIGIN + CASE*11, CASE*1);
+//		Point p7 = new Point(ORIGIN + CASE*13, CASE*3);
+//		Point p8 = new Point(ORIGIN + CASE*13, CASE*8);
+//		Point p9 = new Point(ORIGIN + CASE*12, CASE*6);
+//		Point p10 = new Point(ORIGIN + CASE*12, CASE*4);
+//		Point p11 = new Point(ORIGIN + CASE*12, CASE*8);
+//		Point p12 = new Point(ORIGIN + CASE*11, CASE*6);
+//		Point p13 = new Point(ORIGIN + CASE*11, CASE*5);
+//		Point p14 = new Point(ORIGIN + CASE*11, CASE*7);
+//		Point p15 = new Point(ORIGIN + CASE*10, CASE*5);
+//		Point p16 = new Point(ORIGIN + CASE*10, CASE*4);
+//		Point p17 = new Point(ORIGIN + CASE*9, CASE*3);
+//		Point p18 = new Point(ORIGIN + CASE*8, CASE*3);
+//		Point p19 = new Point(ORIGIN + CASE*7, CASE*2);
+//		Point p20 = new Point(ORIGIN + CASE*6, CASE*3);
+//		Point p21 = new Point(ORIGIN + CASE*5, CASE*3);
+//		Point p22 = new Point(ORIGIN + CASE*4, CASE*4);
+//		Point p23 = new Point(ORIGIN + CASE*4, CASE*5);
+//		Point p24 = new Point(ORIGIN + CASE*3, CASE*7);
+//		Point p25 = new Point(ORIGIN + CASE*3, CASE*5);
+//		Point p26 = new Point(ORIGIN + CASE*3, CASE*6);
+//		Point p27 = new Point(ORIGIN + CASE*2, CASE*8);
+//		Point p28 = new Point(ORIGIN + CASE*2, CASE*4);
+//		Point p29 = new Point(ORIGIN + CASE*2, CASE*6);
+//		Point p30 = new Point(ORIGIN + CASE*1, CASE*8);
+		
+		// == Objetive 3 Dessin des cheveux
 		
 		// Déclaration des points
 		Point p1 = CHEVEUX_EXTREMITE_GAUCHE;
@@ -219,12 +268,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerVisage() {
 		
-		// == Dessin du nez
+		// == Dessin du nez - 
 		
 		// Déclaration des points
-		Point nez1 = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
-		Point nez2 = new Point(ORIGIN + CASE * 7, CASE * 5);
-		Point nez3 = new Point(ORIGIN + CASE * 7.2, CASE * 5.2);
+		Point nez1 = NEZ_ORIGINE;
+		Point nez2 = new Point(nez1.getX() + CASE * 0.2, nez1.getY() - CASE * 0.2);
+		Point nez3 = new Point(nez2.getX() + CASE * 0.2, nez2.getY() + CASE * 0.2);
 		
 		// Premier trait
 		demarrerNouveauDessinAvecDesPoints()
@@ -258,12 +307,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// == Dessin des deux yeux
 		
 		// Dessin du premier oeil (gauche)
-		Point oeil1 = new Point(ORIGIN + CASE * 6, CASE * 4);
+		Point oeil1 = OEIL1_ORIGINE;
 		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
 		
 		// Dessin du second oeil (gauche)
-		Point oeil2 = new Point(ORIGIN + CASE * 8, CASE * 4);
+		Point oeil2 = OEIL2_ORIGINE;
 		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
 	}
