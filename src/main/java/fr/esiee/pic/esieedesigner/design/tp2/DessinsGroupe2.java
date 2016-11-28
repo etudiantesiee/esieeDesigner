@@ -98,7 +98,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point bouche5 = new Point(ORIGIN + CASE * 10, CASE * 7);
 		Point bouche6 = new Point(ORIGIN + CASE * 10, CASE * 6);
 		
-		// dessin trait
+		// Dessin trait de la bouche
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(bouche1)
 		.ajouter(bouche2)
