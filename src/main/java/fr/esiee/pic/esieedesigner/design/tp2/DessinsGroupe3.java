@@ -70,9 +70,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
     private static final double LARGEUR_DES_YEUX = 10;
     
     /**
-     * Largeur des yeux
+     * Point de départ
      */
-    private static final Point pointBasBrasGauche = new Point(64*PIXEL, 30*PIXEL);
+    private static final Point POINT_BAS_BRAS_GAUCHE = new Point(64*PIXEL, 30*PIXEL);
 
     
     /*
@@ -89,20 +89,72 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // Ajout vos dessins ici
         // Pensez à désactiver les dessins de la démo 
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
-        dessinerJambe();
 
-        //Ajout du bras droit au dessin
-		dessineBrasDroit(); 
-		// Ajout du bras gauche au dessin
-		dessineBrasGauche(); 
-		dessinYeuxContour();
-
+		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
+		Point brashautDroit = dessinerTeteHaut(brasGauche);
+		
         dessinYeux();
         dessinBouche();
         dessinNez();
         dessinMenton();
         dessinerTete();
         dessinerCheveux();
+    }
+    
+    /**
+    * 
+    * Method used to draw head of manga
+    *
+    * @author  DaRa ChauCour
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public Point dessinerTeteHaut(Point pBase){
+        Point tete1 = new Point(pBase.getX(), pBase.getY()-2*PIXEL);
+        Point tete2 = new Point(tete1.getX()+PIXEL, tete1.getY()-2*PIXEL);
+        Point tete3 = new Point(tete2.getX()+2*PIXEL, tete2.getY()-1*PIXEL);
+        Point tete4 = new Point(tete3.getX()+2*PIXEL, tete3.getY()-0*PIXEL);
+        Point tete5 = new Point(tete4.getX()+2*PIXEL, tete4.getY()+1*PIXEL);
+        Point tete6 = new Point(tete5.getX()+1*PIXEL, tete5.getY()+2*PIXEL);
+        Point tete7 = new Point(tete6.getX()+0*PIXEL, tete6.getY()+2*PIXEL);
+        
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(pBase)
+	        .ajouter(tete1)
+	        .ajouter(tete2)
+	        .ajouter(tete3)
+	        .ajouter(tete4)
+	        .ajouter(tete5)
+	        .ajouter(tete6)
+	        .ajouter(tete7)
+	        .nePasRelierLesPointsExtreme();
+        
+        Point cheveux2 = new Point(tete2.getX()+2*PIXEL, tete2.getY()+1*PIXEL);
+        Point cheveux3 = new Point(cheveux2.getX()-1*PIXEL, cheveux2.getY()-1.5*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete2)
+	        .ajouter(cheveux2)
+	        .ajouter(cheveux3)
+	        .couleurDeFond(Couleur.GRIS);
+        
+        Point cheveux4 = new Point(tete3.getX()+1*PIXEL, tete3.getY()+2*PIXEL);
+        Point cheveux5 = new Point(cheveux4.getX()+1*PIXEL, cheveux4.getY()-2*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete3)
+	        .ajouter(cheveux4)
+	        .ajouter(cheveux5)
+	        .couleurDeFond(Couleur.GRIS);
+        
+        Point cheveux6 = new Point(tete5.getX()-2*PIXEL, tete5.getY()+1*PIXEL);
+        Point cheveux7 = new Point(cheveux6.getX()+1*PIXEL, cheveux6.getY()-1.5*PIXEL);
+        demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(tete5)
+	        .ajouter(cheveux6)
+	        .ajouter(cheveux7)
+	        .couleurDeFond(Couleur.GRIS);
+
+        return tete7;
+
     }
     
     /**
@@ -151,7 +203,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeuxContour(){
 		// Initialisation des points
-		Point ptYeux1 = new Point(pointBasBrasGauche.getX()+3*PIXEL,pointBasBrasGauche.getY()-6*PIXEL);
+		Point ptYeux1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
 		Point ptYeux2 = new Point(ptYeux1.getX(),ptYeux1.getY()+1*PIXEL);
 		Point ptYeux3 = new Point(ptYeux2.getX()+1*PIXEL,ptYeux2.getY()+1*PIXEL);
 		Point ptYeux4 = new Point(ptYeux3.getX()+1*PIXEL,ptYeux3.getY());
@@ -180,7 +232,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeux(){
 		// Dessin oeil droit
-		Point centreOeilDroit = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point centreOeilDroit = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
@@ -198,7 +250,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinBouche(){
 		// Initialisation des points
-		Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
 		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
 		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
 		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
