@@ -36,12 +36,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Point joue extremité gauche exterieur
 	 */
-	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(ORIGIN + CASE*3, CASE*7);
+	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX(), TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	/**
 	 * Point joue extremité droite exterieur
 	 */
-	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
+	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*8, TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	@Override
 	/**
