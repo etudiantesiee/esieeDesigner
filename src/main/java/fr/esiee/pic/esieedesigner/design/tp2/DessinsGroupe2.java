@@ -201,7 +201,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessiner jupe
 	 */
 	public void dessinerJupe() {
-		// Jupe
+		// Dessin Jupe
 		Point p1 = new Point(ORIGIN + CASE*3, CASE*11);
 		Point p2 = new Point(ORIGIN + CASE*11, CASE*11);
 		Point p3 = new Point(ORIGIN + CASE*12, CASE*13);
