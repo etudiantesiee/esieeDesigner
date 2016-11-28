@@ -22,6 +22,21 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Nombre de pixel d'une case
 	 */
 	private static final double CASE = 25;
+
+	/**
+	 * Point cheveux extremité gauche
+	 */
+	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(ORIGIN + CASE*1, CASE*8);
+	
+	/**
+	 * Point joue extremité gauche exterieur
+	 */
+	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(ORIGIN + CASE*3, CASE*7);
+	
+	/**
+	 * Point joue extremité droite exterieur
+	 */
+	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
 	
 	/**
 	 * Point fixe pour dessiner le nez
@@ -40,6 +55,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	private static final Point BOUCHE_ORIGINE = new Point(ORIGIN + CASE * 4, CASE * 6);
 	
+	
+	/**
+	 * Fonction main qui dessine tout
+	 */
 	@Override
 	public void dessiner() {
 		dessinerCheveux();
@@ -61,10 +80,16 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 		// == Dessin de la joue droite
 		
+//		// Déclaration des points
+//		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
+//		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
+		
+		// == Objetive 3 Dessin de la joue droite
+		
 		// Déclaration des points
-		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
-		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
-
+		Point jd1 = JOUE_EXTREMITE_DROITE_EXTERIEUR;
+		Point jd2 = new Point(JOUE_EXTREMITE_DROITE_EXTERIEUR.getX() - CASE, JOUE_EXTREMITE_DROITE_EXTERIEUR.getY() + CASE);
+		
 		// Dessin de la joue droite
 	    demarrerNouveauDessinAvecDesPoints()
 		.ajouter(jd1)
@@ -78,9 +103,15 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 		// == Dessin de la joue gauche
 		
+//		// Déclaration des points
+//		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
+//		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
+		
+		// == Objetive 3 Dessin de la joue droite
+		
 		// Déclaration des points
-		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
-		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
+		Point jg1 = JOUE_EXTREMITE_GAUCHE_EXTERIEUR;
+		Point jg2 = new Point(JOUE_EXTREMITE_GAUCHE_EXTERIEUR.getX() + CASE, JOUE_EXTREMITE_GAUCHE_EXTERIEUR.getY() + CASE);
 
 		// Dessin de la joue gauche
 	    demarrerNouveauDessinAvecDesPoints()
@@ -95,37 +126,71 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 		// == Dessin des cheveux
 		
+//		// Déclaration des points
+//		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
+//		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
+//		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
+//		Point p4 = new Point(ORIGIN + CASE*5, CASE*0);
+//		Point p5 = new Point(ORIGIN + CASE*9, CASE*0);
+//		Point p6 = new Point(ORIGIN + CASE*11, CASE*1);
+//		Point p7 = new Point(ORIGIN + CASE*13, CASE*3);
+//		Point p8 = new Point(ORIGIN + CASE*13, CASE*8);
+//		Point p9 = new Point(ORIGIN + CASE*12, CASE*6);
+//		Point p10 = new Point(ORIGIN + CASE*12, CASE*4);
+//		Point p11 = new Point(ORIGIN + CASE*12, CASE*8);
+//		Point p12 = new Point(ORIGIN + CASE*11, CASE*6);
+//		Point p13 = new Point(ORIGIN + CASE*11, CASE*5);
+//		Point p14 = new Point(ORIGIN + CASE*11, CASE*7);
+//		Point p15 = new Point(ORIGIN + CASE*10, CASE*5);
+//		Point p16 = new Point(ORIGIN + CASE*10, CASE*4);
+//		Point p17 = new Point(ORIGIN + CASE*9, CASE*3);
+//		Point p18 = new Point(ORIGIN + CASE*8, CASE*3);
+//		Point p19 = new Point(ORIGIN + CASE*7, CASE*2);
+//		Point p20 = new Point(ORIGIN + CASE*6, CASE*3);
+//		Point p21 = new Point(ORIGIN + CASE*5, CASE*3);
+//		Point p22 = new Point(ORIGIN + CASE*4, CASE*4);
+//		Point p23 = new Point(ORIGIN + CASE*4, CASE*5);
+//		Point p24 = new Point(ORIGIN + CASE*3, CASE*7);
+//		Point p25 = new Point(ORIGIN + CASE*3, CASE*5);
+//		Point p26 = new Point(ORIGIN + CASE*3, CASE*6);
+//		Point p27 = new Point(ORIGIN + CASE*2, CASE*8);
+//		Point p28 = new Point(ORIGIN + CASE*2, CASE*4);
+//		Point p29 = new Point(ORIGIN + CASE*2, CASE*6);
+//		Point p30 = new Point(ORIGIN + CASE*1, CASE*8);
+		
+		// == Objetive 3 Dessin des cheveux
+		
 		// Déclaration des points
-		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
-		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
-		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
-		Point p4 = new Point(ORIGIN + CASE*5, CASE*0);
-		Point p5 = new Point(ORIGIN + CASE*9, CASE*0);
-		Point p6 = new Point(ORIGIN + CASE*11, CASE*1);
-		Point p7 = new Point(ORIGIN + CASE*13, CASE*3);
-		Point p8 = new Point(ORIGIN + CASE*13, CASE*8);
-		Point p9 = new Point(ORIGIN + CASE*12, CASE*6);
-		Point p10 = new Point(ORIGIN + CASE*12, CASE*4);
-		Point p11 = new Point(ORIGIN + CASE*12, CASE*8);
-		Point p12 = new Point(ORIGIN + CASE*11, CASE*6);
-		Point p13 = new Point(ORIGIN + CASE*11, CASE*5);
-		Point p14 = new Point(ORIGIN + CASE*11, CASE*7);
-		Point p15 = new Point(ORIGIN + CASE*10, CASE*5);
-		Point p16 = new Point(ORIGIN + CASE*10, CASE*4);
-		Point p17 = new Point(ORIGIN + CASE*9, CASE*3);
-		Point p18 = new Point(ORIGIN + CASE*8, CASE*3);
-		Point p19 = new Point(ORIGIN + CASE*7, CASE*2);
-		Point p20 = new Point(ORIGIN + CASE*6, CASE*3);
-		Point p21 = new Point(ORIGIN + CASE*5, CASE*3);
-		Point p22 = new Point(ORIGIN + CASE*4, CASE*4);
-		Point p23 = new Point(ORIGIN + CASE*4, CASE*5);
-		Point p24 = new Point(ORIGIN + CASE*3, CASE*7);
-		Point p25 = new Point(ORIGIN + CASE*3, CASE*5);
-		Point p26 = new Point(ORIGIN + CASE*3, CASE*6);
-		Point p27 = new Point(ORIGIN + CASE*2, CASE*8);
-		Point p28 = new Point(ORIGIN + CASE*2, CASE*4);
-		Point p29 = new Point(ORIGIN + CASE*2, CASE*6);
-		Point p30 = new Point(ORIGIN + CASE*1, CASE*8);
+		Point p1 = CHEVEUX_EXTREMITE_GAUCHE;
+		Point p2 = new Point(CHEVEUX_EXTREMITE_GAUCHE.getX(), CHEVEUX_EXTREMITE_GAUCHE.getY() - CASE*5);
+		Point p3 = new Point(p2.getX() + CASE*2, p2.getY() - CASE*2);
+		Point p4 = new Point(p3.getX() + CASE*2, p3.getY() - CASE*1);
+		Point p5 = new Point(p4.getX() + CASE*4, p4.getY());
+		Point p6 = new Point(p5.getX() + CASE*2, p5.getY() + CASE);
+		Point p7 = new Point(p6.getX() + CASE*2, p6.getY() + CASE*2);
+		Point p8 = new Point(p7.getX(), p7.getY() + CASE*5);
+		Point p9 = new Point(p8.getX() - CASE, p8.getY() - CASE*2);
+		Point p10 = new Point(p9.getX(), p9.getY() - CASE*2);
+		Point p11 = new Point(p10.getX(), p10.getY() + CASE*4);
+		Point p12 = new Point(p11.getX() - CASE, p11.getY() - CASE*2);
+		Point p13 = new Point(p12.getX(), p12.getY() - CASE);
+		Point p14 = new Point(p13.getX(), p13.getY() + CASE*2);
+		Point p15 = new Point(p14.getX() - CASE, p14.getY() - CASE*2);
+		Point p16 = new Point(p15.getX(), p15.getY() - CASE);
+		Point p17 = new Point(p16.getX() - CASE, p16.getY() - CASE);
+		Point p18 = new Point(p17.getX() - CASE, p17.getY());
+		Point p19 = new Point(p18.getX() - CASE, p18.getY() - CASE);
+		Point p20 = new Point(p19.getX() - CASE, p19.getY() + CASE);
+		Point p21 = new Point(p20.getX() - CASE, p20.getY());
+		Point p22 = new Point(p21.getX() - CASE, p21.getY() + CASE);
+		Point p23 = new Point(p22.getX(), p22.getY() + CASE);
+		Point p24 = new Point(p23.getX() - CASE, p23.getY() + CASE*2);
+		Point p25 = new Point(p24.getX(), p24.getY() - CASE*2);
+		Point p26 = new Point(p25.getX(), p25.getY() + CASE);
+		Point p27 = new Point(p26.getX() - CASE, p26.getY() + CASE*2);
+		Point p28 = new Point(p27.getX(), p27.getY() - CASE*4);
+		Point p29 = new Point(p28.getX(), p28.getY() + CASE*2);
+		Point p30 = new Point(p29.getX() - CASE, p29.getY() + CASE*2);
 
 		// == Dessin des cheveux
 		demarrerNouveauDessinAvecDesPoints()
