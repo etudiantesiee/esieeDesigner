@@ -147,6 +147,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinerJambe();
 
 
 		dessineBrasDroit();
@@ -173,8 +174,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point tete10 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+12*PIXEL);
 		Point tete11 = new Point(BASE_GAUCHE+4*PIXEL, BASE_HAUT+10*PIXEL);
 		Point tete12 = new Point(BASE_GAUCHE+3*PIXEL, BASE_HAUT+7*PIXEL);
-
-
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(tete1)
 		.ajouter(tete2)
@@ -234,6 +233,47 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	}
 	
 
+	
+	/**
+	 * Method pour la jambe.
+	 */
+	public void dessinerJambe() {
+		// Jambe a gauche
+		Point ja4 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+12*PIXEL);
+		Point ja3 = new Point(BASE_GAUCHE+5*PIXEL,BASE_HAUT+13*PIXEL);
+		Point ja2 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+14*PIXEL);
+		Point ja1 = new Point(BASE_GAUCHE+3*PIXEL,BASE_HAUT+14*PIXEL);
+		Point ja6 = new Point(BASE_GAUCHE+4*PIXEL,BASE_HAUT+13*PIXEL);
+		Point ja5 = new Point(BASE_GAUCHE+5*PIXEL,BASE_HAUT+11*PIXEL);
+
+		// Jambe a droite
+		Point jb4 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+11*PIXEL);
+		Point jb3 = new Point(BASE_GAUCHE+10*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb2 = new Point(BASE_GAUCHE+11*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb1 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb6 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
+		
+		// Creer la forme ja
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ja1)
+		.ajouter(ja2)
+		.ajouter(ja3)
+		.ajouter(ja4)
+		.ajouter(ja5)
+		.ajouter(ja6)
+		.couleurDeFond(Couleur.GRIS);
+			
+		// Creer la forme jb
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jb1)
+		.ajouter(jb2)
+		.ajouter(jb3)
+		.ajouter(jb4)
+		.ajouter(jb5)
+		.ajouter(jb6)
+		.couleurDeFond(Couleur.GRIS);
+	}
 	
 	/**
 	 * @author mathieu
