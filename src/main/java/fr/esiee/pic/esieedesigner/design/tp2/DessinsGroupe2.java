@@ -2,6 +2,7 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 
 /**
@@ -24,12 +25,33 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
-		dessiner_cheveux();
+		dessinerCheveux();
 		dessinerTorse();
 		dessinerVisage();
+		dessinerJupe();
+		dessinerJoueDroite();
+		dessinerJoueGauche();
 	}
 
-	public void dessiner_cheveux() {
+	public void dessinerJoueDroite() {
+		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
+		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
+
+	    demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jd1)
+		.ajouter(jd2);
+	}
+	
+	public void dessinerJoueGauche() {
+		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
+		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
+
+	    demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jg1)
+		.ajouter(jg2);
+	}
+	
+	public void dessinerCheveux() {
 		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
 		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
 		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
@@ -174,5 +196,36 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(bouche4)
 		.ajouter(bouche5)
 		.ajouter(bouche6);
+		
+		// == Dessin des deux yeux
+		
+		// Dessin du premier oeil (gauche)
+		Point oeil1 = new Point(ORIGIN + CASE * 6, CASE * 4);
+		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
+		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
+		
+		// Dessin du second oeil (gauche)
+		Point oeil2 = new Point(ORIGIN + CASE * 8, CASE * 4);
+		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
+		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
 	}
+	
+	/**
+	 * Dessiner jupe
+	 */
+	public void dessinerJupe() {
+		// Dessin Jupe
+		Point p1 = new Point(ORIGIN + CASE*3, CASE*11);
+		Point p2 = new Point(ORIGIN + CASE*11, CASE*11);
+		Point p3 = new Point(ORIGIN + CASE*12, CASE*13);
+		Point p4 = new Point(ORIGIN + CASE*2, CASE*13);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.couleurDeFond(Couleur.GRIS);
+	}
+
 }
