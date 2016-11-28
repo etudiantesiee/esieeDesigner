@@ -22,11 +22,16 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Nombre de pixel d'une case
 	 */
 	private static final double CASE = 25;
+	
+	/**
+	 * Point torse_haut_gauche
+	 */
+	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
 
 	/**
 	 * Point cheveux extremité gauche
 	 */
-	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(ORIGIN + CASE*1, CASE*8);
+	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(TORSE_HAUT_GAUCHE.getX() - CASE*2, TORSE_HAUT_GAUCHE.getY());
 	
 	/**
 	 * Point joue extremité gauche exterieur
@@ -34,16 +39,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(ORIGIN + CASE*3, CASE*7);
 	
 	/**
-
-	 * Point torse_haut_gauche
-	 */
-	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
-	
-	/**
 	 * Point joue extremité droite exterieur
 	 */
 	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
-	
 	
 	@Override
 	/**
