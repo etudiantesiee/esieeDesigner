@@ -349,10 +349,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
 		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
 		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
-		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
-		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
-		Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
-		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);//Point 2 de la main
+		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL); //Point 2 du poignet
+		Point coude2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 du coude
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 de l'epaule
 		
 		
 		// On ajoute à la liste des composants à déssiner
@@ -363,7 +363,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .ajouter(main1)
         .ajouter(main2)
         .ajouter(poignet2)
-        .ajouter(aisselle)
+        .ajouter(coude2)
         .ajouter(epaule2)
         .couleurDeFond(Couleur.GRIS);
 		
