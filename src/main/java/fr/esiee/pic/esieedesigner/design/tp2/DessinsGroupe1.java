@@ -249,6 +249,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Creation du corps 
 	 * @author Francois et Daphnee
+	 * @param visageCote3
+	 * @param visageCote4
 	 */
 	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		//Creation de tous les points du corps
@@ -339,6 +341,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
+		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
 		dessinerMains(corps25, corps7);
