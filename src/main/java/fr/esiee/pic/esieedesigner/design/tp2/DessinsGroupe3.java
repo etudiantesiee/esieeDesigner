@@ -12,7 +12,7 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
-    
+	
     
     /**
      * Longueur une case
@@ -70,7 +70,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     private static final double LARGEUR_DES_YEUX = 10;
     
     
-    /**
+    /*
     * 
     * Override method from the extended class
     *
@@ -78,6 +78,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
     * @version 1.0
     * @since   2016-11-28 
     */
+
     @Override
     public void dessiner() {
         // Ajout vos dessins ici
@@ -85,7 +86,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
         dessinerJambe();
 
-
+        dessineBrasGauche(); 
         dessineBrasDroit(); //Ajout du bras droit au dessin
         dessinYeuxContour();
 
@@ -136,110 +137,105 @@ public class DessinsGroupe3 extends CreateurDeForme {
         dessinYeuxContour();
         dessinYeux();
     }
-       
-
-    /**
-     * @author philippe et harrison
-     * Dessin du contour des yeux
-     */
-    public void dessinYeuxContour(){
-        // Initialisation des points
-        Point ptYeux1 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 5*PIXEL);
-        Point ptYeux2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 6*PIXEL);
-        Point ptYeux3 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 7*PIXEL);
-        Point ptYeux4 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 7*PIXEL);
-        Point ptYeux5 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 6*PIXEL);
-        Point ptYeux6 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 7*PIXEL);
-        Point ptYeux7 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 7*PIXEL);
-        Point ptYeux8 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 6*PIXEL);
-        Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);
-        
-        // Création de la forme
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(ptYeux1)
-        .ajouter(ptYeux2)
-        .ajouter(ptYeux3)
-        .ajouter(ptYeux4)
-        .ajouter(ptYeux5)
-        .ajouter(ptYeux6)
-        .ajouter(ptYeux7)
-        .ajouter(ptYeux8)
-        .ajouter(ptYeux9);
-    }
     
-    /**
-     * @author philippe et harrison
-     * Dessin des yeux
-     */
-    public void dessinYeux(){
-        // Dessin oeil droit
-        Point centreOeilDroit = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 6*PIXEL);
-        Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
-        
-        ajouterEllipse(oeilDroit, Couleur.NOIR);
-        
-        // Dessin oeil gauche
-        Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
-        Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
-        
-        ajouterEllipse(oeilGauche, Couleur.NOIR);
-    }
-    
-    /**
-     * @author philippe et harrison
-     * Dessin de la bouche
-     */
-    public void dessinBouche(){
-        // Initialisation des points
-        Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
-        Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
-        Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
-        Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
-        
-        // Création de la forme
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(ptBouche1)
-        .ajouter(ptBouche2)
-        .ajouter(ptBouche3)
-        .ajouter(ptBouche4);
-    }
-    
-    /**
-     * @author philippe et harrison
-     * Dessin du nez
-     */
-    public void dessinNez(){
-        // Initialisation des points
-        Point ptNez1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 8*PIXEL+5);
-        Point ptNez2 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 8*PIXEL);
-        Point ptNez3 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 8*PIXEL+5);
-        
-        // Création de la forme
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(ptNez1)
-        .ajouter(ptNez2)
-        .ajouter(ptNez3)
-        .nePasRelierLesPointsExtreme();
-    }
-    
-    /**
-     * @author philippe et harrison
-     * Dessin du menton
-     */
-    public void dessinMenton(){
-        // Initialisation des points
-        Point ptMenton1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 11*PIXEL+15);
-        Point ptMenton2 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 11*PIXEL+15);
-        
-        // Création de la forme
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(ptMenton1)
-        .ajouter(ptMenton2)
-        .nePasRelierLesPointsExtreme();
-    }
-    
-    
-
+	/**
+	 * @author philippe et harrison
+	 * Dessin du contour des yeux
+	 */
+	public void dessinYeuxContour(){
+		// Initialisation des points
+		Point ptYeux1 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 5*PIXEL);
+		Point ptYeux2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point ptYeux3 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 7*PIXEL);
+		Point ptYeux4 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 7*PIXEL);
+		Point ptYeux5 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point ptYeux6 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 7*PIXEL);
+		Point ptYeux7 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 7*PIXEL);
+		Point ptYeux8 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptYeux1)
+		.ajouter(ptYeux2)
+		.ajouter(ptYeux3)
+		.ajouter(ptYeux4)
+		.ajouter(ptYeux5)
+		.ajouter(ptYeux6)
+		.ajouter(ptYeux7)
+		.ajouter(ptYeux8)
+		.ajouter(ptYeux9);
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin des yeux
+	 */
+	public void dessinYeux(){
+		// Dessin oeil droit
+		Point centreOeilDroit = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 6*PIXEL);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
+		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		
+		// Dessin oeil gauche
+		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
+		
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin de la bouche
+	 */
+	public void dessinBouche(){
+		// Initialisation des points
+		Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptBouche1)
+		.ajouter(ptBouche2)
+		.ajouter(ptBouche3)
+		.ajouter(ptBouche4);
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du nez
+	 */
+	public void dessinNez(){
+		// Initialisation des points
+		Point ptNez1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 8*PIXEL+5);
+		Point ptNez2 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 8*PIXEL);
+		Point ptNez3 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 8*PIXEL+5);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptNez1)
+		.ajouter(ptNez2)
+		.ajouter(ptNez3)
+		.nePasRelierLesPointsExtreme();
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du menton
+	 */
+	public void dessinMenton(){
+		// Initialisation des points
+		Point ptMenton1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 11*PIXEL+15);
+		Point ptMenton2 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 11*PIXEL+15);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptMenton1)
+		.ajouter(ptMenton2)
+		.nePasRelierLesPointsExtreme();
+	}
 
     /**
     * 
@@ -337,24 +333,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
 		
 		// Creer la forme ja
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(ja1)
-		.ajouter(ja2)
-		.ajouter(ja3)
-		.ajouter(ja4)
-		.ajouter(ja5)
-		.ajouter(ja6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(ja1).ajouter(ja2).ajouter(ja3).ajouter(ja4).ajouter(ja5).ajouter(ja6).couleurDeFond(Couleur.GRIS);
 			
 		// Creer la forme jb
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(jb1)
-		.ajouter(jb2)
-		.ajouter(jb3)
-		.ajouter(jb4)
-		.ajouter(jb5)
-		.ajouter(jb6)
-		.couleurDeFond(Couleur.GRIS);
+		demarrerNouveauDessinAvecDesPoints().ajouter(jb1).ajouter(jb2).ajouter(jb3).ajouter(jb4).ajouter(jb5).ajouter(jb6).couleurDeFond(Couleur.GRIS);
 	}
 	
 	/**
@@ -368,10 +350,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
 		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
 		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
-		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
-		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
-		Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
-		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);//Point 2 de la main
+		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL); //Point 2 du poignet
+		Point coude2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 du coude
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL); //Point 2 de l'epaule
 		
 		
 		// On ajoute à la liste des composants à déssiner
@@ -382,36 +364,39 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .ajouter(main1)
         .ajouter(main2)
         .ajouter(poignet2)
-        .ajouter(aisselle)
-        .ajouter(epaule2);
-        
-    }
-    
-    /**
-     * @author mathieu
-     * Dessine le bras Gauche
-     */
-    public void dessineBrasGauche(){
-            
-        //Création des points du bras gauche    
-        Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL);
-        Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
-        Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
-        Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL);
-        Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL);
-        Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
-        Point aisselle = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
-        Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
-        
-        // On ajoute à la liste des composants à déssiner
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(epaule1)
-        .ajouter(coude1)
-        .ajouter(poignet1)
-        .ajouter(main1)
-        .ajouter(main2)
-        .ajouter(poignet2)
-        .ajouter(aisselle)
-        .ajouter(epaule2);
-    }
+        .ajouter(coude2)
+        .ajouter(epaule2)
+        .couleurDeFond(Couleur.GRIS);
+		
+	}
+	
+	/**
+	 * @author mathieu
+	 * Dessine le bras Gauche
+	 */
+	public void dessineBrasGauche(){
+			
+		//Création des points du bras gauche	
+		Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL); //Point 1 de l'épaule
+		Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
+		Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
+		Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
+		Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL); //Point 2 de la main
+		Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
+		Point coude2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
+		Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+		
+		// On ajoute à la liste des composants à déssiner
+		demarrerNouveauDessinAvecDesPoints()
+	    .ajouter(epaule1)
+	    .ajouter(coude1)
+	    .ajouter(poignet1)
+	    .ajouter(main1)
+	    .ajouter(main2)
+	    .ajouter(poignet2)
+	    .ajouter(coude2)
+	    .ajouter(epaule2)
+	    .couleurDeFond(Couleur.GRIS);
+	}
+   
 }
