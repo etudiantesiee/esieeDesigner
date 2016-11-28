@@ -97,26 +97,32 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Point adjacent aux lunettes cote droit
 		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
-		
 		// Dessin de differents points constituant les cheveux
 		demarrerNouveauDessinAvecDesPoints()
+		// Dessin de la pointe gauche
 		.ajouter(pointeGauche1)
 		.ajouter(pointeGauche2)
 		.ajouter(pointeGauche3)
 		.ajouter(pointeGauche4)
+		
+		// Dessin du côté gauche des cheveux
 		.ajouter(touffeGaucheMilieu)
 		.ajouter(touffeGauche1)
 		.ajouter(touffeGauche2)
+		
+		// Dessin du côté droit des cheveux
 		.ajouter(touffeDroite1)
 		.ajouter(touffeDroite2)
 		.ajouter(touffeDroiteMilieu)
+		
+		//Dessin de la pointe droite
 		.ajouter(pointeDroite1)
 		.ajouter(pointeDroite2)
 		.ajouter(pointeDroite3)
 		.ajouter(pointeDroite4)
 		.nePasRelierLesPointsExtreme();
 		
-		// Appel de la fonction dessinant la partie suivante du dessin (les lunettes), en passant en argument les différents points nécessaires
+		// Appel de la fonction dessinant la partie suivante du dessin (les lunettes), en passant en argument les differents points nécessaires
 		dessinerLunettes(pointeGauche1, pointeDroite4, pointeGauche2, pointeDroite3);
 	}
 	
@@ -124,10 +130,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Dessin des lunettes
 	 * 
 	 * @author Naji et Baptiste
-	 * @param pointeGauche1 Point Pointe des cheveux à gauche 1
-	 * @param pointeDroite4 Point Pointe des cheveux à droite 4
-	 * @param pointeGauche2 Point Pointe des cheveux à gauche 2
-	 * @param pointeDroite3 Point Pointe des cheveux à droite 3
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
 		// Bas des lunettes droite bas
@@ -178,7 +180,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
-		// Appel suivant
+		// Appel suivant avec pointeGauche2 et pointeDroite3
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
@@ -186,85 +188,55 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Creation du visage en debutant par le pointeGauche2
 	 * 
 	 * @author JL et Victor
-	 * @param pointeGauche2
-	 * @param pointeDroite3
+	 * @param pointeGauche2 debut visage
+	 * @param pointeDroite3 fin visage
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
-
-		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
-		//On s'appuie de visageCote pour creer visageCote2
         Point visageCote2 = new Point(visageCote.getX(), (visageCote.getY()+ UNITE_VERTICALE));
-        //Creation visageCote3 a partir visageCote2 avec un deplacement horizontal de 2 et vertical de 3
         Point visageCote3 = new Point((visageCote2.getX()+ 3 * UNITE_HORIZONTALE), (visageCote2.getY()+ 3* UNITE_VERTICALE)); 
-        //Creation visageCote4 a partir visageCote3 avec un deplacement horizontal de 2 et vertical de 0
         Point visageCote4 = new Point ((visageCote3.getX()+ 2 * UNITE_HORIZONTALE), (visageCote3.getY()));
-        //Creation visageCote5 a partir visageCote4 avec un deplacement horizontal de 3 et vertical de 3
         Point visageCote5 = new Point ((visageCote4.getX()+ 3 * UNITE_HORIZONTALE), (visageCote4.getY()- 3* UNITE_VERTICALE));
-        //Creation visageCote6 a partir visageCote3 avec un deplacement horizontal de 0 et vertical de 0
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
         //bouche
-        
-        //On part du pointeGauche2
         Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
-        //Creation bouche2 a partir bouche avec un deplacement horizontal de 2 et vertical de 0
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
-        
-        //On part du pointeGauche2
         Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
-        //Creation nezGauche a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
-        //Creation nezDroite a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
-        //Trace visageCote
         .ajouter(visageCote)
-        //Trace visageCote2
         .ajouter(visageCote2)
-        //Trace visageCote3
         .ajouter(visageCote3)
-        //Trace visageCote4
         .ajouter(visageCote4)
-        //Trace visageCote5
         .ajouter(visageCote5)
-        //Trace visageCote6
         .ajouter(visageCote6)
-        //Permet de ne pas relier les lignes
         .nePasRelierLesPointsExtreme();
         
         //dessin bouche
         demarrerNouveauDessinAvecDesPoints()
-        //Trace bouche
         .ajouter(bouche)
-        //Trace bouche2
         .ajouter(bouche2);
         
         //dessin nez
 		demarrerNouveauDessinAvecDesPoints()
-		//Trace nezGauche
 		.ajouter(nezGauche)
-		//Trace nezCentre
 		.ajouter(nezCentre)
-		//Trace nezDroite
 		.ajouter(nezDroite)
-		//Permet de ne pas relier les lignes
 		.nePasRelierLesPointsExtreme();
-		
-		//Appelle la fonction corps
+        
 		dessinerCorps(visageCote3, visageCote4);
 	}
 	
 	/**
 	 * Creation du corps 
 	 * @author Francois et Daphnee
-	 * @param visageCote3
-	 * @param visageCote4
 	 */
 	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		//Creation de tous les points du corps
@@ -355,9 +327,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
-		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
+		//appel de la fonction de la fonction utilisant les parametres du corps
 		dessinerMains(corps25, corps7);
 	}
 	
