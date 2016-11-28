@@ -38,6 +38,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final Point OEIL2_ORIGINE = new Point(ORIGIN + CASE * 8, CASE * 4);
 	
+	private static final Point BOUCHE_ORIGINE = new Point(ORIGIN + CASE * 4, CASE * 6);
+	
 	@Override
 	public void dessiner() {
 		dessinerCheveux();
@@ -224,12 +226,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// == Dessin de la bouche
 		
 		// Déclaration des points
-		Point bouche1 = new Point(ORIGIN + CASE * 4, CASE * 6);
-		Point bouche2 = new Point(ORIGIN + CASE * 4, CASE * 7);
-		Point bouche3 = new Point(ORIGIN + CASE * 6, CASE * 8);
-		Point bouche4 = new Point(ORIGIN + CASE * 8, CASE * 8);
-		Point bouche5 = new Point(ORIGIN + CASE * 10, CASE * 7);
-		Point bouche6 = new Point(ORIGIN + CASE * 10, CASE * 6);
+		Point bouche1 = BOUCHE_ORIGINE;
+		Point bouche2 = new Point(bouche1.getX() + CASE * 0, bouche1.getY() + CASE * 1);
+		Point bouche3 = new Point(bouche2.getX() + CASE * 2, bouche2.getY() + CASE * 1);
+		Point bouche4 = new Point(bouche3.getX() + CASE * 2, bouche3.getY() + CASE * 0);
+		Point bouche5 = new Point(bouche4.getX() + CASE * 2, bouche4.getY() + CASE * (-1));
+		Point bouche6 = new Point(bouche5.getX() + CASE * 0, bouche5.getY() + CASE * (-1));
 		
 		// Dessin trait de la bouche
 		demarrerNouveauDessinAvecDesPoints()
