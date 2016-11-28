@@ -67,7 +67,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Fonction pour dessiner le visage.
+	 * Fonction pour dessiner le visage
 	 */
 	public void dessinerVisage() {
 		
