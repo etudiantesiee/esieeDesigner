@@ -50,23 +50,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
-		// Ajout vos dessins ici
-		// Pensez à désactiver les dessins de la démo 
-		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		// Dessin du corps
 		dessinerCorps();
+		// Dessin des mains
 		dessinerMains();
+		// Dessin des lunettes
 		dessinerLunettes();
+		// Dessin des cheveux
 		dessinerCheveux();
+		// Dessin Visage
 		dessinerVisage();
-		
-//		Point origine1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-//		Point origine2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-//		Point origine3 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-//		
-//		demarrerNouveauDessinAvecDesPoints()
-//		.ajouter(origine1)
-//		.ajouter(origine2)
-//		.ajouter(origine3);
 	}
 	
 	/**
