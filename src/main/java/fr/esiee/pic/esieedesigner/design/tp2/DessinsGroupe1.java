@@ -266,9 +266,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 */
 	public void dessinerMains(Point mainGauche, Point mainDroite) {
 		// Main gauche
-		dessinerMain(new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
+		dessinerMain(new Point(mainGauche.getX(), mainGauche.getY()));
 		// Main droite
-		dessinerMain(new Point((ORIGIN_X + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
+		dessinerMain(new Point(mainDroite.getX(), mainDroite.getY()));
 	}
 	
 	/**
