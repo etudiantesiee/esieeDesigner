@@ -134,17 +134,21 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Naji et Baptiste
 	 */
 	public void dessinerLunettes() {
+		// Haut des lunettes
 		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
 		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
 		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		
+		// Bas des lunettes
 		Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		Point lunetteBasDroiteBas = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
 		Point lunetteBasGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		Point lunetteBasGaucheBas = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
 		Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		
+		// Dessin des lunettes
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(lunetteHautGaucheGauche)
 		.ajouter(lunetteHautGaucheHaut)
@@ -158,14 +162,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(lunetteBasGaucheGauche)
 		.couleurDeFond(Couleur.GRIS);
 		
+		// Oeil gauche
 		Point centreOeilGauche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
+		// Dessin oeil gauche
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
+		// Oeil droit
 		Point centreOeilDroit = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
+		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 	}
 	
