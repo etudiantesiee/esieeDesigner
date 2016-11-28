@@ -335,6 +335,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	/**
 	 *  Dessine Mains
+	 *  
+	 * @author Naji et Baptiste
+	 * @param mainGauche Point point gauche de la main gauche
+	 * @param mainDroite Point point gauche de la main droite
 	 */
 	public void dessinerMains(Point mainGauche, Point mainDroite) {
 		// Main gauche
@@ -345,6 +349,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	/**
 	 * @param pointHautGauche
+	 * @author Naji et Baptiste
 	 */
 	public void dessinerMain(Point pointHautGauche) {
 		// Points de la main
