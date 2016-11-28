@@ -69,6 +69,11 @@ public class DessinsGroupe3 extends CreateurDeForme {
      */
     private static final double LARGEUR_DES_YEUX = 10;
     
+    /**
+     * Largeur des yeux
+     */
+    private static final Point pointBasBrasGauche = new Point(64*PIXEL, 30*PIXEL);
+
     
     /*
     * 
