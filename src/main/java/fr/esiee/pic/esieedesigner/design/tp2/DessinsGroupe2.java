@@ -220,6 +220,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Fonction pour dessiner le visage
 	 * Ordre torse_haut_gauche --> bouche --> nez --> yeux
+	 * 
+	 * @author Kaïl Aprahamian, Mehdi Houacine
 	 */
 	public void dessinerVisage() {
 		
