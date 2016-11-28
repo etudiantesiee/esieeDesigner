@@ -180,7 +180,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
-		// Appel suivant
+		// Appel suivant avec pointeGauche2 et pointeDroite3
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
@@ -325,6 +325,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps28)
 		.couleurDeFond(Couleur.GRIS);
 		
+		//appel de la fonction de la fonction utilisant les parametres du corps
 		dessinerMains(corps25, corps7);
 	}
 	
