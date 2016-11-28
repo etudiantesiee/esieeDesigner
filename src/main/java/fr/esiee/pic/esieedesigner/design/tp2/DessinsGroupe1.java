@@ -180,7 +180,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
-		
+
 		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
 		//On s'appuie de visageCote pour creer visageCote2
@@ -229,16 +229,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
         
         //dessin bouche
         demarrerNouveauDessinAvecDesPoints()
+        //Trace bouche
         .ajouter(bouche)
+        //Trace bouche2
         .ajouter(bouche2);
         
         //dessin nez
 		demarrerNouveauDessinAvecDesPoints()
+		//Trace nezGauche
 		.ajouter(nezGauche)
+		//Trace nezCentre
 		.ajouter(nezCentre)
+		//Trace nezDroite
 		.ajouter(nezDroite)
+		//Permet de ne pas relier les lignes
 		.nePasRelierLesPointsExtreme();
-        
+		
+		//Appelle la fonction corps
 		dessinerCorps(visageCote3, visageCote4);
 	}
 	
