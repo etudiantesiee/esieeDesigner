@@ -65,20 +65,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerCheveux() {
 
 		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
-		Point pointeGauche2 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 6) * UNITE_VERTICALE);
-		Point pointeGauche3 = new Point((ORIGINE.getX() + 2) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeGauche4 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point touffeGaucheMilieu = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGINE.getY() + 3) * UNITE_VERTICALE);
-		Point touffeGauche1 = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGINE.getY() + 1) * UNITE_VERTICALE);
-		Point touffeGauche2 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, ORIGINE.getY() * UNITE_VERTICALE);
-		Point touffeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, ORIGINE.getY() * UNITE_VERTICALE);
-		Point touffeDroite2 = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGINE.getY() + 1) * UNITE_VERTICALE);
-		Point touffeDroiteMilieu = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGINE.getY() + 3) * UNITE_VERTICALE);
-		Point pointeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeDroite2 = new Point((ORIGINE.getX() + 12) * UNITE_HORIZONTALE, (ORIGINE.getY() + 7) * UNITE_VERTICALE);
-		Point pointeDroite3 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGINE.getY() + 6) * UNITE_VERTICALE);
-		Point pointeDroite4 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
-		
+		Point pointeGauche2 = new Point(pointeGauche1.getX(), pointeGauche1.getY() + (2 * UNITE_VERTICALE));
+		Point pointeGauche3 = new Point(pointeGauche2.getX() - (1 * UNITE_HORIZONTALE), pointeGauche2.getY() + (1 * UNITE_VERTICALE));
+		Point pointeGauche4 = new Point(pointeGauche3.getX() - (1 * UNITE_HORIZONTALE), pointeGauche3.getY());
+		Point touffeGaucheMilieu = new Point(pointeGauche4.getX() - (1 * UNITE_HORIZONTALE), pointeGauche4.getY() - (4 * UNITE_VERTICALE));
+		Point touffeGauche1 = new Point(touffeGaucheMilieu.getX(), touffeGaucheMilieu.getY() - (2 * UNITE_VERTICALE));
+		Point touffeGauche2 = new Point(touffeGauche1.getX() + (1 * UNITE_HORIZONTALE), touffeGauche1.getY() - (1 * UNITE_VERTICALE));
+		Point touffeDroite1 = new Point(touffeGauche2.getX() + (12 * UNITE_HORIZONTALE), touffeGauche2.getY());
+		Point touffeDroite2 = new Point(touffeDroite1.getX() + (1 * UNITE_HORIZONTALE), touffeDroite1.getY() + (1 * UNITE_VERTICALE));
+		Point touffeDroiteMilieu = new Point(touffeDroite2.getX(), touffeDroite2.getY() + (2 * UNITE_VERTICALE));
+		Point pointeDroite1 = new Point(touffeDroiteMilieu.getX() - (1 * UNITE_HORIZONTALE), touffeDroiteMilieu.getY() + (4 * UNITE_VERTICALE));
+		Point pointeDroite2 = new Point(pointeDroite1.getX() - (1 * UNITE_HORIZONTALE), pointeDroite1.getY());
+		Point pointeDroite3 = new Point(pointeDroite2.getX() - (1 * UNITE_HORIZONTALE), pointeDroite2.getY() - (1 * UNITE_VERTICALE));
+		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pointeGauche1)
@@ -164,9 +163,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
-        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
-        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
+        Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
+        Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
