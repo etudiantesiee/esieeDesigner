@@ -328,54 +328,54 @@ public class DessinsGroupe3 extends CreateurDeForme {
         Point ja6 = new Point(BASE_GAUCHE+4*PIXEL,BASE_HAUT+13*PIXEL);
         Point ja5 = new Point(BASE_GAUCHE+5*PIXEL,BASE_HAUT+11*PIXEL);
 
-        // Jambe a droite
-        Point jb4 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+11*PIXEL);
-        Point jb3 = new Point(BASE_GAUCHE+10*PIXEL,BASE_HAUT+13*PIXEL);
-        Point jb2 = new Point(BASE_GAUCHE+11*PIXEL,BASE_HAUT+14*PIXEL);
-        Point jb1 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+14*PIXEL);
-        Point jb6 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+13*PIXEL);
-        Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
-        
-        // Creer la forme ja
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(ja1)
-        .ajouter(ja2)
-        .ajouter(ja3)
-        .ajouter(ja4)
-        .ajouter(ja5)
-        .ajouter(ja6)
-        .couleurDeFond(Couleur.GRIS);
-            
-        // Creer la forme jb
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(jb1)
-        .ajouter(jb2)
-        .ajouter(jb3)
-        .ajouter(jb4)
-        .ajouter(jb5)
-        .ajouter(jb6)
-        .couleurDeFond(Couleur.GRIS);
-    }
-    
-    /**
-     * @author mathieu
-     * Dessine le bras Droit
-     */
-    public void dessineBrasDroit(){
-        
-        //Création des points du bras droit
-        Point epaule1 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
-        Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL);
-        Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
-        Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL);
-        Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
-        Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
-        Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
-        Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
-        
-        
-        // On ajoute à la liste des composants à déssiner
-        demarrerNouveauDessinAvecDesPoints()
+		// Jambe a droite
+		Point jb4 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+11*PIXEL);
+		Point jb3 = new Point(BASE_GAUCHE+10*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb2 = new Point(BASE_GAUCHE+11*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb1 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb6 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
+		
+		// Creer la forme ja
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ja1)
+		.ajouter(ja2)
+		.ajouter(ja3)
+		.ajouter(ja4)
+		.ajouter(ja5)
+		.ajouter(ja6)
+		.couleurDeFond(Couleur.GRIS);
+			
+		// Creer la forme jb
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jb1)
+		.ajouter(jb2)
+		.ajouter(jb3)
+		.ajouter(jb4)
+		.ajouter(jb5)
+		.ajouter(jb6)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	/**
+	 * @author mathieu
+	 * Dessine le bras Droit
+	 */
+	public void dessineBrasDroit(){
+		
+		//Création des points du bras droit
+		Point epaule1 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL); //Point 1 de l'épaule
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 5*PIXEL); //Point 1 du coude
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL); //Point 1 du poignet
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 3*PIXEL); //Point 1 de la main
+		Point main2 = new Point(BASE_DROITE - 4*PIXEL, BASE_BAS - 3*PIXEL);
+		Point poignet2 = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 4*PIXEL);
+		Point aisselle = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 5*PIXEL);
+		Point epaule2 = new Point(BASE_DROITE - 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+		
+		
+		// On ajoute à la liste des composants à déssiner
+    	demarrerNouveauDessinAvecDesPoints()
         .ajouter(epaule1)
         .ajouter(coude1)
         .ajouter(poignet1)
