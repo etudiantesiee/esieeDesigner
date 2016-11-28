@@ -55,24 +55,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
-		// Dessin du corps
-		dessinerCorps();
-		// Dessin des mains
-		dessinerMains();
-		// Dessin des lunettes
-		dessinerLunettes();
 		// Dessin des cheveux
 		dessinerCheveux();
-		// Dessin Visage
-		dessinerVisage();
 	}
 	
 	/**
 	 * Thomas et Eve
 	 */
 	public void dessinerCheveux() {
-		
-		Point pointeGauche1 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+
+		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
 		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
 		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
 		Point pointeGauche4 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
@@ -105,12 +97,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeDroite4)
 		.nePasRelierLesPointsExtreme();
 		
+		dessinerLunettes(pointeGauche1, pointeDroite4, pointeGauche2, pointeDroite3);
 	}
 	
 	/**
 	 * Naji et Baptiste
 	 */
-	public void dessinerLunettes() {
+	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
 		// Haut des lunettes
 		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
@@ -152,12 +145,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		
+		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
 	/**
 	 * JL et Victor
 	 */
-	public void dessinerVisage() {
+	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
 		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
         Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
@@ -197,12 +192,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(nezDroite)
 		.nePasRelierLesPointsExtreme();
         
+		dessinerCorps(visageCote3, visageCote4);
 	}
 	
 	/**
 	 * François et Daphnée
 	 */
-	public void dessinerCorps() {
+	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		Point corps1 = new Point((ORIGIN_X+3) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
 		Point corps2 = new Point((ORIGIN_X+4) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
 		Point corps3 = new Point((ORIGIN_X+5) * UNITE_HORIZONTALE, (ORIGIN_Y+11) * UNITE_VERTICALE);
@@ -262,13 +258,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
-		.couleurDeFond(Couleur.GRIS);;
+		.couleurDeFond(Couleur.GRIS);
+		
+		dessinerMains(corps7, corps17);
 	}
 	
 	/**
-	 * 
+	 *  Dessine Mains
 	 */
-	public void dessinerMains() {
+	public void dessinerMains(Point mainGauche, Point mainDroite) {
 		// Main gauche
 		dessinerMain(new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
 		// Main droite
