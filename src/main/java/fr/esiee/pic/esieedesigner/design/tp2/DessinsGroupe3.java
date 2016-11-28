@@ -151,15 +151,15 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeuxContour(){
 		// Initialisation des points
-		Point ptYeux1 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 5*PIXEL);
-		Point ptYeux2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 6*PIXEL);
-		Point ptYeux3 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 7*PIXEL);
-		Point ptYeux4 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 7*PIXEL);
-		Point ptYeux5 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 6*PIXEL);
-		Point ptYeux6 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 7*PIXEL);
-		Point ptYeux7 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 7*PIXEL);
-		Point ptYeux8 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 6*PIXEL);
-		Point ptYeux9 = new Point(BASE_GAUCHE + 10*PIXEL, BASE_HAUT + 5*PIXEL);
+		Point ptYeux1 = new Point(pointBasBrasGauche.getX()+3*PIXEL,pointBasBrasGauche.getY()-6*PIXEL);
+		Point ptYeux2 = new Point(ptYeux1.getX(),ptYeux1.getY()+1*PIXEL);
+		Point ptYeux3 = new Point(ptYeux2.getX()+1*PIXEL,ptYeux2.getY()+1*PIXEL);
+		Point ptYeux4 = new Point(ptYeux3.getX()+1*PIXEL,ptYeux3.getY());
+		Point ptYeux5 = new Point(ptYeux4.getX()+1*PIXEL,ptYeux4.getY()-1*PIXEL);
+		Point ptYeux6 = new Point(ptYeux5.getX()+1*PIXEL,ptYeux5.getY()+1*PIXEL);
+		Point ptYeux7 = new Point(ptYeux6.getX()+1*PIXEL,ptYeux6.getY());
+		Point ptYeux8 = new Point(ptYeux7.getX()+1*PIXEL,ptYeux7.getY()-1*PIXEL);
+		Point ptYeux9 = new Point(ptYeux8.getX(),ptYeux8.getY()-1*PIXEL);
 		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
