@@ -49,15 +49,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerCheveux();
 		dessinerVisage();
 		
-
-		Point origine1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point origine2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point origine3 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-		
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(origine1)
-		.ajouter(origine2)
-		.ajouter(origine3);
+//		Point origine1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+//		Point origine2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+//		Point origine3 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+//		
+//		demarrerNouveauDessinAvecDesPoints()
+//		.ajouter(origine1)
+//		.ajouter(origine2)
+//		.ajouter(origine3);
 	}
 	
 	/**
@@ -138,6 +137,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Thomas et Eve
 	 */
 	public void dessinerCheveux() {
+		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point pointeGauche1 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
 		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
@@ -155,6 +159,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(lunetteHautDroiteDroite)
+		.ajouter(lunetteHautDroiteHaut)
+		.ajouter(lunetteHautGaucheDroite)
+		.ajouter(lunetteHautGaucheHaut)
+		.ajouter(lunetteHautGaucheGauche)
 		.ajouter(pointeGauche1)
 		.ajouter(pointeGauche2)
 		.ajouter(pointeGauche3)
