@@ -3,6 +3,8 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 
 /**
@@ -31,7 +33,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	
 	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
 	
-	/*Cette fonction dessine le contour des yeux*/
+	/**
+	 * Longueur des yeux
+	 */
+	private static final double LONGUEUR_DES_YEUX = 10;
+	
+	/**
+	 * Largeur des yeux
+	 */
+	private static final double LARGEUR_DES_YEUX = 10;
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du contour des yeux
+	 */
 	public void dessinYeuxContour(){
 		// Initialisation des points
 		Point ptYeux1 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 5*PIXEL);
@@ -55,7 +70,24 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(ptYeux7)
 		.ajouter(ptYeux8)
 		.ajouter(ptYeux9);
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin des yeux
+	 */
+	public void dessinYeux(){
+		// Dessin oeil droit
+		Point centreOeilDroit = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 6*PIXEL);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		
+		// Dessin oeil gauche
+		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
+		
+		ajouterEllipse(oeilGauche, Couleur.JAUNE);
 	}
 	
 	@Override
@@ -97,7 +129,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(tete11)
 		.ajouter(tete12);
 		dessinYeuxContour();
-		
+		dessinYeux();
 	}
 	
 	public void dessinerCheveux(){
