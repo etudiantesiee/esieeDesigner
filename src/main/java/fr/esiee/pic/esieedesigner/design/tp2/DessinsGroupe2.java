@@ -8,7 +8,12 @@ import fr.esiee.pic.esieedesigner.api.shapes.Point;
 /**
  * Le groupe 2 ajoutera ses dessins dans cette classe.
  * 
- * @author etudiant
+ * @author Eric CHAN FSEUNG
+ * @author Valentin BELIN
+ * @author Arnaud LE
+ * @author Angelique PHAN
+ * @author Kail APRAHAMIAN
+ * @author Mehdi HOUACINE
  *
  */
 public class DessinsGroupe2 extends CreateurDeForme {
@@ -30,16 +35,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Point cheveux extremité gauche
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point CHEVEUX_EXTREMITE_GAUCHE = new Point(TORSE_HAUT_GAUCHE.getX() - CASE*2, TORSE_HAUT_GAUCHE.getY());
 	
 	/**
 	 * Point joue extremité gauche exterieur
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX(), TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	/**
 	 * Point joue extremité droite exterieur
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*8, TORSE_HAUT_GAUCHE.getY() - CASE);
 	
@@ -61,8 +72,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// Dessin de la jupe
 		dessinerJupe();
 		
-		// Dessin des joues
+		// Dessin de la joue droite
 		dessinerJoueDroite();
+		
+		// Dessin de la joue gauche
 		dessinerJoueGauche();
 		
 		// Dessin des mains
@@ -76,6 +89,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Fonction qui dessine la joue droite
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerJoueDroite() {
 		
@@ -93,6 +108,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Fonction qui dessine la joue gauche
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerJoueGauche() {
 		
@@ -110,6 +127,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Fonction qui dessine les cheveux
+	 * @author Eric CHAN FSEUNG
+	 * @author Valentin BELIN
 	 */
 	public void dessinerCheveux() {
 		
@@ -301,7 +320,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessiner main droite
 	 */
 	public void dessinerMainDroite() {
-		// Dessin main droite.
+		// Dessin main droite
 		Point p1 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*10, TORSE_HAUT_GAUCHE.getY() + CASE*2);
 		Point p2 = new Point(p1.getX() + CASE*1, p1.getY() + CASE*1);
 		Point p3 = new Point(p2.getX() - CASE*1, p2.getY());
