@@ -37,6 +37,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Diametre des yeux
 	 */
 	private static final double DIAMETRE_DES_YEUX = 7;
+	
+	/**
+	 * Nombre de doigts, permet de calculer le nombre de traits séparant les doigts
+	 */
+	private static final double NOMBRE_DE_DOIGT = 4;
+	
+	/**
+	 * Longueur des doigts du manga
+	 */
+	private static final double LARGEUR_DOIGT = 10;
 
 	@Override
 	public void dessiner() {
@@ -128,7 +138,39 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * 
 	 */
 	public void dessinerMains() {
+		// Main gauche
+		dessinerMain(new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
+		// Main droite
+		dessinerMain(new Point((ORIGIN_X + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
+	}
+	
+	/**
+	 * @param pointHautGauche
+	 */
+	public void dessinerMain(Point pointHautGauche) {
+		// Points de la main
+		Point pointHautDroite = new Point(pointHautGauche.getX() + (1 * UNITE_HORIZONTALE), pointHautGauche.getY());
+		Point pointBasDroite = new Point(pointHautGauche.getX() + (1 * UNITE_HORIZONTALE), pointHautGauche.getY() + (1 * UNITE_HORIZONTALE));
+		Point pointBasGauche = new Point(pointHautGauche.getX(), pointHautGauche.getY() + (1 * UNITE_HORIZONTALE));
 		
+		// Dessin de la main
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(pointHautGauche)
+		.ajouter(pointHautDroite)
+		.ajouter(pointBasDroite)
+		.ajouter(pointBasGauche);
+		
+		double longueurDoigt = (pointHautDroite.getX() - pointHautGauche.getX()) / NOMBRE_DE_DOIGT;
+		for (int i = 0; i < NOMBRE_DE_DOIGT; i++) {
+			// Points des doigts
+			Point separateurDoigtDroitBas = new Point(pointBasGauche.getX() + (longueurDoigt * i), pointBasGauche.getY());
+			Point separateurDoigtDRoitHaut = new Point(separateurDoigtDroitBas.getX(), separateurDoigtDroitBas.getY() - LARGEUR_DOIGT);
+			
+			// Dessin du doigt courant droit
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(separateurDoigtDroitBas)
+			.ajouter(separateurDoigtDRoitHaut);
+		}
 	}
 	
 	/**
