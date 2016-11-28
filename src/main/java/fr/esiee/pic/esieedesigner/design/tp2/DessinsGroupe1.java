@@ -115,7 +115,30 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * JL et Victor
 	 */
 	public void dessinerVisage() {
-		
+		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+        Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote)
+        .ajouter(visageCote2);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote2)
+        .ajouter(visageCote3);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote3)
+        .ajouter(visageCote4);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote4)
+        .ajouter(visageCote5);
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote5)
+        .ajouter(visageCote6);
+        
 	}
 
 }
