@@ -90,14 +90,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // Pensez à désactiver les dessins de la démo 
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
-        //Ajout du bras droit au dessin
+        
 		 
 		// Ajout du bras gauche au dessin
 		Point brasgauche = dessineBrasGauche(POINT_BAS_BRAS_GAUCHE); 
 		dessinYeuxContour();
 
+	
+		dessinerJambeDroite(POINT_BAS_BRAS_GAUCHE);
+        dessinerJambeGauche(POINT_BAS_BRAS_GAUCHE);
+
+
 		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
 		Point brashautDroit = dessinerTeteHaut(brasGauche);
+		//Ajout du bras droit au dessin
 		Point brashautDroit2 = dessineBrasDroit(brashautDroit);
 		
         dessinYeux();
@@ -239,13 +245,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeux(){
 		// Dessin oeil droit
-		Point centreOeilDroit = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
+		Point centreOeilDroit = new Point(POINT_BAS_BRAS_GAUCHE.getX()+7*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-5*PIXEL);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
 		// Dessin oeil gauche
-		Point centreOeilGauche = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 6*PIXEL);
+		Point centreOeilGauche = new Point(POINT_BAS_BRAS_GAUCHE.getX()+5*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-5*PIXEL);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, LONGUEUR_DES_YEUX, LARGEUR_DES_YEUX);
 		
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
@@ -257,10 +263,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinBouche(){
 		// Initialisation des points
-		Point ptBouche1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+3*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-6*PIXEL);
-		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
-		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
-		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+4*PIXEL,POINT_BAS_BRAS_GAUCHE.getY()-2*PIXEL);
+		Point ptBouche2 = new Point(ptBouche1.getX()+1*PIXEL,ptBouche1.getY()+2*PIXEL);
+		Point ptBouche3 = new Point(ptBouche2.getX()+2*PIXEL,ptBouche2.getY());
+		Point ptBouche4 = new Point(ptBouche3.getX()+1*PIXEL,ptBouche3.getY()-2*PIXEL);
 		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
@@ -378,7 +384,55 @@ public class DessinsGroupe3 extends CreateurDeForme {
         .couleurDeFond(Couleur.GRIS);
     }
     
+
+    /**
+    * 
+    * Method used to draw the legs
+    *
+    * @author  idom inigo
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public Point dessinerJambeGauche(final  Point paramPoint ) {
+        // Jambe a gauche
+    	
+        Point ja4 = new Point(paramPoint.getX(),paramPoint.getY());
+        Point ja3 = new Point(paramPoint.getX()-1*PIXEL,paramPoint.getY()+1*PIXEL);
+        Point ja2 = new Point(paramPoint.getX(),paramPoint.getY()+2*PIXEL);
+        Point ja1 = new Point(paramPoint.getX()-3*PIXEL,paramPoint.getY()+2*PIXEL);
+        Point ja6 = new Point(paramPoint.getX()-2*PIXEL,paramPoint.getY()+1*PIXEL);
+        Point ja5 = new Point(paramPoint.getX()-1*PIXEL,paramPoint.getY()-1*PIXEL);
+        
+		// Creer la forme ja
+		demarrerNouveauDessinAvecDesPoints().ajouter(ja1).ajouter(ja2).ajouter(ja3).ajouter(ja4).ajouter(ja5).ajouter(ja6).couleurDeFond(Couleur.GRIS);
     
+        return ja5;
+
+    }
+    
+    /**
+     * 
+     * Method used to draw the legs
+     *
+     * @author  idom inigo
+     * @version 1.0
+     * @since   2016-11-28 
+     */
+     public Point dessinerJambeDroite(final  Point paramPoint ) {
+ 		// Jambe a droite
+ 		Point jb4 = new Point(paramPoint.getX(),paramPoint.getY());
+ 		Point jb3 = new Point(paramPoint.getX()+1*PIXEL,paramPoint.getY()+2*PIXEL);
+ 		Point jb2 = new Point(paramPoint.getX()+2*PIXEL,paramPoint.getY()+3*PIXEL);
+ 		Point jb1 = new Point(paramPoint.getX()-1*PIXEL,paramPoint.getY()+3*PIXEL);
+ 		Point jb6 = new Point(paramPoint.getX(),paramPoint.getY()+2*PIXEL);
+ 		Point jb5 = new Point(paramPoint.getX()-1*PIXEL,paramPoint.getY()+1*PIXEL);
+ 		
+ 		// Creer la forme jb
+ 		demarrerNouveauDessinAvecDesPoints().ajouter(jb1).ajouter(jb2).ajouter(jb3).ajouter(jb4).ajouter(jb5).ajouter(jb6).couleurDeFond(Couleur.GRIS);
+ 		
+ 		return jb5;
+ 	}
+
 	
 	/**
 	 * @author mathieu
