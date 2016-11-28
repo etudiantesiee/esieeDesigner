@@ -12,35 +12,64 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
-    
-    private static final int PIXEL = 25;
-    
-    private static final int LONGUEUR_PAGE = 77 * PIXEL;
-    
-    private static final int LARGEUR_PAGE = 41 * PIXEL;
-    
-    private static final int LARGEUR_PERSO = 14 * PIXEL;
-    
-    private static final int LONGUEUR_PERSO = 14 * PIXEL;
-
-    private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
-    
-    private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
-    
-    private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
-    
-    private static final int BASE_BAS  = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
-    
-    /**
-     * Longueur des yeux
-     */
-    private static final double LONGUEUR_DES_YEUX = 10;
-    
-    /**
-     * Largeur des yeux
-     */
-    private static final double LARGEUR_DES_YEUX = 10;
-    
+	
+	
+	/**
+	 * Longueur une case
+	 */
+	private static final int PIXEL = 25;
+	
+	/**
+	 * Longueur page entière
+	 */
+	private static final int LONGUEUR_PAGE = 77 * PIXEL;
+	
+	/**
+	 * Largeur page entière
+	 */
+	private static final int LARGEUR_PAGE = 41 * PIXEL;
+	
+	/**
+	 * Largeur du personnage (cadre)
+	 */
+	private static final int LARGEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Longueur du personnage (cadre)
+	 */
+	private static final int LONGUEUR_PERSO = 14 * PIXEL;
+	
+	/**
+	 * Base Haut représente la composante y du cadre à partir du haut
+	 */
+	private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Bas représente la composante y du cadre à partir du bas
+	 */
+	private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
+	
+	/**
+	 * Base Droite représente la composante x du cadre à partir du droite
+	 */
+	private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
+	
+	/**
+	 * Base Gauche représente la composante x du cadre à partir du gauche
+	 */
+	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
+	
+	/**
+	 * Longueur des yeux
+	 */
+	private static final double LONGUEUR_DES_YEUX = 10;
+	
+	/**
+	 * Largeur des yeux
+	 */
+	private static final double LARGEUR_DES_YEUX = 10;
+	
+	
     /**
     * 
     * Override method from the extended class
@@ -107,7 +136,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
         dessinYeuxContour();
         dessinYeux();
     }
-   
+   	
+
 	/**
 	 * @author philippe et harrison
 	 * Dessin du contour des yeux
