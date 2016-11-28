@@ -99,6 +99,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Thomas et Eve
 	 */
 	public void dessinerCheveux() {
+		Point touffeGaucheMilieu = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point touffeGauche1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+		Point touffeGauche2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+		
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(touffeGaucheMilieu)
+		.ajouter(touffeGauche1)
+		.ajouter(touffeGauche2);
 		
 	}
 	
