@@ -104,19 +104,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Naji et Baptiste
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
+		// Bas des lunettes
+		//Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE); //pointeDroite4
+		Point lunetteBasDroiteBas = new Point(pointeDroite4.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY() + 1 * UNITE_VERTICALE);
+		Point lunetteBasGaucheDroite = new Point(lunetteBasDroiteBas.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY());
+		Point lunetteBasGaucheBas = new Point(pointeGauche1.getX() + 2 * UNITE_HORIZONTALE, pointeGauche1.getY() + 1 * UNITE_VERTICALE);
+		//Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE); //pointeGauche1
+		
 		// Haut des lunettes
 		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
 		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
 		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
 		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		
-		// Bas des lunettes
-		Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Point lunetteBasDroiteBas = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-		Point lunetteBasGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Point lunetteBasGaucheBas = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-		Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		
 		// Dessin des lunettes
 		demarrerNouveauDessinAvecDesPoints()
@@ -125,11 +125,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(lunetteHautGaucheDroite)
 		.ajouter(lunetteHautDroiteHaut)
 		.ajouter(lunetteHautDroiteDroite)
-		.ajouter(lunetteBasDroiteDroite)
+		.ajouter(pointeDroite4)
 		.ajouter(lunetteBasDroiteBas)
 		.ajouter(lunetteBasGaucheDroite)
 		.ajouter(lunetteBasGaucheBas)
-		.ajouter(lunetteBasGaucheGauche)
+		.ajouter(pointeGauche1)
 		.couleurDeFond(Couleur.GRIS);
 		
 		// Oeil gauche
