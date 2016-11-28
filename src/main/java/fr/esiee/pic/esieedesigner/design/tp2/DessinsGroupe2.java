@@ -24,6 +24,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		dessinerTorse();
+		dessinerVisage();
 	}
 	
 	/**
