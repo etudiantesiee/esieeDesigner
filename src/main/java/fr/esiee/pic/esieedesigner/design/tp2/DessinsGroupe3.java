@@ -29,7 +29,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	
 	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
 	
-	/*Cette fonction dessine le contour des yeux*/
+	/**
+	 * @author philippe et harrison
+	 * Dessin du contour des yeux
+	 */
 	public void dessinYeuxContour(){
 		// Initialisation des points
 		Point ptYeux1 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_HAUT + 5*PIXEL);
@@ -53,7 +56,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(ptYeux7)
 		.ajouter(ptYeux8)
 		.ajouter(ptYeux9);
-		
 	}
 	
 	@Override
