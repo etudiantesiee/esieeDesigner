@@ -192,7 +192,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * @param pointeDroite3 fin visage
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
+
+		//Menton
+
+		//On part du pointeGauche2
+
 		//menton
+
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
         Point visageCote2 = new Point(visageCote.getX(), (visageCote.getY()+ UNITE_VERTICALE));
         Point visageCote3 = new Point((visageCote2.getX()+ 3 * UNITE_HORIZONTALE), (visageCote2.getY()+ 3* UNITE_VERTICALE)); 
@@ -200,11 +206,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point visageCote5 = new Point ((visageCote4.getX()+ 3 * UNITE_HORIZONTALE), (visageCote4.getY()- 3* UNITE_VERTICALE));
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
+
+        //Bouche
+        
+        //On part du pointeGauche2
+      //Creation bouche a partir pointeGauche2 avec un deplacement horizontal de 3 et vertical de 2
+
         //bouche
+
         Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
+
+        //Nez
         
+        //On part du pointeGauche2
+
         //nez
+
         Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
         Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
         Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
