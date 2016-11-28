@@ -305,18 +305,18 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerMainGauche() {
 		// Dessin main gauche
-		Point p1 = new Point(ORIGIN + CASE*1, CASE*10);
-		Point p2 = new Point(ORIGIN + CASE*0, CASE*11);
-		Point p3 = new Point(ORIGIN + CASE*1, CASE*11);
-		Point p4 = new Point(ORIGIN + CASE*1, CASE*12);
-		Point p5 = new Point(ORIGIN + CASE*2, CASE*11);
+		Point p0 = new Point(TORSE_HAUT_GAUCHE.getX() - CASE*2, TORSE_HAUT_GAUCHE.getY() + CASE*2);
+		Point p1 = new Point(p0.getX() - CASE*1, p0.getY() + CASE*1);
+		Point p2 = new Point(p1.getX() + CASE*1, p1.getY());
+		Point p3 = new Point(p2.getX(), p2.getY() + CASE*1);
+		Point p4 = new Point(p3.getX() + CASE*1, p3.getY() - CASE*1);
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p0)
 		.ajouter(p1)
 		.ajouter(p2)
 		.ajouter(p3)
-		.ajouter(p4)
-		.ajouter(p5);
+		.ajouter(p4);
 	}
 
 	/**
@@ -324,11 +324,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerMainDroite() {
 		// Dessin main droite.
-		Point p1 = new Point(ORIGIN + CASE*13, CASE*10);
-		Point p2 = new Point(ORIGIN + CASE*14, CASE*11);
-		Point p3 = new Point(ORIGIN + CASE*13, CASE*11);
-		Point p4 = new Point(ORIGIN + CASE*13, CASE*12);
-		Point p5 = new Point(ORIGIN + CASE*12, CASE*11);
+		Point p1 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*10, TORSE_HAUT_GAUCHE.getY() + CASE*2);
+		Point p2 = new Point(p1.getX() + CASE*1, p1.getY() + CASE*1);
+		Point p3 = new Point(p2.getX() - CASE*1, p2.getY());
+		Point p4 = new Point(p3.getX(), p3.getY() + CASE*1);
+		Point p5 = new Point(p4.getX() - CASE*1, p4.getY() - CASE*1);
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
@@ -343,10 +343,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerPiedGauche() {
 		// Dessin pied gauche
-		Point p1 = new Point(ORIGIN + CASE*6, CASE*13);
-		Point p2 = new Point(ORIGIN + CASE*5, CASE*14);
-		Point p3 = new Point(ORIGIN + CASE*7, CASE*14);
-		Point p4 = new Point(ORIGIN + CASE*7, CASE*13);
+		Point p1 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*3, TORSE_HAUT_GAUCHE.getY() + CASE*5);
+		Point p2 = new Point(p1.getX() - CASE*1, p1.getY() + CASE*1);
+		Point p3 = new Point(p2.getX() + CASE*2, p2.getY());
+		Point p4 = new Point(p3.getX(), p3.getY() - CASE*1);
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
@@ -360,10 +360,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerPiedDroit() {
 		// Dessin pied droit
-		Point p1 = new Point(ORIGIN + CASE*7, CASE*13);
-		Point p2 = new Point(ORIGIN + CASE*8, CASE*13);
-		Point p3 = new Point(ORIGIN + CASE*9, CASE*14);
-		Point p4 = new Point(ORIGIN + CASE*7, CASE*14);
+		Point p1 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*4, TORSE_HAUT_GAUCHE.getY() + CASE*5);
+		Point p2 = new Point(p1.getX() + CASE*1, p1.getY());
+		Point p3 = new Point(p2.getX() + CASE*1, p2.getY() + CASE*1);
+		Point p4 = new Point(p3.getX() - CASE*2, p3.getY());
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
