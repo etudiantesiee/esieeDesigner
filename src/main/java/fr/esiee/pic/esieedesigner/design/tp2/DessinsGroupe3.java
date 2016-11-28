@@ -282,9 +282,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinNez(){
 		// Initialisation des points
-		Point ptNez1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 8*PIXEL+5);
-		Point ptNez2 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 8*PIXEL);
-		Point ptNez3 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 8*PIXEL+5);
+		Point ptNez1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+5*PIXEL+20,POINT_BAS_BRAS_GAUCHE.getY()-2*PIXEL-20);
+		Point ptNez2 = new Point(ptNez1.getX()+5,ptNez1.getY()-5);
+		Point ptNez3 = new Point(ptNez2.getX()+5,ptNez2.getY()+5);
 		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
@@ -300,8 +300,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinMenton(){
 		// Initialisation des points
-		Point ptMenton1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 11*PIXEL+15);
-		Point ptMenton2 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 11*PIXEL+15);
+		Point ptMenton1 = new Point(POINT_BAS_BRAS_GAUCHE.getX()+5*PIXEL+20,POINT_BAS_BRAS_GAUCHE.getY()+15);
+		Point ptMenton2 = new Point(ptMenton1.getX()+10,ptMenton1.getY());
 		
 		// Création de la forme
 		demarrerNouveauDessinAvecDesPoints()
