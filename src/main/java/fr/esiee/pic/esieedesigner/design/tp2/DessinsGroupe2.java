@@ -27,6 +27,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessiner_cheveux();
 		dessinerTorse();
 		dessinerVisage();
+		dessinerJupe();
 	}
 
 	public void dessiner_cheveux() {
@@ -175,4 +176,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(bouche5)
 		.ajouter(bouche6);
 	}
+	
+	/**
+	 * Dessiner jupe
+	 */
+	public void dessinerJupe() {
+		// Jupe
+		Point p1 = new Point(ORIGIN + CASE*3, CASE*11);
+		Point p2 = new Point(ORIGIN + CASE*11, CASE*11);
+		Point p3 = new Point(ORIGIN + CASE*12, CASE*13);
+		Point p4 = new Point(ORIGIN + CASE*2, CASE*13);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.couleurDeFond(Couleur.GRIS);
+	}
+
 }
