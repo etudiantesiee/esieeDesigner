@@ -13,62 +13,64 @@ import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
  */
 public class DessinsGroupe3 extends CreateurDeForme {
 	
-	/**
-	 * Longueur une case
-	 */
-	private static final int PIXEL = 25;
-	
-	/**
-	 * Longueur page entière
-	 */
-	private static final int LONGUEUR_PAGE = 77 * PIXEL;
-	
-	/**
-	 * Largeur page entière
-	 */
-	private static final int LARGEUR_PAGE = 41 * PIXEL;
-	
-	/**
-	 * Largeur du personnage (cadre)
-	 */
-	private static final int LARGEUR_PERSO = 14 * PIXEL;
-	
-	/**
-	 * Longueur du personnage (cadre)
-	 */
-	private static final int LONGUEUR_PERSO = 14 * PIXEL;
-	
-	/**
-	 * Base Haut représente la composante y du cadre à partir du haut
-	 */
-	private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
-	
-	/**
-	 * Base Bas représente la composante y du cadre à partir du bas
-	 */
-	private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
-	
-	/**
-	 * Base Droite représente la composante x du cadre à partir du droite
-	 */
-	private static final int BASE_DROITE = LONGUEUR_PAGE/2 + LONGUEUR_PERSO/2;
-	
-	/**
-	 * Base Gauche représente la composante x du cadre à partir du gauche
-	 */
-
-	private static final int BASE_GAUCHE = LONGUEUR_PAGE/2 - LONGUEUR_PERSO/2;
-	/**
-	 * Longueur des yeux
-	 */
-	private static final double LONGUEUR_DES_YEUX = 10;
-	/**
-	 * Largeur des yeux
-	 */
-	private static final double LARGEUR_DES_YEUX = 10;
-
     
-   /**
+    /**
+     * Longueur une case
+     */
+    private static final int PIXEL = 25;
+    
+    /**
+     * Longueur page entière
+     */
+    private static final int LONGUEUR_PAGE = 77 * PIXEL;
+    
+    /**
+     * Largeur page entière
+     */
+    private static final int LARGEUR_PAGE = 41 * PIXEL;
+    
+    /**
+     * Largeur du personnage (cadre)
+     */
+    private static final int LARGEUR_PERSO = 14 * PIXEL;
+    
+    /**
+     * Longueur du personnage (cadre)
+     */
+    private static final int LONGUEUR_PERSO = 14 * PIXEL;
+    
+    /**
+     * Base Haut représente la composante y du cadre à partir du haut
+     */
+    private static final int BASE_HAUT = LARGEUR_PAGE/2-LARGEUR_PERSO/2;
+    
+    /**
+     * Base Bas représente la composante y du cadre à partir du bas
+     */
+    private static final int BASE_BAS = LARGEUR_PAGE/2 + LARGEUR_PERSO/2;
+    
+    /**
+     * Base Droite représente la composante x du cadre à partir du droite
+     */
+    private static final int BASE_DROITE = LONGUEUR_PAGE ;
+    
+    /**
+     * Base Gauche représente la composante x du cadre à partir du gauche
+     */
+    private static final int BASE_GAUCHE = LONGUEUR_PAGE - LONGUEUR_PERSO;
+    
+    /**
+     * Longueur des yeux
+     */
+    private static final double LONGUEUR_DES_YEUX = 10;
+    
+    /**
+     * Largeur des yeux
+     */
+    private static final double LARGEUR_DES_YEUX = 10;
+    
+    
+    /*
     * 
     * Override method from the extended class
     *
@@ -313,8 +315,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
     }
     
     /**
-     * Method pour la jambe.
-     */
+    * 
+    * Method used to draw the legs
+    *
+    * @author  idom inigo
+    * @version 1.0
+    * @since   2016-11-28 
+    */
     public void dessinerJambe() {
         // Jambe a gauche
         Point ja4 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+12*PIXEL);
@@ -384,7 +391,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * @author mathieu
 	 * Dessine le bras Gauche
 	 */
-public void dessineBrasGauche(){
+	public void dessineBrasGauche(){
+
 		
 	//Création des points du bras gauche
 	
