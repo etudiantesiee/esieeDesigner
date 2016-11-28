@@ -94,7 +94,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         //Ajout du bras droit au dessin
 		dessineBrasDroit(); 
 		// Ajout du bras gauche au dessin
-		dessineBrasGauche(); 
+		Point brasgauche = dessineBrasGauche(pointBasBrasGauche); 
 		dessinYeuxContour();
 
         dessinYeux();
@@ -394,42 +394,46 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	
 	/**
 	 * @author mathieu
+	 * @param x : Point de départ
 	 * Dessine le bras Gauche
 	 */
-	public void dessineBrasGauche(){
+	public Point dessineBrasGauche(Point pointDepart){
 
 		
 	//Création des points du bras gauche
 	
-	//Point 1 de l'épaule
-	Point epaule1 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 7*PIXEL); 
-	//Point 1 du coude
-	Point coude1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 5*PIXEL);
-	//Point 1 du poignet
-	Point poignet1 = new Point(BASE_GAUCHE + 2*PIXEL, BASE_BAS - 4*PIXEL);
-	//Point 1 de la main
-	Point main1 = new Point(BASE_GAUCHE + 1*PIXEL, BASE_BAS - 3*PIXEL); 
 	//Point 2 de la main
-	Point main2 = new Point(BASE_GAUCHE + 4*PIXEL, BASE_BAS - 3*PIXEL); 
-	//Point 2 du poignet
-	Point poignet2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 4*PIXEL);
+	Point main2 = new Point(pointDepart.getX() + 3*PIXEL, pointDepart.getY());
+	//Point 1 du poignet
+	Point poignet1 = new Point(main2.getX() - 1*PIXEL, main2.getY() - 1*PIXEL);
+	//Point 1 du coude
+	Point coude1 = new Point(poignet1.getX(), poignet1.getY() - 1*PIXEL);
+	//Point 1 de l'épaule
+	Point epaule1 = new Point(coude1.getX() + 0.6*PIXEL, coude1.getY()); 
+	//Point 2 de l'epauleBASE_BAS
+	Point epaule2 = new Point(epaule1.getX() - 0.6*PIXEL, epaule1.getY() - 2*PIXEL);
 	//Point 2 du coude
-	Point coude2 = new Point(BASE_GAUCHE + 3*PIXEL, BASE_BAS - 5*PIXEL);
-	//Point 2 de l'epaule
-	Point epaule2 = new Point(BASE_GAUCHE + 3.6*PIXEL, BASE_BAS - 5*PIXEL);
+	Point coude2 = new Point(epaule2.getX() - 1*PIXEL, epaule2.getY() + 2*PIXEL);
+	//Point 2 du poignet
+	Point poignet2 = new Point(coude2.getX(), coude2.getY() + 1*PIXEL);
+	
+	
 	
 	// On ajoute à la liste des composants à déssiner
 	demarrerNouveauDessinAvecDesPoints()
-    .ajouter(epaule1)
-    .ajouter(coude1)
+	.ajouter(pointDepart)
+	.ajouter(main2)
     .ajouter(poignet1)
-    .ajouter(main1)
-    .ajouter(main2)
-    .ajouter(poignet2)
-    .ajouter(coude2)
+    .ajouter(coude1)
+    .ajouter(epaule1)
     .ajouter(epaule2)
+    .ajouter(coude2)
+    .ajouter(poignet2)
     .couleurDeFond(Couleur.GRIS);
 	//On ajoute la couleur de fond à la fin
+	
+	//On retourne le point de l'épaule
+	return epaule2;
 }
    
 }
