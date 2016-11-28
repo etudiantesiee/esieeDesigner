@@ -89,8 +89,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         // Ajout vos dessins ici
         // Pensez à désactiver les dessins de la démo 
         // en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
-        dessinerJambe();
-
+        
         //Ajout du bras droit au dessin
 		dessineBrasDroit(); 
 		// Ajout du bras gauche au dessin
