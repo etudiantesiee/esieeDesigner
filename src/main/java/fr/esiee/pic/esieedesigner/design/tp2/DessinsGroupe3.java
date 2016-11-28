@@ -99,6 +99,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	
 		dessinerJambeDroite(POINT_BAS_BRAS_GAUCHE);
         dessinerJambeGauche(POINT_BAS_BRAS_GAUCHE);
+        dessinerTeteBasGauche(POINT_BAS_BRAS_GAUCHE);
 
 
 		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
@@ -406,7 +407,29 @@ public class DessinsGroupe3 extends CreateurDeForme {
         return ja5;
 
     }
+    /**
+    * 
+    * Method used to draw the left under corner of the head
+    *
+    * @author  idom inigo
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public Point dessinerTeteBasGauche(final  Point paramPoint ) {
+        // Point definition
+    	
+        Point je = new Point(paramPoint.getX(),paramPoint.getY());
+        Point je1 = new Point(paramPoint.getX()-1*PIXEL,paramPoint.getY()-1*PIXEL);
+        Point je2 = new Point(paramPoint.getX()-2*PIXEL,paramPoint.getY()-4*PIXEL);
+       
+        
+		// Create the form
+		demarrerNouveauDessinAvecDesPoints().ajouter(je).ajouter(je1);
+		demarrerNouveauDessinAvecDesPoints().ajouter(je1).ajouter(je2);
     
+        return je2;
+
+    }
     /**
      * 
      * Method used to draw the legs
