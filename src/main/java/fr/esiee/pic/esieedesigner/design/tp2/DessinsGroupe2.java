@@ -160,20 +160,19 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// Dessin torse
 		Point p1 = TORSE_HAUT_GAUCHE;
 		Point p2 = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*1, TORSE_HAUT_GAUCHE.getY());
-		Point p3 = new Point(ORIGIN + CASE*6, CASE*9);
-		Point p4 = new Point(ORIGIN + CASE*8, CASE*9);
-		Point p5 = new Point(ORIGIN + CASE*10, CASE*8);
-		Point p6 = new Point(ORIGIN + CASE*11, CASE*8);
-		Point p7 = new Point(ORIGIN + CASE*13, CASE*10);
-		Point p8 = new Point(ORIGIN + CASE*12, CASE*11);
-		Point p9 = new Point(ORIGIN + CASE*11, CASE*10);
-		Point p10 = new Point(ORIGIN + CASE*11, CASE*11);
-		Point p11 = new Point(ORIGIN + CASE*3, CASE*11);
-		Point p12 = new Point(ORIGIN + CASE*3, CASE*10);
-		Point p13 = new Point(ORIGIN + CASE*2, CASE*11);
-		Point p14 = new Point(ORIGIN + CASE*1, CASE*10);
-		Point p15 = new Point(ORIGIN + CASE*3, CASE*8);
-		
+		Point p3 = new Point(p2.getX() + CASE*2, p2.getY() + CASE*1);
+		Point p4 = new Point(p3.getX() + CASE*2, p3.getY());
+		Point p5 = new Point(p4.getX() + CASE*2, p4.getY() - CASE*1);
+		Point p6 = new Point(p5.getX() + CASE*1, p5.getY());
+		Point p7 = new Point(p6.getX() + CASE*2, p6.getY() + CASE*2);
+		Point p8 = new Point(p7.getX() - CASE*1, p7.getY() + CASE*1);
+		Point p9 = new Point(p8.getX() - CASE*1, p8.getY() - CASE*1);
+		Point p10 = new Point(p9.getX(), p9.getY() + CASE*1);
+		Point p11 = new Point(p10.getX() - CASE*8, p10.getY());
+		Point p12 = new Point(p11.getX(), p11.getY() - CASE*1);
+		Point p13 = new Point(p12.getX() - CASE*1, p12.getY() + CASE*1);
+		Point p14 = new Point(p13.getX() - CASE*1, p13.getY() - CASE*1);
+		Point p15 = new Point(p14.getX() + CASE*2, p14.getY() - CASE*2);
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
 		.ajouter(p2)
