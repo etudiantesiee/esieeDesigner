@@ -100,19 +100,27 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Naji et Baptiste
+	 * Dessin des lunettes
+	 * 
+	 * @author Naji et Baptiste
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
-		// Bas des lunettes
+		// Bas des lunettes droite bas
 		Point lunetteBasDroiteBas = new Point(pointeDroite4.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY() + 1 * UNITE_VERTICALE);
+		// Bas des lunettes gauche droite
 		Point lunetteBasGaucheDroite = new Point(lunetteBasDroiteBas.getX() - 2 * UNITE_HORIZONTALE, pointeDroite4.getY());
+		// Bas des lunettes gauche bas
 		Point lunetteBasGaucheBas = new Point(pointeGauche1.getX() + 2 * UNITE_HORIZONTALE, pointeGauche1.getY() + 1 * UNITE_VERTICALE);
 		
-		// Haut des lunettes
+		// Haut des lunettes gauche gauche
 		Point lunetteHautGaucheGauche = new Point(pointeGauche1.getX(), pointeGauche1.getY() - 1 * UNITE_VERTICALE);
+		// Haut des lunettes gauche haut
 		Point lunetteHautGaucheHaut = new Point(lunetteBasGaucheBas.getX(), lunetteBasGaucheBas.getY() - 3 * UNITE_VERTICALE);
+		// Haut des lunettes gauche droite
 		Point lunetteHautGaucheDroite = new Point(lunetteBasGaucheDroite.getX(), lunetteBasGaucheDroite.getY() - 1 * UNITE_VERTICALE);
+		// Haut des lunettes droite haut
 		Point lunetteHautDroiteHaut = new Point(lunetteBasDroiteBas.getX(), lunetteBasDroiteBas.getY() - 3 * UNITE_VERTICALE);
+		// Haut des lunettes droite droite
 		Point lunetteHautDroiteDroite = new Point(pointeDroite4.getX(), lunetteBasGaucheDroite.getY() - 1 * UNITE_VERTICALE);
 		
 		// Dessin des lunettes
@@ -129,20 +137,23 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(pointeGauche1)
 		.couleurDeFond(Couleur.GRIS);
 		
-		// Oeil gauche
+		// Point centre oeil gauche
 		Point centreOeilGauche = new Point(lunetteBasGaucheDroite.getX() - 1 * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		// ellipse oeil gauche
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
 		// Dessin oeil gauche
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
-		// Oeil droit
+		// Point centre oeil droit
 		Point centreOeilDroit = new Point(lunetteBasGaucheDroite.getX() + 1 * UNITE_HORIZONTALE, centreOeilGauche.getY());
+		// ellipse oeil droit
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
+		// Appel suivant
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
