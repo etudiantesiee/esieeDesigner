@@ -74,6 +74,24 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point corps8 = new Point((ORIGIN_X+1) * UNITE_HORIZONTALE, (ORIGIN_Y+10) * UNITE_VERTICALE);
 		Point corps9 = new Point((ORIGIN_X+3) * UNITE_HORIZONTALE, (ORIGIN_Y+8) * UNITE_VERTICALE);
 		Point corps10 = new Point((ORIGIN_X+4) * UNITE_HORIZONTALE, (ORIGIN_Y+8) * UNITE_VERTICALE);
+		Point corps11 = new Point((ORIGIN_X+6) * UNITE_HORIZONTALE, (ORIGIN_Y+10) * UNITE_VERTICALE);
+		Point corps12 = new Point((ORIGIN_X+8) * UNITE_HORIZONTALE, (ORIGIN_Y+10) * UNITE_VERTICALE);
+		Point corps13 = new Point((ORIGIN_X+10) * UNITE_HORIZONTALE, (ORIGIN_Y+8) * UNITE_VERTICALE);
+		Point corps14 = new Point((ORIGIN_X+11) * UNITE_HORIZONTALE, (ORIGIN_Y+8) * UNITE_VERTICALE);
+		Point corps15 = new Point((ORIGIN_X+13) * UNITE_HORIZONTALE, (ORIGIN_Y+10) * UNITE_VERTICALE);
+		Point corps16 = new Point((ORIGIN_X+13) * UNITE_HORIZONTALE, (ORIGIN_Y+12) * UNITE_VERTICALE);
+		Point corps17 = new Point((ORIGIN_X+12) * UNITE_HORIZONTALE, (ORIGIN_Y+12) * UNITE_VERTICALE);
+		Point corps18 = new Point((ORIGIN_X+12) * UNITE_HORIZONTALE, (ORIGIN_Y+11) * UNITE_VERTICALE);
+		Point corps19 = new Point((ORIGIN_X+11) * UNITE_HORIZONTALE, (ORIGIN_Y+10) * UNITE_VERTICALE);
+		Point corps20 = new Point((ORIGIN_X+9) * UNITE_HORIZONTALE, (ORIGIN_Y+11) * UNITE_VERTICALE);
+		Point corps21 = new Point((ORIGIN_X+10) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
+		Point corps22 = new Point((ORIGIN_X+11) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
+		Point corps23 = new Point((ORIGIN_X+8) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
+		Point corps24 = new Point((ORIGIN_X+9) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
+		Point corps25 = new Point((ORIGIN_X+8) * UNITE_HORIZONTALE, (ORIGIN_Y+12) * UNITE_VERTICALE);
+		Point corps26 = new Point((ORIGIN_X+6) * UNITE_HORIZONTALE, (ORIGIN_Y+12) * UNITE_VERTICALE);
+		Point corps27 = new Point((ORIGIN_X+5) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
+		Point corps28 = new Point((ORIGIN_X+6) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(corps1)
@@ -85,7 +103,25 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps7)
 		.ajouter(corps8)
 		.ajouter(corps9)
-		.ajouter(corps10);
+		.ajouter(corps10)
+		.ajouter(corps11)
+		.ajouter(corps12)
+		.ajouter(corps13)
+		.ajouter(corps14)
+		.ajouter(corps15)
+		.ajouter(corps16)
+		.ajouter(corps17)
+		.ajouter(corps18)
+		.ajouter(corps19)
+		.ajouter(corps20)
+		.ajouter(corps21)
+		.ajouter(corps22)
+		.ajouter(corps23)
+		.ajouter(corps24)
+		.ajouter(corps25)
+		.ajouter(corps26)
+		.ajouter(corps27)
+		.ajouter(corps28);
 	}
 	
 	/**
@@ -154,14 +190,24 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * JL et Victor
 	 */
 	public void dessinerVisage() {
+		//menton
 		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
         Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
         Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
         Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
         Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
         Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-
         
+        //bouche
+        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        
+        //nez
+        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+
+        //dessin menton
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote)
         .ajouter(visageCote2);
@@ -177,6 +223,18 @@ public class DessinsGroupe1 extends CreateurDeForme {
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote5)
         .ajouter(visageCote6);
+        
+        //dessin bouche
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(bouche)
+        .ajouter(bouche2);
+        
+        //dessin nez
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(nezGauche)
+		.ajouter(nezCentre)
+		.ajouter(nezDroite)
+		.nePasRelierLesPointsExtreme();
         
 	}
 
