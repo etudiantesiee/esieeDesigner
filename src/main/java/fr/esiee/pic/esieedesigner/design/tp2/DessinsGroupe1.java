@@ -26,16 +26,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Origine X
 	 */
-	private static final double ORIGIN_X = 30;
-	
-	/**
-	 * Origine Y
-	 */
-	private static final double ORIGIN_Y = 2;
-	
-	/**
-	 * Origine X
-	 */
 	private static final Point ORIGINE = new Point(30, 2);
 	
 	/**
@@ -138,7 +128,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.couleurDeFond(Couleur.GRIS);
 		
 		// Point centre oeil gauche
-		Point centreOeilGauche = new Point(lunetteBasGaucheDroite.getX() - 1 * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point centreOeilGauche = new Point(lunetteBasGaucheDroite.getX() - 1 * UNITE_HORIZONTALE, lunetteBasGaucheDroite.getY());
 		// ellipse oeil gauche
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
 		
