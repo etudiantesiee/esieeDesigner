@@ -23,7 +23,20 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final double CASE = 25;
 	
+	/**
+	 * Point fixe pour dessiner le nez
+	 */
 	private static final Point NEZ_ORIGINE = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
+	
+	/**
+	 * Point fixe pour dessiner le premier oeil (gauche)
+	 */
+	private static final Point OEIL1_ORIGINE = new Point(ORIGIN + CASE * 6, CASE * 4);
+	
+	/**
+	 * Point fixe pour dessiner le deuxième oeil (droite)
+	 */
+	private static final Point OEIL2_ORIGINE = new Point(ORIGIN + CASE * 8, CASE * 4);
 	
 	@Override
 	public void dessiner() {
@@ -230,12 +243,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		// == Dessin des deux yeux
 		
 		// Dessin du premier oeil (gauche)
-		Point oeil1 = new Point(ORIGIN + CASE * 6, CASE * 4);
+		Point oeil1 = OEIL1_ORIGINE;
 		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
 		
 		// Dessin du second oeil (gauche)
-		Point oeil2 = new Point(ORIGIN + CASE * 8, CASE * 4);
+		Point oeil2 = OEIL2_ORIGINE;
 		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
 	}
