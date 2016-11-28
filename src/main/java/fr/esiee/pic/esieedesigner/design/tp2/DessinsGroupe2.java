@@ -48,6 +48,25 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(nez2)
 		.ajouter(nez3);
 		
+		// == Dessin de la bouche
+		
+		// Déclaration des points
+		Point bouche1 = new Point(ORIGIN + CASE * 4, CASE * 6);
+		Point bouche2 = new Point(ORIGIN + CASE * 4, CASE * 7);
+		Point bouche3 = new Point(ORIGIN + CASE * 6, CASE * 8);
+		Point bouche4 = new Point(ORIGIN + CASE * 8, CASE * 8);
+		Point bouche5 = new Point(ORIGIN + CASE * 10, CASE * 7);
+		Point bouche6 = new Point(ORIGIN + CASE * 10, CASE * 6);
+		
+		// dessin trait
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(bouche1)
+		.ajouter(bouche2)
+		.ajouter(bouche3)
+		.ajouter(bouche4)
+		.ajouter(bouche5)
+		.ajouter(bouche6);
+		
 	}
 
 }
