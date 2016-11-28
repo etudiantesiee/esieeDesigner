@@ -344,6 +344,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//corps colorie en gris
 		.couleurDeFond(Couleur.GRIS);
 		
+		//appel de la fonction de la fonction utilisant les parametres du corps
 		dessinerMains(corps25, corps7);
 	}
 	
