@@ -65,19 +65,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerCheveux() {
 
 		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
-		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
-		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeGauche4 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point touffeGaucheMilieu = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point touffeGauche1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-		Point touffeGauche2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point touffeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point touffeDroite2 = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-		Point touffeDroiteMilieu = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point pointeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeDroite2 = new Point((ORIGIN_X + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeDroite3 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
-		Point pointeDroite4 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point pointeGauche2 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
+		Point pointeGauche3 = new Point((ORIGINE.getX() + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeGauche4 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point touffeGaucheMilieu = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point touffeGauche1 = new Point(ORIGINE.getX() * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+		Point touffeGauche2 = new Point((ORIGINE.getX() + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+		Point touffeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+		Point touffeDroite2 = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+		Point touffeDroiteMilieu = new Point((ORIGINE.getX() + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point pointeDroite1 = new Point((ORIGINE.getX() + 13) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeDroite2 = new Point((ORIGINE.getX() + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeDroite3 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
+		Point pointeDroite4 = new Point((ORIGINE.getX() + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
 		
 		
 		demarrerNouveauDessinAvecDesPoints()
