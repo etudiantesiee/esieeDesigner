@@ -154,9 +154,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
-		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-        Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-        Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
+        Point visageCote2 = new Point(visageCote.getX(), (visageCote.getY()+ UNITE_VERTICALE));
+        Point visageCote3 = new Point((visageCote2.getX()+ 3 * UNITE_HORIZONTALE), (visageCote2.getY()+ 3* UNITE_VERTICALE)); 
         Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
         Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
         Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
