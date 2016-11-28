@@ -190,7 +190,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * @param pointeDroite3 fin visage
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
-		//menton
+		//Menton
 
 		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
@@ -205,14 +205,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
         //Creation visageCote6 a partir visageCote3 avec un deplacement horizontal de 0 et vertical de 0
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
-        //bouche
+        //Bouche
         
         //On part du pointeGauche2
+      //Creation bouche a partir pointeGauche2 avec un deplacement horizontal de 3 et vertical de 2
         Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
         //Creation bouche2 a partir bouche avec un deplacement horizontal de 2 et vertical de 0
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
-        //nez
+        //Nez
         
         //On part du pointeGauche2
         Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
