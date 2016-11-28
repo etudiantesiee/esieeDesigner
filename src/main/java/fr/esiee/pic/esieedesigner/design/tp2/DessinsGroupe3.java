@@ -1,10 +1,10 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
-import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
-import fr.esiee.pic.esieedesigner.api.shapes.Point;
+
 
 /**
  * Le groupe 3 ajoutera ses dessins dans cette classe.
@@ -89,13 +89,59 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		ajouterEllipse(oeilGauche, Couleur.JAUNE);
 	}
 	
+	/**
+	 * @author philippe et harrison
+	 * Dessin de la bouche
+	 */
+	public void dessinBouche(){
+		// Initialisation des points
+		Point ptBouche1 = new Point(BASE_GAUCHE + 5*PIXEL, BASE_HAUT + 9*PIXEL);
+		Point ptBouche2 = new Point(BASE_GAUCHE + 6*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche3 = new Point(BASE_GAUCHE + 8*PIXEL, BASE_HAUT + 11*PIXEL);
+		Point ptBouche4 = new Point(BASE_GAUCHE + 9*PIXEL, BASE_HAUT + 9*PIXEL);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptBouche1)
+		.ajouter(ptBouche2)
+		.ajouter(ptBouche3)
+		.ajouter(ptBouche4);
+	}
+	
+	/**
+	 * @author philippe et harrison
+	 * Dessin du nez
+	 */
+	public void dessinNez(){
+		// Initialisation des points
+		Point ptNez1 = new Point(BASE_GAUCHE + 6*PIXEL+20, BASE_HAUT + 8*PIXEL+5);
+		Point ptNez2 = new Point(BASE_GAUCHE + 7*PIXEL, BASE_HAUT + 8*PIXEL);
+		Point ptNez3 = new Point(BASE_GAUCHE + 7*PIXEL+5, BASE_HAUT + 8*PIXEL+5);
+		
+		// Création de la forme
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ptNez1)
+		.ajouter(ptNez2)
+		.ajouter(ptNez3)
+		.nePasRelierLesPointsExtreme();
+	}
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinerJambe();
+
+
+		dessineBrasDroit();
+		dessinYeuxContour();
+
+		dessinYeux();
+		dessinBouche();
+		dessinNez();
 		dessinerTete();
-		
+		dessinerCheveux();
 	}
 	
 	public void dessinerTete(){
@@ -111,8 +157,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point tete10 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+12*PIXEL);
 		Point tete11 = new Point(BASE_GAUCHE+4*PIXEL, BASE_HAUT+10*PIXEL);
 		Point tete12 = new Point(BASE_GAUCHE+3*PIXEL, BASE_HAUT+7*PIXEL);
-
-
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(tete1)
 		.ajouter(tete2)
@@ -126,14 +170,112 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(tete10)
 		.ajouter(tete11)
 		.ajouter(tete12);
-		dessinYeuxContour();
-		dessinYeux();
+	}
+	
+	public void dessinerCheveux(){
+		dessinerCheveux1();
+		dessinerCheveux2();
+		dessinerCheveux3();
+
+	}
+	
+	public void dessinerCheveux1(){
+		Point cheveux1 = new Point(BASE_GAUCHE+4*PIXEL, BASE_HAUT+3*PIXEL);
+		Point cheveux2 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_GAUCHE+5*PIXEL, BASE_HAUT+2.5*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	public void dessinerCheveux2(){
+		Point cheveux1 = new Point(BASE_GAUCHE+6*PIXEL, BASE_HAUT+2*PIXEL);
+		Point cheveux2 = new Point(BASE_GAUCHE+7*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_GAUCHE+8*PIXEL, BASE_HAUT+2*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	public void dessinerCheveux3(){
+		Point cheveux1 = new Point(BASE_DROITE-4*PIXEL, BASE_HAUT+3*PIXEL);
+		Point cheveux2 = new Point(BASE_DROITE-6*PIXEL, BASE_HAUT+4*PIXEL);
+		Point cheveux3 = new Point(BASE_DROITE-5*PIXEL, BASE_HAUT+2.5*PIXEL);
+
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(cheveux1)
+		.ajouter(cheveux2)
+		.ajouter(cheveux3)
+		.couleurDeFond(Couleur.GRIS);
+	}
+	
+
+	
+	/**
+	 * Method pour la jambe.
+	 */
+	public void dessinerJambe() {
+		// Jambe a gauche
+		Point ja4 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+12*PIXEL);
+		Point ja3 = new Point(BASE_GAUCHE+5*PIXEL,BASE_HAUT+13*PIXEL);
+		Point ja2 = new Point(BASE_GAUCHE+6*PIXEL,BASE_HAUT+14*PIXEL);
+		Point ja1 = new Point(BASE_GAUCHE+3*PIXEL,BASE_HAUT+14*PIXEL);
+		Point ja6 = new Point(BASE_GAUCHE+4*PIXEL,BASE_HAUT+13*PIXEL);
+		Point ja5 = new Point(BASE_GAUCHE+5*PIXEL,BASE_HAUT+11*PIXEL);
+
+		// Jambe a droite
+		Point jb4 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+11*PIXEL);
+		Point jb3 = new Point(BASE_GAUCHE+10*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb2 = new Point(BASE_GAUCHE+11*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb1 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+14*PIXEL);
+		Point jb6 = new Point(BASE_GAUCHE+9*PIXEL,BASE_HAUT+13*PIXEL);
+		Point jb5 = new Point(BASE_GAUCHE+8*PIXEL,BASE_HAUT+12*PIXEL);
+		
+		// Creer la forme ja
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ja1)
+		.ajouter(ja2)
+		.ajouter(ja3)
+		.ajouter(ja4)
+		.ajouter(ja5)
+		.ajouter(ja6)
+		.couleurDeFond(Couleur.GRIS);
+			
+		// Creer la forme jb
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(jb1)
+		.ajouter(jb2)
+		.ajouter(jb3)
+		.ajouter(jb4)
+		.ajouter(jb5)
+		.ajouter(jb6)
+		.couleurDeFond(Couleur.GRIS);
 	}
 	
 	/**
 	 * @author mathieu
 	 * Dessine le bras Droit
 	 */
-	public void DessineBrasDroit(){
+	public void dessineBrasDroit(){
+		
+		Point epaule = new Point(BASE_DROITE - 3*PIXEL, BASE_BAS - 7*PIXEL);
+		Point coude1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 4*PIXEL);
+		Point poignet1 = new Point(BASE_DROITE - 2*PIXEL, BASE_BAS - 3*PIXEL);
+		Point main1 = new Point(BASE_DROITE - 1*PIXEL, BASE_BAS - 2*PIXEL);
+		
+		
+		// On ajoute à la liste des composants à déssiner
+    	demarrerNouveauDessinAvecDesPoints()
+        .ajouter(epaule)
+        .ajouter(coude1)
+        .ajouter(poignet1)
+        .ajouter(main1);
+		
 	}
 }
