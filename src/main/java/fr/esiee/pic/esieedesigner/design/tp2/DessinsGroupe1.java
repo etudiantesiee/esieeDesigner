@@ -210,19 +210,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote)
-        .ajouter(visageCote2);
-        demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote2)
-        .ajouter(visageCote3);
-        demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote3)
-        .ajouter(visageCote4);
-        demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote4)
-        .ajouter(visageCote5);
-        demarrerNouveauDessinAvecDesPoints()
         .ajouter(visageCote5)
-        .ajouter(visageCote6);
+        .ajouter(visageCote6)
+        .nePasRelierLesPointsExtreme();
         
         //dessin bouche
         demarrerNouveauDessinAvecDesPoints()
