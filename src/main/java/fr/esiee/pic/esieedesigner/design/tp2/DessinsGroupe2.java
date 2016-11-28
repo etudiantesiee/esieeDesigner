@@ -31,6 +31,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessinerJupe();
 		dessinerJoueDroite();
 		dessinerJoueGauche();
+		dessinerMainDroite();
+		dessinerMainGauche();
+		dessinerPiedGauche();
+		dessinerPiedDroit();
 	}
 
 	/**
@@ -250,6 +254,78 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(p3)
 		.ajouter(p4)
 		.couleurDeFond(Couleur.GRIS);
+	}
+	
+	/**
+	 * Dessiner main gauche
+	 */
+	public void dessinerMainGauche() {
+		// Dessin main gauche
+		Point p1 = new Point(ORIGIN + CASE*1, CASE*10);
+		Point p2 = new Point(ORIGIN + CASE*0, CASE*11);
+		Point p3 = new Point(ORIGIN + CASE*1, CASE*11);
+		Point p4 = new Point(ORIGIN + CASE*1, CASE*12);
+		Point p5 = new Point(ORIGIN + CASE*2, CASE*11);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.ajouter(p5);
+	}
+
+	/**
+	 * Dessiner main droite
+	 */
+	public void dessinerMainDroite() {
+		// Dessin main droite
+		Point p1 = new Point(ORIGIN + CASE*13, CASE*10);
+		Point p2 = new Point(ORIGIN + CASE*14, CASE*11);
+		Point p3 = new Point(ORIGIN + CASE*13, CASE*11);
+		Point p4 = new Point(ORIGIN + CASE*13, CASE*12);
+		Point p5 = new Point(ORIGIN + CASE*12, CASE*11);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.ajouter(p5);
+	}
+	
+	/**
+	 * Dessiner pied gauche
+	 */
+	public void dessinerPiedGauche() {
+		// Dessin pied gauche
+		Point p1 = new Point(ORIGIN + CASE*6, CASE*13);
+		Point p2 = new Point(ORIGIN + CASE*5, CASE*14);
+		Point p3 = new Point(ORIGIN + CASE*7, CASE*14);
+		Point p4 = new Point(ORIGIN + CASE*7, CASE*13);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4);
+	}
+
+	/**
+	 * Dessiner pied droit
+	 */
+	public void dessinerPiedDroit() {
+		// Dessin pied droit
+		Point p1 = new Point(ORIGIN + CASE*7, CASE*13);
+		Point p2 = new Point(ORIGIN + CASE*8, CASE*13);
+		Point p3 = new Point(ORIGIN + CASE*9, CASE*14);
+		Point p4 = new Point(ORIGIN + CASE*7, CASE*14);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4);
 	}
 
 }
