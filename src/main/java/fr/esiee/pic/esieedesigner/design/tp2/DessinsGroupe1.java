@@ -26,12 +26,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Origine X
 	 */
-	private static final double ORIGIN_X = 2;
+	private static final double ORIGIN_X = 30;
 	
 	/**
 	 * Origine Y
 	 */
 	private static final double ORIGIN_Y = 2;
+	
+	/**
+	 * Origine X
+	 */
+	private static final Point ORIGINE = new Point(30, 2);
 	
 	/**
 	 * Diametre des yeux
