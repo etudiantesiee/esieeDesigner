@@ -50,23 +50,50 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Thomas et Eve
+	 * @author Thomas et Eve
 	 */
 	public void dessinerCheveux() {
-
+		
+		// Point adjacent aux lunettes cote gauche
 		Point pointeGauche1 = new Point((ORIGINE.getX() + 3) * UNITE_HORIZONTALE, (ORIGINE.getY() + 4) * UNITE_VERTICALE);
+		
+		// Point adjacent à la joue gauche
 		Point pointeGauche2 = new Point(pointeGauche1.getX(), pointeGauche1.getY() + (2 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux interieure gauche 
 		Point pointeGauche3 = new Point(pointeGauche2.getX() - (1 * UNITE_HORIZONTALE), pointeGauche2.getY() + (1 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux exterieure gauche 
 		Point pointeGauche4 = new Point(pointeGauche3.getX() - (1 * UNITE_HORIZONTALE), pointeGauche3.getY());
+		
+		// Point touffe laterale bas gauche
 		Point touffeGaucheMilieu = new Point(pointeGauche4.getX() - (1 * UNITE_HORIZONTALE), pointeGauche4.getY() - (4 * UNITE_VERTICALE));
+		
+		// Point touffe laterale haut gauche
 		Point touffeGauche1 = new Point(touffeGaucheMilieu.getX(), touffeGaucheMilieu.getY() - (2 * UNITE_VERTICALE));
+		
+		// Point crane gauche
 		Point touffeGauche2 = new Point(touffeGauche1.getX() + (1 * UNITE_HORIZONTALE), touffeGauche1.getY() - (1 * UNITE_VERTICALE));
+		
+		// Point crane droit
 		Point touffeDroite1 = new Point(touffeGauche2.getX() + (12 * UNITE_HORIZONTALE), touffeGauche2.getY());
+		
+		// Point touffe laterale haut droite
 		Point touffeDroite2 = new Point(touffeDroite1.getX() + (1 * UNITE_HORIZONTALE), touffeDroite1.getY() + (1 * UNITE_VERTICALE));
+		
+		// Point touffe laterale bas droite
 		Point touffeDroiteMilieu = new Point(touffeDroite2.getX(), touffeDroite2.getY() + (2 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux exterieure droite
 		Point pointeDroite1 = new Point(touffeDroiteMilieu.getX() - (1 * UNITE_HORIZONTALE), touffeDroiteMilieu.getY() + (4 * UNITE_VERTICALE));
+		
+		// Point pointe de cheveux interieure droite
 		Point pointeDroite2 = new Point(pointeDroite1.getX() - (1 * UNITE_HORIZONTALE), pointeDroite1.getY());
+		
+		// Point adjacent à la joue droite
 		Point pointeDroite3 = new Point(pointeDroite2.getX() - (1 * UNITE_HORIZONTALE), pointeDroite2.getY() - (1 * UNITE_VERTICALE));
+		
+		// Point adjacent aux lunettes cote droit
 		Point pointeDroite4 = new Point(pointeDroite3.getX(), pointeDroite3.getY() - (2 * UNITE_VERTICALE));		
 		
 		demarrerNouveauDessinAvecDesPoints()
@@ -152,34 +179,56 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * JL et Victor
+	 * @author JL et Victor
+	 * Creation du visage en debutant par le pointeGauche2
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
+		
+		//On part du pointeGauche2
 		Point visageCote = new Point((pointeGauche2.getX()), (pointeGauche2.getY()));
+		//On s'appuie de visageCote pour creer visageCote2
         Point visageCote2 = new Point(visageCote.getX(), (visageCote.getY()+ UNITE_VERTICALE));
+        //Creation visageCote3 a partir visageCote2 avec un deplacement horizontal de 2 et vertical de 3
         Point visageCote3 = new Point((visageCote2.getX()+ 3 * UNITE_HORIZONTALE), (visageCote2.getY()+ 3* UNITE_VERTICALE)); 
+        //Creation visageCote4 a partir visageCote3 avec un deplacement horizontal de 2 et vertical de 0
         Point visageCote4 = new Point ((visageCote3.getX()+ 2 * UNITE_HORIZONTALE), (visageCote3.getY()));
+        //Creation visageCote5 a partir visageCote4 avec un deplacement horizontal de 3 et vertical de 3
         Point visageCote5 = new Point ((visageCote4.getX()+ 3 * UNITE_HORIZONTALE), (visageCote4.getY()- 3* UNITE_VERTICALE));
+        //Creation visageCote6 a partir visageCote3 avec un deplacement horizontal de 0 et vertical de 0
         Point visageCote6 = new Point((pointeDroite3.getX()), (pointeDroite3.getY()));
         
         //bouche
+        
+        //On part du pointeGauche2
         Point bouche = new Point((pointeGauche2.getX()+ 3 * UNITE_HORIZONTALE), (pointeGauche2.getY()+ 2* UNITE_VERTICALE));
+        //Creation bouche2 a partir bouche avec un deplacement horizontal de 2 et vertical de 0
         Point bouche2 = new Point((bouche.getX()+ 2 * UNITE_HORIZONTALE), (bouche.getY()));
         
         //nez
+        
+        //On part du pointeGauche2
         Point nezCentre = new Point((pointeGauche2.getX()+ 4 * UNITE_HORIZONTALE), (pointeGauche2.getY()- 1* UNITE_VERTICALE));
+        //Creation nezGauche a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezGauche = new Point((nezCentre.getX()- 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
+        //Creation nezDroite a partir nezCentre avec un deplacement horizontal de 0.25 et vertical de 0.25
         Point nezDroite = new Point((nezCentre.getX()+ 0.25 * UNITE_HORIZONTALE), (nezCentre.getY()+ 0.25* UNITE_VERTICALE));
 
         //dessin menton
         demarrerNouveauDessinAvecDesPoints()
+        //Trace visageCote
         .ajouter(visageCote)
+        //Trace visageCote2
         .ajouter(visageCote2)
+        //Trace visageCote3
         .ajouter(visageCote3)
+        //Trace visageCote4
         .ajouter(visageCote4)
+        //Trace visageCote5
         .ajouter(visageCote5)
+        //Trace visageCote6
         .ajouter(visageCote6)
+        //Permet de ne pas relier les lignes
         .nePasRelierLesPointsExtreme();
         
         //dessin bouche
