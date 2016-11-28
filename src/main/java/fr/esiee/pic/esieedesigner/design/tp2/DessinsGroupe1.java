@@ -26,12 +26,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Origine X
 	 */
-	private static final double ORIGIN_X = 2;
+	private static final double ORIGIN_X = 30;
 	
 	/**
 	 * Origine Y
 	 */
 	private static final double ORIGIN_Y = 2;
+	
+	/**
+	 * Origine X
+	 */
+	private static final Point ORIGINE = new Point(30, 2);
 	
 	/**
 	 * Diametre des yeux
@@ -50,22 +55,150 @@ public class DessinsGroupe1 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
-		// Dessin du corps
-		dessinerCorps();
-		// Dessin des mains
-		dessinerMains();
-		// Dessin des lunettes
-		dessinerLunettes();
 		// Dessin des cheveux
 		dessinerCheveux();
-		// Dessin Visage
-		dessinerVisage();
+	}
+	
+	/**
+	 * Thomas et Eve
+	 */
+	public void dessinerCheveux() {
+		
+		Point pointeGauche1 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
+		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeGauche4 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point touffeGaucheMilieu = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point touffeGauche1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+		Point touffeGauche2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+		Point touffeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
+		Point touffeDroite2 = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
+		Point touffeDroiteMilieu = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point pointeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeDroite2 = new Point((ORIGIN_X + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+		Point pointeDroite3 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
+		Point pointeDroite4 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(pointeGauche1)
+		.ajouter(pointeGauche2)
+		.ajouter(pointeGauche3)
+		.ajouter(pointeGauche4)
+		.ajouter(touffeGaucheMilieu)
+		.ajouter(touffeGauche1)
+		.ajouter(touffeGauche2)
+		.ajouter(touffeDroite1)
+		.ajouter(touffeDroite2)
+		.ajouter(touffeDroiteMilieu)
+		.ajouter(pointeDroite1)
+		.ajouter(pointeDroite2)
+		.ajouter(pointeDroite3)
+		.ajouter(pointeDroite4)
+		.nePasRelierLesPointsExtreme();
+		
+		dessinerLunettes(pointeGauche1, pointeDroite4, pointeGauche2, pointeDroite3);
+	}
+	
+	/**
+	 * Naji et Baptiste
+	 */
+	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
+		// Haut des lunettes
+		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
+		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
+		
+		// Bas des lunettes
+		Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point lunetteBasDroiteBas = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+		Point lunetteBasGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Point lunetteBasGaucheBas = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+		Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		
+		// Dessin des lunettes
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(lunetteHautGaucheGauche)
+		.ajouter(lunetteHautGaucheHaut)
+		.ajouter(lunetteHautGaucheDroite)
+		.ajouter(lunetteHautDroiteHaut)
+		.ajouter(lunetteHautDroiteDroite)
+		.ajouter(lunetteBasDroiteDroite)
+		.ajouter(lunetteBasDroiteBas)
+		.ajouter(lunetteBasGaucheDroite)
+		.ajouter(lunetteBasGaucheBas)
+		.ajouter(lunetteBasGaucheGauche)
+		.couleurDeFond(Couleur.GRIS);
+		
+		// Oeil gauche
+		Point centreOeilGauche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		// Dessin oeil gauche
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		// Oeil droit
+		Point centreOeilDroit = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
+		
+		// Oeil droit
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		
+		dessinerVisage(pointeGauche2, pointeDroite3);
+	}
+	
+	/**
+	 * JL et Victor
+	 */
+	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
+		//menton
+		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+        Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
+        Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
+        Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
+        
+        //bouche
+        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
+        
+        //nez
+        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
+        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
+
+        //dessin menton
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(visageCote)
+        .ajouter(visageCote2)
+        .ajouter(visageCote3)
+        .ajouter(visageCote4)
+        .ajouter(visageCote5)
+        .ajouter(visageCote6)
+        .nePasRelierLesPointsExtreme();
+        
+        //dessin bouche
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(bouche)
+        .ajouter(bouche2);
+        
+        //dessin nez
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(nezGauche)
+		.ajouter(nezCentre)
+		.ajouter(nezDroite)
+		.nePasRelierLesPointsExtreme();
+        
+		dessinerCorps(visageCote3, visageCote4);
 	}
 	
 	/**
 	 * François et Daphnée
 	 */
-	public void dessinerCorps() {
+	public void dessinerCorps(Point visageCote3, Point visageCote4) {
 		Point corps1 = new Point((ORIGIN_X+3) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
 		Point corps2 = new Point((ORIGIN_X+4) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
 		Point corps3 = new Point((ORIGIN_X+5) * UNITE_HORIZONTALE, (ORIGIN_Y+11) * UNITE_VERTICALE);
@@ -125,13 +258,15 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps26)
 		.ajouter(corps27)
 		.ajouter(corps28)
-		.couleurDeFond(Couleur.GRIS);;
+		.couleurDeFond(Couleur.GRIS);
+		
+		dessinerMains(corps7, corps17);
 	}
 	
 	/**
-	 * 
+	 *  Dessine Mains
 	 */
-	public void dessinerMains() {
+	public void dessinerMains(Point mainGauche, Point mainDroite) {
 		// Main gauche
 		dessinerMain(new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 12) * UNITE_VERTICALE));
 		// Main droite
@@ -166,137 +301,4 @@ public class DessinsGroupe1 extends CreateurDeForme {
 			.ajouter(separateurDoigtDRoitHaut);
 		}
 	}
-	
-	/**
-	 * Naji et Baptiste
-	 */
-	public void dessinerLunettes() {
-		// Haut des lunettes
-		Point lunetteHautGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point lunetteHautGaucheHaut = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
-		Point lunetteHautGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point lunetteHautDroiteHaut = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 2) * UNITE_VERTICALE);
-		Point lunetteHautDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		
-		// Bas des lunettes
-		Point lunetteBasDroiteDroite = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Point lunetteBasDroiteBas = new Point((ORIGIN_X + 9) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-		Point lunetteBasGaucheDroite = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Point lunetteBasGaucheBas = new Point((ORIGIN_X + 5) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-		Point lunetteBasGaucheGauche = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		
-		// Dessin des lunettes
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(lunetteHautGaucheGauche)
-		.ajouter(lunetteHautGaucheHaut)
-		.ajouter(lunetteHautGaucheDroite)
-		.ajouter(lunetteHautDroiteHaut)
-		.ajouter(lunetteHautDroiteDroite)
-		.ajouter(lunetteBasDroiteDroite)
-		.ajouter(lunetteBasDroiteBas)
-		.ajouter(lunetteBasGaucheDroite)
-		.ajouter(lunetteBasGaucheBas)
-		.ajouter(lunetteBasGaucheGauche)
-		.couleurDeFond(Couleur.GRIS);
-		
-		// Oeil gauche
-		Point centreOeilGauche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Ellipse oeilGauche = new Ellipse(centreOeilGauche, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
-		
-		// Dessin oeil gauche
-		ajouterEllipse(oeilGauche, Couleur.NOIR);
-		
-		// Oeil droit
-		Point centreOeilDroit = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Ellipse oeilDroit = new Ellipse(centreOeilDroit, DIAMETRE_DES_YEUX, DIAMETRE_DES_YEUX);
-		
-		// Oeil droit
-		ajouterEllipse(oeilDroit, Couleur.NOIR);
-	}
-	
-	/**
-	 * Thomas et Eve
-	 */
-	public void dessinerCheveux() {
-		
-		Point pointeGauche1 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		Point pointeGauche2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
-		Point pointeGauche3 = new Point((ORIGIN_X + 2) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeGauche4 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point touffeGaucheMilieu = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point touffeGauche1 = new Point(ORIGIN_X * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-		Point touffeGauche2 = new Point((ORIGIN_X + 1) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point touffeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, ORIGIN_Y * UNITE_VERTICALE);
-		Point touffeDroite2 = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 1) * UNITE_VERTICALE);
-		Point touffeDroiteMilieu = new Point((ORIGIN_X + 14) * UNITE_HORIZONTALE, (ORIGIN_Y + 3) * UNITE_VERTICALE);
-		Point pointeDroite1 = new Point((ORIGIN_X + 13) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeDroite2 = new Point((ORIGIN_X + 12) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-		Point pointeDroite3 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 6) * UNITE_VERTICALE);
-		Point pointeDroite4 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-		
-		
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(pointeGauche1)
-		.ajouter(pointeGauche2)
-		.ajouter(pointeGauche3)
-		.ajouter(pointeGauche4)
-		.ajouter(touffeGaucheMilieu)
-		.ajouter(touffeGauche1)
-		.ajouter(touffeGauche2)
-		.ajouter(touffeDroite1)
-		.ajouter(touffeDroite2)
-		.ajouter(touffeDroiteMilieu)
-		.ajouter(pointeDroite1)
-		.ajouter(pointeDroite2)
-		.ajouter(pointeDroite3)
-		.ajouter(pointeDroite4)
-		.nePasRelierLesPointsExtreme();
-		
-	}
-	
-	/**
-	 * JL et Victor
-	 */
-	public void dessinerVisage() {
-		//menton
-		Point visageCote = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-        Point visageCote2 = new Point((ORIGIN_X + 3) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-        Point visageCote3 = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
-        Point visageCote4 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 10) * UNITE_VERTICALE);
-        Point visageCote5 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 7) * UNITE_VERTICALE);
-        Point visageCote6 = new Point((ORIGIN_X + 11) * UNITE_HORIZONTALE, (ORIGIN_Y + 4) * UNITE_VERTICALE);
-        
-        //bouche
-        Point bouche = new Point((ORIGIN_X + 6) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
-        Point bouche2 = new Point((ORIGIN_X + 8) * UNITE_HORIZONTALE, (ORIGIN_Y + 8) * UNITE_VERTICALE);
-        
-        //nez
-        Point nezCentre = new Point((ORIGIN_X + 7) * UNITE_HORIZONTALE, (ORIGIN_Y + 5) * UNITE_VERTICALE);
-        Point nezGauche = new Point((ORIGIN_X + 6.8) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
-        Point nezDroite = new Point((ORIGIN_X + 7.2) * UNITE_HORIZONTALE, (ORIGIN_Y + 5.2) * UNITE_VERTICALE);
-
-        //dessin menton
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(visageCote)
-        .ajouter(visageCote2)
-        .ajouter(visageCote3)
-        .ajouter(visageCote4)
-        .ajouter(visageCote5)
-        .ajouter(visageCote6)
-        .nePasRelierLesPointsExtreme();
-        
-        //dessin bouche
-        demarrerNouveauDessinAvecDesPoints()
-        .ajouter(bouche)
-        .ajouter(bouche2);
-        
-        //dessin nez
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(nezGauche)
-		.ajouter(nezCentre)
-		.ajouter(nezDroite)
-		.nePasRelierLesPointsExtreme();
-        
-	}
-
 }

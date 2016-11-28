@@ -28,6 +28,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
 	
+	private static final Point NEZ_ORIGINE = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
+
 	
 	@Override
 	public void dessiner() {
@@ -195,12 +197,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerVisage() {
 		
-		// == Dessin du nez
+		// == Dessin du nez - 
 		
 		// Déclaration des points
-		Point nez1 = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
-		Point nez2 = new Point(ORIGIN + CASE * 7, CASE * 5);
-		Point nez3 = new Point(ORIGIN + CASE * 7.2, CASE * 5.2);
+		Point nez1 = NEZ_ORIGINE;
+		Point nez2 = new Point(nez1.getX() + CASE * 0.2, nez1.getY() - CASE * 0.2);
+		Point nez3 = new Point(nez2.getX() + CASE * 0.2, nez2.getY() + CASE * 0.2);
 		
 		// Premier trait
 		demarrerNouveauDessinAvecDesPoints()
