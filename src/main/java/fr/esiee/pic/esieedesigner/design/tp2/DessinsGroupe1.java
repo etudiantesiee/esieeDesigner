@@ -174,7 +174,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Oeil droit
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		
-		// Appel suivant
+		// Appel suivant avec pointeGauche2 et pointeDroite3
 		dessinerVisage(pointeGauche2, pointeDroite3);
 	}
 	
