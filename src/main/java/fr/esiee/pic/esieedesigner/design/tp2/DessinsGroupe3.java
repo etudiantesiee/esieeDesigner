@@ -96,32 +96,28 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point brasgauche = dessineBrasGauche(POINT_BAS_BRAS_GAUCHE); 
 		dessinYeuxContour();
 
-	
-		//dessinerJambeDroite();
-        //dessinerJambeGauche();
+		Point brasHautDroit = dessinerTeteHaut(brasgauche);
+		Point brasBasGauche = dessineBrasDroit(brasHautDroit); 
+		Point jambeHautDroit = dessinerTeteBasDroit(brasBasGauche);
+		Point jambebasDroit = dessinerJambeDroite(jambeHautDroit);
+		Point jambeBasGauche = dessinerBasTete(jambebasDroit);
+		Point jambeHautgauche = dessinerJambeGauche(jambeBasGauche);
+		Point finalPoint = dessinerTeteBasGauche(jambeHautgauche);
 
 
-		Point brasGauche =  new Point(POINT_BAS_BRAS_GAUCHE.getX()+2*PIXEL, POINT_BAS_BRAS_GAUCHE.getY()+4*PIXEL); 
-		Point brasHautDroit = dessinerTeteHaut(brasGauche);
-		Point jambeHautDroit = dessinerTeteBasDroit(brasGauche);
 
-        dessinYeux();
-        dessinBouche();
-        dessinNez();
-        dessinMenton();
-        dessinerTete();
-        dessinerCheveux();
     }
     
     /**
     * 
-    * Method used to draw head of manga
+    * Method used to draw head top of manga
     *
     * @author  DaRa ChauCour
     * @version 1.0
     * @since   2016-11-28 
     */
     public Point dessinerTeteHaut(Point pBase){
+    	//Define points
         Point tete1 = new Point(pBase.getX(), pBase.getY()-2*PIXEL);
         Point tete2 = new Point(tete1.getX()+PIXEL, tete1.getY()-2*PIXEL);
         Point tete3 = new Point(tete2.getX()+2*PIXEL, tete2.getY()-1*PIXEL);
@@ -129,7 +125,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
         Point tete5 = new Point(tete4.getX()+2*PIXEL, tete4.getY()+1*PIXEL);
         Point tete6 = new Point(tete5.getX()+1*PIXEL, tete5.getY()+2*PIXEL);
         Point tete7 = new Point(tete6.getX()+0*PIXEL, tete6.getY()+2*PIXEL);
-        
+        //Draw left side
         demarrerNouveauDessinAvecDesPoints()
 	        .ajouter(pBase)
 	        .ajouter(tete1)
@@ -141,6 +137,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	        .ajouter(tete7)
 	        .nePasRelierLesPointsExtreme();
         
+        //draw left hair
+    	//Define points
+
         Point cheveux2 = new Point(tete2.getX()+2*PIXEL, tete2.getY()+1*PIXEL);
         Point cheveux3 = new Point(cheveux2.getX()-1*PIXEL, cheveux2.getY()-1.5*PIXEL);
         demarrerNouveauDessinAvecDesPoints()
@@ -148,7 +147,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	        .ajouter(cheveux2)
 	        .ajouter(cheveux3)
 	        .couleurDeFond(Couleur.GRIS);
-        
+        //draw center hair
         Point cheveux4 = new Point(tete3.getX()+1*PIXEL, tete3.getY()+2*PIXEL);
         Point cheveux5 = new Point(cheveux4.getX()+1*PIXEL, cheveux4.getY()-2*PIXEL);
         demarrerNouveauDessinAvecDesPoints()
@@ -157,6 +156,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	        .ajouter(cheveux5)
 	        .couleurDeFond(Couleur.GRIS);
         
+        //draw right hair
         Point cheveux6 = new Point(tete5.getX()-2*PIXEL, tete5.getY()+1*PIXEL);
         Point cheveux7 = new Point(cheveux6.getX()+1*PIXEL, cheveux6.getY()-1.5*PIXEL);
         demarrerNouveauDessinAvecDesPoints()
@@ -169,11 +169,40 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
     }
     
+    /**
+    * 
+    * Method used to draw head right bottom of manga
+    *
+    * @author  DaRa ChauCour
+    * @version 1.0
+    * @since   2016-11-28 
+    */
     public Point dessinerTeteBasDroit(Point pBase){
     	
     	Point tete1 = new Point(pBase.getX()-1*PIXEL, pBase.getY()+3*PIXEL);
     	Point tete2 = new Point(tete1.getX()-1*PIXEL, tete1.getY()+1*PIXEL);
+    	demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(pBase)
+	        .ajouter(tete1)
+	    	.ajouter(tete2);
+    	
     	return tete2;
+    }
+    
+    /**
+    * 
+    * Method used to draw head bottom of manga
+    *
+    * @author  DaRa ChauCour
+    * @version 1.0
+    * @since   2016-11-28 
+    */
+    public Point dessinerBasTete(Point pBase){
+    	Point tete1 = new Point(pBase.getX()-2*PIXEL, pBase.getY());
+    	demarrerNouveauDessinAvecDesPoints()
+	        .ajouter(pBase)
+	        .ajouter(tete1);
+    	return tete1;
     }
     
 
