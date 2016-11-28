@@ -16,7 +16,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Point de départ groupe 2
 	 */
-	private static final double ORIGIN = 1400;
+	private static final double ORIGIN = 0;
 	
 	/**
 	 * Nombre de pixel d'une case
