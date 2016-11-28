@@ -264,7 +264,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * 
+	 *  Dessine Mains
 	 */
 	public void dessinerMains(Point mainGauche, Point mainDroite) {
 		// Main gauche
