@@ -258,7 +258,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(corps28)
 		.couleurDeFond(Couleur.GRIS);
 		
-		dessinerMains(corps25, corps6);
+		dessinerMains(corps25, corps7);
 	}
 	
 	/**
