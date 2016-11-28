@@ -179,8 +179,11 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	/**
-	 * @author JL et Victor
 	 * Creation du visage en debutant par le pointeGauche2
+	 * 
+	 * @author JL et Victor
+	 * @param pointeGauche2
+	 * @param pointeDroite3
 	 */
 	public void dessinerVisage(Point pointeGauche2, Point pointeDroite3) {
 		//menton
