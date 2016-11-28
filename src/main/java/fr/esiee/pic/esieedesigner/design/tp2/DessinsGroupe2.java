@@ -44,38 +44,34 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
 	
-	/**
-	 * Point fixe pour dessiner le nez
-	 */
-	private static final Point NEZ_ORIGINE = new Point(ORIGIN + CASE * 6.8, CASE * 5.2);
-
 	
-	/**
-	 * Point fixe pour dessiner le premier oeil (gauche)
-	 */
-	private static final Point OEIL1_ORIGINE = new Point(ORIGIN + CASE * 6, CASE * 4);
-	
-	/**
-	 * Point fixe pour dessiner le deuxième oeil (droite)
-	 */
-	private static final Point OEIL2_ORIGINE = new Point(ORIGIN + CASE * 8, CASE * 4);
-	
-	private static final Point BOUCHE_ORIGINE = new Point(ORIGIN + CASE * 4, CASE * 6);
-	
-	
-	/**
-	 * Fonction main qui dessine tout
-	 */
 	@Override
+	/**
+	 * Fonction main qui dessine toutes les parties du corps du personnage du dessin #16.
+	 */
 	public void dessiner() {
+		
+		// Dessin des cheveux
 		dessinerCheveux();
+		
+		// Dessin du torse
 		dessinerTorse();
+		
+		// Dessin des parties du visage (bouche, nez et yeux)
 		dessinerVisage();
+		
+		// Dessin de la jupe
 		dessinerJupe();
+		
+		// Dessin des joues
 		dessinerJoueDroite();
 		dessinerJoueGauche();
+		
+		// Dessin des mains
 		dessinerMainDroite();
 		dessinerMainGauche();
+		
+		// Dessin des pieds
 		dessinerPiedGauche();
 		dessinerPiedDroit();
 	}
@@ -228,30 +224,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Fonction pour dessiner le visage
+	 * Ordre torse_haut_gauche --> bouche --> nez --> yeux
 	 */
 	public void dessinerVisage() {
 		
-		// == Dessin du nez - 
-		
+		// == Dessin de la bouche - point initial = torse haut gauche
+
 		// Déclaration des points
-		Point nez1 = NEZ_ORIGINE;
-		Point nez2 = new Point(nez1.getX() + CASE * 0.2, nez1.getY() - CASE * 0.2);
-		Point nez3 = new Point(nez2.getX() + CASE * 0.2, nez2.getY() + CASE * 0.2);
+		// Déclaration du point bouche1 à partir du point d'origine TORSE_HAUT_GAUCHE
+		Point bouche1 = new Point(TORSE_HAUT_GAUCHE.getX()+ CASE * 1, TORSE_HAUT_GAUCHE.getY() + CASE * (-2));
 		
-		// Premier trait
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(nez1)
-		.ajouter(nez2);
-		
-		// Deuxième trait
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(nez2)
-		.ajouter(nez3);
-		
-		// == Dessin de la bouche
-		
-		// Déclaration des points
-		Point bouche1 = BOUCHE_ORIGINE;
+		// Dessin des points de la bouche à partir du point bouche1
 		Point bouche2 = new Point(bouche1.getX() + CASE * 0, bouche1.getY() + CASE * 1);
 		Point bouche3 = new Point(bouche2.getX() + CASE * 2, bouche2.getY() + CASE * 1);
 		Point bouche4 = new Point(bouche3.getX() + CASE * 2, bouche3.getY() + CASE * 0);
@@ -267,15 +250,36 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(bouche5)
 		.ajouter(bouche6);
 		
-		// == Dessin des deux yeux
+		// ==========================================
+		
+		// == Dessin du nez - point initial = bouche1
+		
+		// Déclaration des points
+		Point nez1 = new Point(bouche1.getX() + CASE * 2.8, bouche1.getY() + CASE * (-0.8));
+		Point nez2 = new Point(nez1.getX() + CASE * 0.2, nez1.getY() - CASE * 0.2);
+		Point nez3 = new Point(nez2.getX() + CASE * 0.2, nez2.getY() + CASE * 0.2);
+		
+		// Premier trait
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(nez1)
+		.ajouter(nez2);
+		
+		// Deuxième trait
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(nez2)
+		.ajouter(nez3);
+		
+		// ==============================================
+		
+		// == Dessin des deux yeux - point initial = nez2
 		
 		// Dessin du premier oeil (gauche)
-		Point oeil1 = OEIL1_ORIGINE;
+		Point oeil1 = new Point(nez2.getX() + CASE * (-1), nez2.getY() + CASE * (-1));
 		Ellipse ellipseOeil1 = new Ellipse(oeil1, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil1, Couleur.NOIR);
 		
 		// Dessin du second oeil (gauche)
-		Point oeil2 = OEIL2_ORIGINE;
+		Point oeil2 = new Point(nez2.getX() + CASE * 1, nez2.getY() + CASE * (-1));
 		Ellipse ellipseOeil2 = new Ellipse(oeil2, CASE * 0.3, CASE * 0.6);
 		ajouterEllipse(ellipseOeil2, Couleur.NOIR);
 	}
