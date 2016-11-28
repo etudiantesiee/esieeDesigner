@@ -152,7 +152,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void dessinYeuxContour(){
 		// Initialisation des points
-		Point ptYeux1 = new Point(pointBasBrasGauche.getX()+3*PIXEL,pointBasBrasGauche.getY()-6*PIXEL);
+		Point ptYeux1 = new Point(PointBasBrasGauche.getX()+3*PIXEL,PointBasBrasGauche.getY()-6*PIXEL);
 		Point ptYeux2 = new Point(ptYeux1.getX(),ptYeux1.getY()+1*PIXEL);
 		Point ptYeux3 = new Point(ptYeux2.getX()+1*PIXEL,ptYeux2.getY()+1*PIXEL);
 		Point ptYeux4 = new Point(ptYeux3.getX()+1*PIXEL,ptYeux3.getY());
