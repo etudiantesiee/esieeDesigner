@@ -25,6 +25,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Point torse_haut_gauche
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	private static final Point TORSE_HAUT_GAUCHE = new Point(ORIGIN + CASE*3, CASE*8);
 
@@ -96,7 +98,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void dessinerJoueGauche() {
 		
-		// == Objetive 3 Dessin de la joue droite
+		// == Objective 3 Dessin de la joue droite
 		
 		// Déclaration des points
 		Point jg1 = JOUE_EXTREMITE_GAUCHE_EXTERIEUR;
@@ -162,6 +164,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Dessin torse
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerTorse() {
 		// Dessin torse
@@ -262,6 +266,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Dessiner jupe
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerJupe() {
 		// Dessin Jupe
@@ -280,6 +286,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Dessiner main gauche
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerMainGauche() {
 		// Dessin main gauche
@@ -299,6 +307,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Dessiner main droite
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerMainDroite() {
 		// Dessin main droite
@@ -318,6 +328,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	/**
 	 * Dessiner pied gauche
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerPiedGauche() {
 		// Dessin pied gauche
@@ -335,6 +347,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 	/**
 	 * Dessiner pied droit
+	 * @author Arnaud LE
+	 * @author Angelique PHAN
 	 */
 	public void dessinerPiedDroit() {
 		// Dessin pied droit
