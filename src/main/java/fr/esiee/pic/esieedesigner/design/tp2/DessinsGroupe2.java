@@ -37,9 +37,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Fonction qui dessine la joue droite
 	 */
 	public void dessinerJoueDroite() {
+		
+		// == Dessin de la joue droite
+		
+		// Déclaration des points
 		Point jd1 = new Point(ORIGIN + CASE*10, CASE*8);
 		Point jd2 = new Point(ORIGIN + CASE*11, CASE*7);
 
+		// Dessin de la joue droite
 	    demarrerNouveauDessinAvecDesPoints()
 		.ajouter(jd1)
 		.ajouter(jd2);
@@ -49,9 +54,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Fonction qui dessine la joue gauche
 	 */
 	public void dessinerJoueGauche() {
+		
+		// == Dessin de la joue gauche
+		
+		// Déclaration des points
 		Point jg1 = new Point(ORIGIN + CASE*3, CASE*7);
 		Point jg2 = new Point(ORIGIN + CASE*4, CASE*8);
 
+		// Dessin de la joue gauche
 	    demarrerNouveauDessinAvecDesPoints()
 		.ajouter(jg1)
 		.ajouter(jg2);
@@ -61,6 +71,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Fonction qui dessine les cheveux
 	 */
 	public void dessinerCheveux() {
+		
+		// == Dessin des cheveux
+		
+		// Déclaration des points
 		Point p1 = new Point(ORIGIN + CASE*1, CASE*8);
 		Point p2 = new Point(ORIGIN + CASE*1, CASE*3);
 		Point p3 = new Point(ORIGIN + CASE*3, CASE*1);
@@ -92,6 +106,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point p29 = new Point(ORIGIN + CASE*2, CASE*6);
 		Point p30 = new Point(ORIGIN + CASE*1, CASE*8);
 
+		// == Dessin des cheveux
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
 		.ajouter(p2)
