@@ -93,6 +93,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	 * Dessin des lunettes
 	 * 
 	 * @author Naji et Baptiste
+	 * @param pointeGauche1 Point Pointe des cheveux à gauche 1
+	 * @param pointeDroite4 Point Pointe des cheveux à droite 4
+	 * @param pointeGauche2 Point Pointe des cheveux à gauche 2
+	 * @param pointeDroite3 Point Pointe des cheveux à droite 3
 	 */
 	public void dessinerLunettes(Point pointeGauche1, Point pointeDroite4, Point pointeGauche2, Point pointeDroite3) {
 		// Bas des lunettes droite bas
