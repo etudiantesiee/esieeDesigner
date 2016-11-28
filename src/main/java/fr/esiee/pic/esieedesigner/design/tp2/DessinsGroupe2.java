@@ -36,12 +36,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Point joue extremité gauche exterieur
 	 */
-	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(ORIGIN + CASE*3, CASE*7);
+	private static final Point JOUE_EXTREMITE_GAUCHE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX(), TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	/**
 	 * Point joue extremité droite exterieur
 	 */
-	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(ORIGIN + CASE*11, CASE*7);
+	private static final Point JOUE_EXTREMITE_DROITE_EXTERIEUR = new Point(TORSE_HAUT_GAUCHE.getX() + CASE*8, TORSE_HAUT_GAUCHE.getY() - CASE);
 	
 	@Override
 	/**
@@ -149,36 +149,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 		// == Dessin des cheveux
 		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(p1)
-		.ajouter(p2)
-		.ajouter(p3)
-		.ajouter(p4)
-		.ajouter(p5)
-		.ajouter(p6)
-		.ajouter(p7)
-		.ajouter(p8)
-		.ajouter(p9)
-		.ajouter(p10)
-		.ajouter(p11)
-		.ajouter(p12)
-		.ajouter(p13)
-		.ajouter(p14)
-		.ajouter(p15)
-		.ajouter(p16)
-		.ajouter(p17)
-		.ajouter(p18)
-		.ajouter(p19)
-		.ajouter(p20)
-		.ajouter(p21)
-		.ajouter(p22)
-		.ajouter(p23)
-		.ajouter(p24)
-		.ajouter(p25)
-		.ajouter(p26)
-		.ajouter(p27)
-		.ajouter(p28)
-		.ajouter(p29)
-		.ajouter(p30)
+		.ajouter(p1).ajouter(p2).ajouter(p3).ajouter(p4)
+		.ajouter(p5).ajouter(p6).ajouter(p7).ajouter(p8)
+		.ajouter(p9).ajouter(p10).ajouter(p11).ajouter(p12)
+		.ajouter(p13).ajouter(p14).ajouter(p15).ajouter(p16)
+		.ajouter(p17).ajouter(p18).ajouter(p19).ajouter(p20)
+		.ajouter(p21).ajouter(p22).ajouter(p23).ajouter(p24)
+		.ajouter(p25).ajouter(p26).ajouter(p27).ajouter(p28)
+		.ajouter(p29).ajouter(p30)
 		.couleurDeFond(Couleur.GRIS);
 	}
 	
