@@ -170,6 +170,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	}
 	
 	@Override
+	/*
+	 * Dessin des différentes parties du corps
+	 * */
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
@@ -179,12 +182,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 		dessineBrasDroit(); //Ajout du bras droit au dessin
 		dessineBrasGauche(); //Ajout du bras droit au dessin
-		dessinYeuxContour();
-
-		dessinYeux();
-		dessinBouche();
-		dessinNez();
-		dessinMenton();
+		
+		dessinYeuxContour(); // Dessin du contour des yeux
+		dessinYeux(); // Dessin des yeux
+		dessinBouche(); // Dessin de la bouche
+		dessinNez(); // Dessin du nez
+		dessinMenton(); // Dessin du menton
+		
 		dessinerTete();
 		dessinerCheveux();
 	}
