@@ -92,6 +92,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point corps27 = new Point((ORIGIN_X+5) * UNITE_HORIZONTALE, (ORIGIN_Y+13) * UNITE_VERTICALE);
 		Point corps28 = new Point((ORIGIN_X+6) * UNITE_HORIZONTALE, (ORIGIN_Y+14) * UNITE_VERTICALE);
 		
+		//Trace du dessin 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(corps1)
 		.ajouter(corps2)
