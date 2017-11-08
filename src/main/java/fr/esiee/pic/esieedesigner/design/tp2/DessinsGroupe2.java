@@ -2,6 +2,7 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 
 import java.lang.reflect.Array;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -93,9 +94,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
+		// Declaration du tableau contenant les points pour le nez
+		Point[] pointsPourLeNez = {
+				new Point(this.vraiePositionEnX(6.8), this.vraiePositionEnY(6.1)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(7.2), this.vraiePositionEnY(6.1))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsPourLeNez).nePasRelierLesPointsExtreme();
 		
-		
-		
+		// Creation de la bouche
+		Point[] pointsPourLaBouche = {
+				new Point(this.vraiePositionEnX(5), this.vraiePositionEnY(8)),
+				new Point(this.vraiePositionEnX(9), this.vraiePositionEnY(8))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsPourLaBouche);
 	}
 	/**
 	 * Contour du visage
@@ -180,14 +194,20 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(jambeDroite)
 		.ajouter(ventre)
 		.ajouter(jambeGauche)
+		.couleurDeFond(Couleur.GRIS)
 		;
 		
 	}
-	
 	/*
 	 * Dessin haut du corps
 	 */
 	private void dessinHautCorps(){
+		Point epauleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(8));
+		Point coudeDroite = new Point(vraiePositionEnX(2),vraiePositionEnY(10));
+		Point mancheDroite2 = new Point(vraiePositionEnX(1),vraiePositionEnY(11));
+		Point mancheDroite1 = new Point(vraiePositionEnX(2),vraiePositionEnY(12));
+		Point aisselleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(11));
+		Point hancheDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
 		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
 		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
 		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
@@ -196,20 +216,33 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleDroite)
+		.ajouter(coudeDroite)
+		.ajouter(mancheDroite2)
+		.ajouter(mancheDroite1)
+		.ajouter(aisselleDroite)
+		.ajouter(hancheDroite)
 		.ajouter(hancheGauche)
 		.ajouter(aisselleGauche)
 		.ajouter(mancheGauche1)
 		.ajouter(mancheGauche2)
 		.ajouter(coudeGauche)
 		.ajouter(epauleGauche)
+		.couleurDeFond(Couleur.GRIS)
+		.nePasRelierLesPointsExtreme()
 		;
 	}
-	
-	private void suitePointDessin(Point[] points){
+    /**
+	 * Permet de relier plusieurs points
+	 * @param points Les points à relier dans l'ordre de reliement
+	 * @return CheminDePoints le chemin de points formé par les points relié
+     */
+    private CheminDePoints suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
 		for(int i = 0; i < points.length; i++){
 			cdp.ajouter(points[i]);
 		}
+		return cdp;
 	}
 	/**
 	 * Permet de connaitre la vraie position en X
