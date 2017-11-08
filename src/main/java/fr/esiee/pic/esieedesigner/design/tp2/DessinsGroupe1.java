@@ -115,6 +115,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(hc)
 		.ajouter(ic)
 		.ajouter(jc)
+		.couleurDeFond(Couleur.GRIS)
 		.produireTraitDeLiaisonDePetiteTaille();
 		
 		// Dessin oeil droit
@@ -122,7 +123,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		double ordonneOeilDroit = 3*Y;
 		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
-				
+		// Remplissage noir		
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 				
 		// Dessin oeil gauche
@@ -130,9 +131,37 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		double ordonneOeilGauche = 3*Y;
 		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
-				
+		// Remplissage noir				
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		
+		// Dessin du nez
+		Point ad = new Point (6*X + 20, 4*Y + 10 );
+		Point bd = new Point (7*X, 4*Y +5);
+		Point cd = new Point (7*X + 5, 4*Y +10);
+		
+		// Ajout des points du nez, pas de couleur de fond
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ad)
+		.ajouter(bd)
+		.ajouter(cd)
+		.nePasRelierLesPointsExtreme()
+		.produireTraitDeLiaisonDePetiteTaille();
 	
+		// Dessin de la bouche
+		Point ae = new Point (6*X, 6*Y);
+		Point be = new Point (9*X, 5*Y);
+		Point ce = new Point (7*X, 6*Y);
+		
+		// Ajout des points de la bouche, pas de couleur de fond
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ae)
+		.ajouter(be)
+		.ajouter(ce)
+		.couleurDeFond(Couleur.JAUNE)
+		.produireTraitDeLiaisonDePetiteTaille();
+					
+		
 	}
 	
 	/**
