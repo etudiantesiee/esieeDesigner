@@ -21,9 +21,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		formetete();
-		// Ajout vos dessins ici
-		// Pensez à désactiver les dessins de la démo 
-		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		formeCheveux();
 	    dessinerCorps();
 	}
 	
@@ -38,7 +36,7 @@ private void dessinerCorps(){
 	
 	
 	/**
-	 * contrusction du dessin
+	 * Construction du dessin
 	 */
 	demarrerNouveauDessinAvecDesPoints()
 	.ajouter(menton)
@@ -71,5 +69,18 @@ private void dessinerCorps(){
 			.ajouter(neufD)
 			.ajouter(dixD);
 
+		}
+		/**
+		 * Construction de la forme des cheveux
+		 */
+		public void formeCheveux() {
+			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
+			Point deuxC = new Point(menton.getX()-150, unC.getY());
+			Point troisC = new Point(deuxC.getX(), deuxC.getY()-125);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(unC)
+			.ajouter(deuxC)
+			.ajouter(troisC);
 		}
 }
