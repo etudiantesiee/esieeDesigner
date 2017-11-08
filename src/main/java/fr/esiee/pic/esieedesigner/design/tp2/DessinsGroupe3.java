@@ -50,13 +50,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point baseLunette4 = new Point(menton.getX()-25*4, menton.getY() - 7*25);
 		Point baseLunette5 = new Point(menton.getX()-25, menton.getY() - 8*25);
 		Point baseLunette6 = new Point(menton.getX() , menton.getY() - 7*25);
+		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); //début yeux
+		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
+		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
+		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
+	
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(baseLunette)
 		.ajouter(baseLunette2)
 		.ajouter(baseLunette3)
 		.ajouter(baseLunette4)
 		.ajouter(baseLunette5)
-		.ajouter(baseLunette6);
+		.ajouter(baseLunette6)		
+		.ajouter(baseLunette7)
+		.ajouter(baseLunette8)	
+		.ajouter(baseLunette9)
+		.ajouter(baseLunette10);
 	}
 		
 
