@@ -37,7 +37,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		
 	}
-	
+	/**
+	 * Méthode dessinant les jambes.
+	 */
 	public void dessinerJambe(){
 		
 		
