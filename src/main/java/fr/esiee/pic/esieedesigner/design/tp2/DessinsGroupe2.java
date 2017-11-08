@@ -21,17 +21,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * elle permet de calculer la taille en pixel
 	 * Utilisé dans les méthode {@link vraieTailleEnX} et {@link vraieTailleEnY}
 	 */
-	private static final int nbrPixelCarreau = 25;
+	private static final int NBRPIXELCARREAU = 25;
 	/** 
 	 * Permet de connaitre la taille de déplacement en X de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnX = 28;
+	private static final int DECALAGEENX = 28;
 	/** 
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 0;
+	private static final int DECALAGEENY = 0;
 	
 	@Override
 	public void dessiner() {
@@ -149,7 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnX(int nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en X
@@ -158,7 +158,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnX(double nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -167,7 +167,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnY(int nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -176,6 +176,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnY(double nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 }
