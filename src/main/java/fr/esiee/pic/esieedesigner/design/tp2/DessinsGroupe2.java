@@ -80,8 +80,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Nous ne dessinons pas les contours de la tête
 	 */
 	private void interieurTete(){
+		// Nous creons les deux paires de lunettes
 		lunette();
+		// Nous créons les yeux
 		yeux();
+		// Nous creons le nez ainsi que la bouche;
 		nezEtBouche();
 	}
 	/**
@@ -121,12 +124,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void yeux(){
+		// Definission des points l'oeil gauche
 		Point oeilGauchePoint = new Point(vraiePositionEnX(5), vraiePositionEnY(5));
+		// Creation de l'elipse de l'oeil gauche
 		Ellipse oeilGauche = new Ellipse(oeilGauchePoint, 7,20);
+		// Ajout et et dessin de l'ellipse
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
-		
+		// Definisssions des points de l'oeil droit
 		Point oeilDroitPoint = new Point(vraiePositionEnX(9), vraiePositionEnY(5));
+		// Creation de l'ellipse de l'oeil droit
 		Ellipse oeilDroit = new Ellipse(oeilDroitPoint, 7,20);
+		// Ajout et dessin de l'ellipse
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 	}
 	/** 
