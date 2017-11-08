@@ -9,6 +9,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  *
  */
 public class DessinsGroupe1 extends CreateurDeForme {
+	
+	/**
+	 * Unité de dessin horizontale
+	 */
+	private static final double UNITE_HORIZONTALE = 50;
+	
+	/**
+	 * Unité de dessin verticale
+	 */
+	private static final double UNITE_VERTICALE = 50;
+	
 
 	@Override
 	public void dessiner() {
