@@ -43,6 +43,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formetete();
 		traitUnGauche();
 		traitDeux();
+		traitUnDroite();
+		traitDeuxDroite();
 		formeCheveux();
 		dessinerCorps();
 		yeux();
@@ -178,7 +180,8 @@ private void dessinerCorps(){
 	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
 	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
 	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
-	
+	Point baseBrasD = new Point(basePiedD3.getX(),basePiedD3.getY()-75);
+	Point baseMainD = new Point(basePiedD3.getX()+25,basePiedD3.getY()-25);
 
 	
 	/**
@@ -201,6 +204,11 @@ private void dessinerCorps(){
 	.ajouter(basePiedD3)
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
+	.ajouter(baseCorps2)
+	.ajouter(basePiedD3)
+	.ajouter(baseBrasD)
+	.ajouter(basePiedD3)
+	.ajouter(baseMainD)
 	.nePasRelierLesPointsExtreme();
 	
 	colorierPantalon(baseBrasG);
@@ -323,6 +331,31 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(traitDeuxUn)
 			.ajouter(traitDeuxDeux);
 		}
+		
+		/*
+		 * trait 3
+		 */
+		public void traitUnDroite() {
+			Point traitUnDroite = new Point(menton.getX()+100, menton.getY()-75);
+			Point traitUnDD = new Point(traitUnDroite.getX(), traitUnDroite.getY()-25);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitUnDroite)
+			.ajouter(traitUnDD);
+		}
+		
+		/*
+		 * trait 4
+		 */
+		public void traitDeuxDroite() {
+			Point traitDeuxDroite = new Point(menton.getX()+125, menton.getY()-75);
+			Point traitDeuxDD = new Point(traitDeuxDroite.getX(), traitDeuxDroite.getY()-50);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitDeuxDroite)
+			.ajouter(traitDeuxDD);
+		}
+		
 		
 	
 }

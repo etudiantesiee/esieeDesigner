@@ -1,7 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
-import java.lang.reflect.Array;
-
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
@@ -151,7 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	}
 	/**
-	 * menton
+	 * les points du menton, des cheveux et les meches
 	 */
 	public void visage(){
 		//Creation des points
@@ -197,12 +195,16 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				ajouter(basChDroite).nePasRelierLesPointsExtreme();
 				
 	
-		
+		//creation des points du cote de visage
 		Point haut1=new Point(vraiePositionEnX(1),vraiePositionEnY(3));
+		//creation des points du cote de visage
 		Point bas1=new Point(vraiePositionEnX(1),vraiePositionEnY(5));
+		//creation des points du cote de visage
 		Point haut2=new Point(vraiePositionEnX(13),vraiePositionEnY(3));
+		//creation des points du cote de visage
 		Point bas2=new Point(vraiePositionEnX(13),vraiePositionEnY(5));
 		
+		// relier les points du coté de visage 
 		demarrerNouveauDessinAvecDesPoints().ajouter(haut1)
 		.ajouter(bas1);
 		demarrerNouveauDessinAvecDesPoints()
