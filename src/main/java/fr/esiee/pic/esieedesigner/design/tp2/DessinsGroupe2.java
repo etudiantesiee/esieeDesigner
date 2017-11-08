@@ -158,6 +158,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin haut du corps
 	 */
 	private void dessinHautCorps(){
+		Point epauleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(8));
+		Point coudeDroite = new Point(vraiePositionEnX(2),vraiePositionEnY(10));
+		Point mancheDroite2 = new Point(vraiePositionEnX(1),vraiePositionEnY(11));
+		Point mancheDroite1 = new Point(vraiePositionEnX(2),vraiePositionEnY(12));
+		Point aisselleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(11));
+		Point hancheDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
 		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
 		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
 		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
@@ -166,6 +172,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleDroite)
+		.ajouter(coudeDroite)
+		.ajouter(mancheDroite2)
+		.ajouter(mancheDroite1)
+		.ajouter(aisselleDroite)
+		.ajouter(hancheDroite)
 		.ajouter(hancheGauche)
 		.ajouter(aisselleGauche)
 		.ajouter(mancheGauche1)
