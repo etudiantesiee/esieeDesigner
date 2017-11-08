@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -54,16 +55,31 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void yeux()
 	{
-		Point baseLunette = new Point(menton.getX(), menton.getY() - 6*25); //début yeux
+		//début yeux
+		Point baseLunette = new Point(menton.getX(), menton.getY() - 6*25); 
 		Point baseLunette2 = new Point(menton.getX()-25, menton.getY()  - 5*25);
 		Point baseLunette3 = new Point(menton.getX()- 25*4, menton.getY() - 6*25);
 		Point baseLunette4 = new Point(menton.getX()-25*4, menton.getY() - 7*25);
 		Point baseLunette5 = new Point(menton.getX()-25, menton.getY() - 8*25);
 		Point baseLunette6 = new Point(menton.getX() , menton.getY() - 7*25);
-		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); //début yeux
+		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); 
 		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
 		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
 		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
+		
+		double abscisseOeilDroit = menton.getX()+1*25;
+		double ordonneOeilDroit = menton.getY()-6*25;
+		double abscisseOeilGauche = menton.getX()-1*25;
+		double ordonneOeilGauche  = menton.getY()-6*25;
+		
+		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
+		
+		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
+			
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(baseLunette)
@@ -76,13 +92,16 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(baseLunette8)	
 		.ajouter(baseLunette9)
 		.ajouter(baseLunette10);
+		
+		
 	}
 		
 /**
  * méthode bouche
  */
 	public void bouche(){
-		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); //début bouche
+		//bouche
+		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); 
 		Point b2 = new Point(menton.getX()-50, menton.getY()  - 2*25);
 		Point b3 = new Point(menton.getX()-50, menton.getY()  - 4*25);
 		Point b4 = new Point(menton.getX()+50, menton.getY()  - 4*25);
@@ -131,6 +150,9 @@ private void dessinerCorps(){
 	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
 	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
 	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
+	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
+	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
+	
 
 	
 	/**
@@ -151,6 +173,8 @@ private void dessinerCorps(){
 	.ajouter(basePiedD)
 	.ajouter(basePiedD2)
 	.ajouter(basePiedD3)
+	.ajouter(baseCorps2)
+	.ajouter(baseCorps3)
 	.nePasRelierLesPointsExtreme();
 }
 
