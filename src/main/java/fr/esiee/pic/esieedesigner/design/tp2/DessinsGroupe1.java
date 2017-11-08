@@ -260,7 +260,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
-        .ajouter(d4);
+        .ajouter(d4)
+        .couleurDeFond(Couleur.GRIS);
 	}
 	
 	
