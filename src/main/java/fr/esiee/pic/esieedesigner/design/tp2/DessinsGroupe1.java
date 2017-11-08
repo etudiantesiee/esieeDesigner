@@ -46,6 +46,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Unité des carreaux pour faciliter les calculs
 		double x = UNITE_VERTICALE;
 		double y = UNITE_HORIZONTALE;
+		//Nous utilisons les variables pour faciliter l'écriture
 		
 		// Dessin des cheveux
 		Point a = new Point (4*x, 0);
@@ -72,6 +73,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.couleurDeFond(Couleur.GRIS)
 		.produireTraitDeLiaisonDePetiteTaille();
 		
+		//Nous avons fait des traits de petites taille
+		
 		// Dessin du contour du visage
 		Point ab = new Point (3*x, 3*y);
 		Point bb = new Point (3*x, 5*y);
@@ -90,6 +93,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(fb)
 		.nePasRelierLesPointsExtreme()
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//Nous ne devons pas relier les points extreme : utilisation de la méthode de l'API
 		
 		// Ajout des yeux 
 		Point ac = new Point (5*x, 2*y);
@@ -133,6 +138,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
 		// Remplissage noir				
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
+		
+		//Nous avons réutilisé une méthode déjà codée (trouvée dans l'exemple)
+		
 		
 		
 		// Dessin du nez
@@ -234,6 +242,28 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(p19)
 		.ajouter(p20);
 		
+		//création de la main droite
+		Point p21= new Point(1.3*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p22= new Point(1.3*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p21)
+		.ajouter(p22);
+		
+		//création de la main droite
+		Point p23= new Point(1.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.6*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p23)
+		.ajouter(p24);
+		
+		//création de la main droite
+		Point p25= new Point(1.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.9*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p25)
+		.ajouter(p26);
+		
+
 			
 	}
 	/**
@@ -242,6 +272,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerJambe(){
 		
 		// Création de points pour dessiner la culotte
+		//coordonnée (horizontale, verticale)
         Point p1 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p2 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p3 = new Point(10*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -252,6 +283,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin de la culotte
         demarrerNouveauDessinAvecDesPoints()
+        // ajouter point p1 et p3
         .ajouter(p1)
         .ajouter(p2)
         .ajouter(p3)
@@ -270,10 +302,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin du pied gauche
         demarrerNouveauDessinAvecDesPoints()
+        // méthode pour ajouter k1 
         .ajouter(k1)
         .ajouter(k2)
         .ajouter(k3)
         .ajouter(k4);
+       
          
         // création des points pour le pied droit 
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -283,6 +317,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         
         // Dessin du pied droit
         demarrerNouveauDessinAvecDesPoints()
+        //appel de la méthode ajouter pour  relier points
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
