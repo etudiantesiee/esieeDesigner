@@ -32,6 +32,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formetete();
 		 dessinerCorps();
 		yeux();
+		bouche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -50,17 +51,43 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point baseLunette4 = new Point(menton.getX()-25*4, menton.getY() - 7*25);
 		Point baseLunette5 = new Point(menton.getX()-25, menton.getY() - 8*25);
 		Point baseLunette6 = new Point(menton.getX() , menton.getY() - 7*25);
+		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); //début yeux
+		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
+		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
+		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
+	
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(baseLunette)
 		.ajouter(baseLunette2)
 		.ajouter(baseLunette3)
 		.ajouter(baseLunette4)
 		.ajouter(baseLunette5)
-		.ajouter(baseLunette6);
+		.ajouter(baseLunette6)		
+		.ajouter(baseLunette7)
+		.ajouter(baseLunette8)	
+		.ajouter(baseLunette9)
+		.ajouter(baseLunette10);
 	}
 		
-
-
+/**
+ * méthode bouche
+ */
+	public void bouche(){
+		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); //début bouche
+		Point b2 = new Point(menton.getX()-50, menton.getY()  - 2*25);
+		Point b3 = new Point(menton.getX()-50, menton.getY()  - 4*25);
+		Point b4 = new Point(menton.getX()+50, menton.getY()  - 4*25);
+		Point b5 = new Point(menton.getX()+50, menton.getY()  - 2*25);
+		Point b6 = new Point(menton.getX()+25, menton.getY()  - 1*25);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(b1)
+		.ajouter(b2)
+		.ajouter(b3)
+		.ajouter(b4)
+		.ajouter(b5)
+		.ajouter(b6);
+	}
 	   
 	
 	
