@@ -165,9 +165,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(hautGauche)
 		.ajouter(basGauche);
 		
+		//relier les points
 		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
 		.ajouter(basDroite);
 		
+		//on dessine en reliantr les points
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 

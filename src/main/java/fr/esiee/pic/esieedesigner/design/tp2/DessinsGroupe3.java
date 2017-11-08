@@ -20,7 +20,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * Permet l'instanciation des dessins
 	 */
 	
+
 	Point menton = new Point(21*25,15*25);
+
 
 
 	// Point du menton
@@ -42,6 +44,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		nez();
 		bouche();
 		poche();
+		pointil();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -171,7 +174,8 @@ private void dessinerCorps(){
 	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
 	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
 	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
-	
+	Point baseBrasD = new Point(basePiedD3.getX(),basePiedD3.getY()-75);
+	Point baseMainD = new Point(basePiedD3.getX()+25,basePiedD3.getY()-25);
 
 	
 	/**
@@ -194,6 +198,11 @@ private void dessinerCorps(){
 	.ajouter(basePiedD3)
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
+	.ajouter(baseCorps2)
+	.ajouter(basePiedD3)
+	.ajouter(baseBrasD)
+	.ajouter(basePiedD3)
+	.ajouter(baseMainD)
 	.nePasRelierLesPointsExtreme();
 	
 	colorierPantalon(baseBrasG);
@@ -260,7 +269,43 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(dixD);
 
 		}
-
+		/**
+		 * méthode pour les pointille
+		 *
+		 */
+		private void pointil()
+		{
+			Point point1 = new Point(menton.getX(),menton.getY());
+			Point point2 = new Point(menton.getX(),menton.getY()+0.20*25);
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(point1)
+			.ajouter(point2);
+			
+			Point point3 = new Point(menton.getX(),menton.getY()+0.4*25);
+			Point point4 = new Point(menton.getX(),menton.getY()+0.8*25);
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(point3)
+			.ajouter(point4);
+			
+			Point point5 = new Point(menton.getX(),menton.getY()+0.9);
+			Point point6 = new Point(menton.getX(),menton.getY()+1.1*25);	
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(point5)
+			.ajouter(point6);
+			
+			Point point7 = new Point(menton.getX(),menton.getY()+1.4*25);
+			Point point8 = new Point(menton.getX(),menton.getY()+1.6*25);	
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(point7)
+			.ajouter(point8);
+			
+			Point point9 = new Point(menton.getX(),menton.getY()+1.8*25);
+			Point point10 = new Point(menton.getX(),menton.getY()+2*25);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(point9)
+			.ajouter(point10);
+		}
 		/**
 		 * Construction de la forme des cheveux
 		 */
