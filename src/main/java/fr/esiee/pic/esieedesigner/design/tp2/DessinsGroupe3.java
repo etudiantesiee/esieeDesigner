@@ -43,6 +43,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formetete();
 		traitUnGauche();
 		traitDeux();
+		traitUnDroite();
+		traitDeuxDroite();
 		formeCheveux();
 		dessinerCorps();
 		yeux();
@@ -323,6 +325,31 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(traitDeuxUn)
 			.ajouter(traitDeuxDeux);
 		}
+		
+		/*
+		 * trait 3
+		 */
+		public void traitUnDroite() {
+			Point traitUnDroite = new Point(menton.getX()+100, menton.getY()-75);
+			Point traitUnDD = new Point(traitUnDroite.getX(), traitUnDroite.getY()-25);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitUnDroite)
+			.ajouter(traitUnDD);
+		}
+		
+		/*
+		 * trait 4
+		 */
+		public void traitDeuxDroite() {
+			Point traitDeuxDroite = new Point(menton.getX()+125, menton.getY()-75);
+			Point traitDeuxDD = new Point(traitDeuxDroite.getX(), traitDeuxDroite.getY()-50);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitDeuxDroite)
+			.ajouter(traitDeuxDD);
+		}
+		
 		
 	
 }
