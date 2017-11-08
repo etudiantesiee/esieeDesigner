@@ -44,7 +44,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void yeux()
 	{
-		Point baseLunette = new Point(menton.getX(), menton.getY() +6*25);
+		Point baseLunette = new Point(menton.getX(), menton.getY() +6*25); //début yeux
 		Point baseLunette2 = new Point(menton.getX()-25, menton.getY() -25);
 		Point baseLunette3 = new Point(menton.getX()- 25*4, menton.getY());
 		demarrerNouveauDessinAvecDesPoints()
