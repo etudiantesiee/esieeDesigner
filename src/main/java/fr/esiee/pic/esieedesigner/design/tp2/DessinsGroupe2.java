@@ -1,7 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
-import java.lang.reflect.Array;
-
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
@@ -151,7 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	}
 	/**
-	 * menton
+	 * les points du menton, des cheveux et les meches
 	 */
 	public void visage(){
 		//Creation des points
@@ -162,19 +160,21 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Creation des points
 		Point basDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(10));
-		//Dessiner 
+		//Dessiner  le menton
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
 		.ajouter(basGauche);
 		
+		//relier les points
 		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
-.ajouter(basDroite);
+		.ajouter(basDroite);
 		
+		//on dessine en reliantr les points
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 
 	
-		//Creation des points du cheveux
+	        	//Creation des points du cheveux
 				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
 				//Creation des points
 				Point hautChGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(0));
@@ -189,7 +189,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
 				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
 				
-				
+				//dessin du cheveux plus les meches 
 				demarrerNouveauDessinAvecDesPoints().ajouter(basChGauche)
 				.ajouter(hautChGauche).
 				ajouter(hautM1).
@@ -197,12 +197,16 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				ajouter(basChDroite).nePasRelierLesPointsExtreme();
 				
 	
-		
+		//creation des points du cote de visage
 		Point haut1=new Point(vraiePositionEnX(1),vraiePositionEnY(3));
+		//creation des points du cote de visage
 		Point bas1=new Point(vraiePositionEnX(1),vraiePositionEnY(5));
+		//creation des points du cote de visage
 		Point haut2=new Point(vraiePositionEnX(13),vraiePositionEnY(3));
+		//creation des points du cote de visage
 		Point bas2=new Point(vraiePositionEnX(13),vraiePositionEnY(5));
 		
+		// relier les points du coté de visage 
 		demarrerNouveauDessinAvecDesPoints().ajouter(haut1)
 		.ajouter(bas1);
 		demarrerNouveauDessinAvecDesPoints()
