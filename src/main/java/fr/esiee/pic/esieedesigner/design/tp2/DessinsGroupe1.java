@@ -139,6 +139,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Remplissage noir				
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
+		//Nous avons réutilisé une méthode déjà codée (trouvée dans l'exemple)
+		
+		
 		
 		// Dessin du nez
 		Point ad = new Point (6*x + 20, 4*y + 10 );
