@@ -180,7 +180,8 @@ private void dessinerCorps(){
 	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
 	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
 	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
-	
+	Point baseBrasD = new Point(basePiedD3.getX(),basePiedD3.getY()-75);
+	Point baseMainD = new Point(basePiedD3.getX()+25,basePiedD3.getY()-25);
 
 	
 	/**
@@ -203,6 +204,11 @@ private void dessinerCorps(){
 	.ajouter(basePiedD3)
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
+	.ajouter(baseCorps2)
+	.ajouter(basePiedD3)
+	.ajouter(baseBrasD)
+	.ajouter(basePiedD3)
+	.ajouter(baseMainD)
 	.nePasRelierLesPointsExtreme();
 	
 	colorierPantalon(baseBrasG);
