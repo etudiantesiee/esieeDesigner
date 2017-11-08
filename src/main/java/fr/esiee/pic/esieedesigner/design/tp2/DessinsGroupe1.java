@@ -44,7 +44,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(p2);
 			
 	}
-	
+	/**
+	 * Méthode dessinant les jambes.
+	 */
 	public void dessinerJambe(){
 		
 		
