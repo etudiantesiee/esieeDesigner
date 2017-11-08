@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -121,7 +122,8 @@ private void dessinerCorps(){
 	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
 	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
 	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
-	
+	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
+
 	
 	/**
 	 * Construction du dessin
@@ -140,6 +142,7 @@ private void dessinerCorps(){
 	.ajouter(baseCorps)
 	.ajouter(basePiedD)
 	.ajouter(basePiedD2)
+	.ajouter(basePiedD3)
 	.nePasRelierLesPointsExtreme();
 }
 
@@ -167,7 +170,8 @@ private void dessinerCorps(){
 			.ajouter(septD)
 			.ajouter(huitD)
 			.ajouter(neufD)
-			.ajouter(dixD);
+			.ajouter(dixD)
+			.nePasRelierLesPointsExtreme();
 
 		}
 
@@ -175,15 +179,24 @@ private void dessinerCorps(){
 		 * Construction de la forme des cheveux
 		 */
 		public void formeCheveux() {
+			//Point 1 Cheveux
 			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
+			//Point 2 Cheveux
 			Point deuxC = new Point(menton.getX()-150, unC.getY());
+			//Point 3 Cheveux
 			Point troisC = new Point(deuxC.getX(), deuxC.getY()-125);
+			//Point 4 Cheveux
 			Point quatreC = new Point(troisC.getX()+50, troisC.getY()-50);
+			//Point 5 Cheveux
 			Point cinqC = new Point(quatreC.getX()+200, quatreC.getY());
+			//Point 6 Cheveux
 			Point sixC = new Point(cinqC.getX()+50, cinqC.getY()+50);
+			//Point 7 Cheveux
 			Point septC = new Point(sixC.getX(), sixC.getY()+125);
+			//Point 8 Cheveux
 			Point huitC = new Point(menton.getX()+83.3, septC.getY());
-
+			
+			
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(unC)
 			.ajouter(deuxC)
@@ -192,7 +205,9 @@ private void dessinerCorps(){
 			.ajouter(cinqC)
 			.ajouter(sixC)
 			.ajouter(septC)
-			.ajouter(huitC);
+			.ajouter(huitC)
+			.couleurDeFond(Couleur.GRIS)
+			.nePasRelierLesPointsExtreme();
 		}
 }
 		
