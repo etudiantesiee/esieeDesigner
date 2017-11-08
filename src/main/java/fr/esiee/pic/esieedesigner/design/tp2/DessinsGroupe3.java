@@ -33,6 +33,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formeCheveux();
 		dessinerCorps();
 		yeux();
+		nez();
 		bouche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
@@ -87,7 +88,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(b5)
 		.ajouter(b6);
 	}
-	   
+	   /**
+	    * méthode nez
+	    */
+ public void nez(){
+	 Point n1 = new Point(menton.getX()-0.20*25, menton.getY() - 4.75*25);
+	 Point n2 = new Point(menton.getX() , menton.getY() - 5*25);
+	 Point n3 = new Point(menton.getX()+0.20*25, menton.getY() - 4.75*25);
+		
+	 demarrerNouveauDessinAvecDesPoints()
+		.ajouter(n1)
+		.ajouter(n2)
+	    .ajouter(n3)
+	    .nePasRelierLesPointsExtreme();
+ }
 	
 	
 /**
