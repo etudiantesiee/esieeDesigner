@@ -2,6 +2,7 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 
 import java.lang.reflect.Array;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -99,6 +100,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		};
 		// Dessin de la lunette de droite
 		suitePointDessin(pointsPourLeNez).nePasRelierLesPointsExtreme();
+		
+		// Creation de la bouche
+		Point[] pointsPourLaBouche = {
+				new Point(this.vraiePositionEnX(5), this.vraiePositionEnY(8)),
+				new Point(this.vraiePositionEnX(9), this.vraiePositionEnY(8))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsPourLaBouche);
 	}
 	/**
 	 * Contour du visage
@@ -153,6 +162,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(jambeDroite)
 		.ajouter(ventre)
 		.ajouter(jambeGauche)
+		.couleurDeFond(Couleur.GRIS)
 		;
 		
 	}
@@ -160,6 +170,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin haut du corps
 	 */
 	private void dessinHautCorps(){
+		Point epauleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(8));
+		Point coudeDroite = new Point(vraiePositionEnX(2),vraiePositionEnY(10));
+		Point mancheDroite2 = new Point(vraiePositionEnX(1),vraiePositionEnY(11));
+		Point mancheDroite1 = new Point(vraiePositionEnX(2),vraiePositionEnY(12));
+		Point aisselleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(11));
+		Point hancheDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
 		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
 		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
 		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
@@ -168,12 +184,20 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleDroite)
+		.ajouter(coudeDroite)
+		.ajouter(mancheDroite2)
+		.ajouter(mancheDroite1)
+		.ajouter(aisselleDroite)
+		.ajouter(hancheDroite)
 		.ajouter(hancheGauche)
 		.ajouter(aisselleGauche)
 		.ajouter(mancheGauche1)
 		.ajouter(mancheGauche2)
 		.ajouter(coudeGauche)
 		.ajouter(epauleGauche)
+		.couleurDeFond(Couleur.GRIS)
+		.nePasRelierLesPointsExtreme()
 		;
 	}
     /**
