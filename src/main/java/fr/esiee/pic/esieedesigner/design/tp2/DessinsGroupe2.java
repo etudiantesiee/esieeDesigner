@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import java.lang.reflect.Array;
+
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -29,13 +31,90 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 28;
+	private static final int decalageEnY = 0;
 	
 	@Override
 	public void dessiner() {
+		dessinCorps();
+		interieurTete();
+	}
+	/**
+	 * Permet de dessin l'interieur de la tête
+	 * Nous ne dessinons pas les contours de la tête
+	 */
+	private void interieurTete(){
+		lunette();
+		yeux();
+		nezEtBouche();
+	}
+	/**
+	 * Dessin des lunettes 
+	 * Ne retourne rien
+	 */
+	private void lunette(){
+		Point[] pointsLunetteGauche = {
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
+		};
+		suitePointDessin(pointsLunetteGauche);
+		Point[] pointsLunetteDroite = {
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
+		};
+		suitePointDessin(pointsLunetteDroite);
+	}
+	/**
+	 * Dessin des yeux
+	 * Ne retourne rien
+	 */
+	private void yeux(){
+		
+	}
+	/** 
+	 * Dessin du nez et de la bouche.
+	 */
+	private void nezEtBouche(){
+
+		
+		
+	}
+	/**
+	 * Contour du visage
+	 */
+	public void ContourVisage(){
 		
 	}
 	
+	private void dessinCorps(){
+		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
+		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
+		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
+		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
+
+		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
+		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(orteilGauche)
+		.ajouter(talonGauche)
+		.ajouter(talonGauche2)
+		.ajouter(fesses)
+		.ajouter(talonDroit)
+		.ajouter(orteilDroit);
+		
+	}
 	
 	private void suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();

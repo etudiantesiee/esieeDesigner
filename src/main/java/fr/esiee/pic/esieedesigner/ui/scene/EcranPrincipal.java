@@ -74,7 +74,7 @@ public final class EcranPrincipal {
 	 * Initialisation des formes à dessiner
 	 */
 	private void init() {
-		 initDemo();
+		 //initDemo();
 		
 		// Affichage des dessins du groupe 1
 		DessinsGroupe1 grp1 = new DessinsGroupe1();
