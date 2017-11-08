@@ -108,7 +108,7 @@ private void dessinerCorps(){
 			.ajouter(dixD);
 
 		}
-<<<<<<< HEAD
+
 		/**
 		 * Construction de la forme des cheveux
 		 */
@@ -123,5 +123,5 @@ private void dessinerCorps(){
 			.ajouter(troisC);
 		}
 }
-=======
+}
 		
