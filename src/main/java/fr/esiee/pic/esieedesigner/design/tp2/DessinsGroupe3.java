@@ -121,7 +121,8 @@ private void dessinerCorps(){
 	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
 	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
 	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
-	
+	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
+
 	
 	/**
 	 * Construction du dessin
@@ -140,6 +141,7 @@ private void dessinerCorps(){
 	.ajouter(baseCorps)
 	.ajouter(basePiedD)
 	.ajouter(basePiedD2)
+	.ajouter(basePiedD3)
 	.nePasRelierLesPointsExtreme();
 }
 
