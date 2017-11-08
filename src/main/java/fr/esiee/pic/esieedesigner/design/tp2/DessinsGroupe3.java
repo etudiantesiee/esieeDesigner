@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
 /**
@@ -10,6 +11,8 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  */
 public class DessinsGroupe3 extends CreateurDeForme {
 
+	
+	Point menton = new Point(37*25,15*25);
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
@@ -18,3 +21,12 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	}
 
 }
+/**
+ * fonction forme tete
+ */
+	public void formetete{
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(menton);
+		
+	}
