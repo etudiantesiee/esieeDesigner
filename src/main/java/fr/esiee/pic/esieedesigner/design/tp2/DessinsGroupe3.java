@@ -149,7 +149,42 @@ private void dessinerCorps(){
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
 	.nePasRelierLesPointsExtreme();
+	
+	colorierPantalon(baseBrasG);
+	
 }
+
+/**
+ * Fonction permettant de colorier le pantalon
+ */
+private void colorierPantalon(Point baseBrasG) {
+	
+	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
+	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
+	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
+	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
+	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
+	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
+	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
+	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
+	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
+	
+	demarrerNouveauDessinAvecDesPoints()
+	.ajouter(baseMainG)
+	.ajouter(basePiedG)
+	.ajouter(basePiedG2)
+	.ajouter(basePiedG3)
+	.ajouter(baseCorps)
+	.ajouter(basePiedD)
+	.ajouter(basePiedD2)
+	.ajouter(basePiedD3)
+	.ajouter(baseCorps2)
+	.ajouter(baseCorps3)
+	.couleurDeFond(Couleur.GRIS);
+	
+}
+
 
 	/**
 	 * Permet le dessin de la forme de la tête et du visage
