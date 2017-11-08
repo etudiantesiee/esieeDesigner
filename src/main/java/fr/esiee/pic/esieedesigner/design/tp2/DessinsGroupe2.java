@@ -37,12 +37,35 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
+		//Dessin des jambes
 		dessinJambes();
+		//Dessin de la poche
 		dessinPoche();
+		//Dessin du haut du corps
 		dessinHautCorps();
+		//Dessin du visage
 		interieurTete();
+		//Dessin de la tete
 		contourVisage();
+		dessinerMain();
 		
+	}
+	private void dessinerMain(){
+		Point[] pointsDeLaMainGauche = {
+				new Point(vraiePositionEnX(1.2), vraiePositionEnY(11.2)),
+				new Point(vraiePositionEnX(1.8), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(1.1), vraiePositionEnY(12.5)),
+				new Point(vraiePositionEnX(0.5), vraiePositionEnY(11.8)),
+		};
+		suitePointDessin(pointsDeLaMainGauche);
+		
+		Point[] pointsDeLaMainDroite = {
+				new Point(vraiePositionEnX(12.2), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(12.8), vraiePositionEnY(11.2)),
+				new Point(vraiePositionEnX(13.5), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(12.8), vraiePositionEnY(12.5)),
+		};
+		suitePointDessin(pointsDeLaMainDroite);
 	}
 	/**
 	 * Permet de dessin l'interieur de la tête
@@ -196,7 +219,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessiner jambes
 	 */
 	private void dessinJambes(){
-
+		//Création des points des jambes
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
@@ -208,6 +231,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point ventre = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
 		Point jambeGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(13));
 		
+		//Dessin des jambes
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
 		.ajouter(talonGauche)
@@ -227,6 +251,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin haut du corps
 	 */
 	private void dessinHautCorps(){
+		//Création des points du haut du corps
 		Point epauleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(8));
 		Point coudeDroite = new Point(vraiePositionEnX(2),vraiePositionEnY(10));
 		Point mancheDroite2 = new Point(vraiePositionEnX(1),vraiePositionEnY(11));
@@ -242,6 +267,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point mentonGauche = new Point(vraiePositionEnX(9),vraiePositionEnY(10));
 		Point mentonDroite = new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		
+		//Dessin du haut du corps
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(epauleDroite)
 		.ajouter(coudeDroite)
@@ -262,11 +288,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	private void dessinPoche(){
+		//Création des points de la poche
 		Point hautDroit = new Point(vraiePositionEnX(9),vraiePositionEnY(10.5));
 		Point basDroit = new Point(vraiePositionEnX(9),vraiePositionEnY(11));
 		Point basGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(11));
 		Point hautGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(10.5));
 		
+		//Dessin de la poche
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautDroit)
 		.ajouter(basDroit)
