@@ -139,6 +139,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Remplissage noir				
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
+		//Nous avons réutilisé une méthode déjà codée (trouvée dans l'exemple)
+		
+		
 		
 		// Dessin du nez
 		Point ad = new Point (6*x + 20, 4*y + 10 );
@@ -239,6 +242,28 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(p19)
 		.ajouter(p20);
 		
+		//création de la main droite
+		Point p21= new Point(1.3*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p22= new Point(1.3*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p21)
+		.ajouter(p22);
+		
+		//création de la main droite
+		Point p23= new Point(1.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.6*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p23)
+		.ajouter(p24);
+		
+		//création de la main droite
+		Point p25= new Point(1.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.9*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p25)
+		.ajouter(p26);
+		
+
 			
 	}
 	/**
