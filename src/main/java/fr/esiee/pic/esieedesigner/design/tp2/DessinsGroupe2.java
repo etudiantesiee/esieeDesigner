@@ -146,7 +146,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Contour du visage
 	 */
 	public void contourVisage(){
-		
+	//methode appelant le visage
 	visage();	
 	
 	}
