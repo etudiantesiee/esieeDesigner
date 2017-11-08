@@ -42,11 +42,13 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		//On lance toutes les fonctions permettant la création des divers éléments du corps
 		formetete();
 		traitUnGauche();
+		traitDeux();
 		formeCheveux();
 		dessinerCorps();
 		yeux();
 		nez();
 		bouche();
+		poche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -137,7 +139,24 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	    .ajouter(n3)
 	    .nePasRelierLesPointsExtreme();
  }
-	
+	/**
+	 * Méthode poche
+	 */
+public void poche(){
+	 //points poches
+	 Point p1 = new Point(menton.getX()-2*25, menton.getY() );
+	 Point p2 = new Point(menton.getX() - 2*25, menton.getY()+25 );
+	 Point p3 = new Point(menton.getX()-3*25, menton.getY()+25);
+	 Point p4 = new Point(menton.getX()-3*25, menton.getY());
+	 
+	 //Ajout des points pour la création de la poche
+	 demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+	    .ajouter(p3)
+	    .ajouter(p4)
+	    .nePasRelierLesPointsExtreme();
+}
 	
 /**
  * Fonction pour dessiner le corps
@@ -183,7 +202,42 @@ private void dessinerCorps(){
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
 	.nePasRelierLesPointsExtreme();
+	
+	colorierPantalon(baseBrasG);
+	
 }
+
+/**
+ * Fonction permettant de colorier le pantalon
+ */
+private void colorierPantalon(Point baseBrasG) {
+	
+	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
+	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
+	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
+	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
+	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
+	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
+	Point basePiedD3 = new Point(basePiedD2.getX()-50,basePiedD2.getY()-25);
+	Point baseCorps2 = new Point(basePiedD3.getX(),basePiedD3.getY()-25);
+	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
+	
+	demarrerNouveauDessinAvecDesPoints()
+	.ajouter(baseMainG)
+	.ajouter(basePiedG)
+	.ajouter(basePiedG2)
+	.ajouter(basePiedG3)
+	.ajouter(baseCorps)
+	.ajouter(basePiedD)
+	.ajouter(basePiedD2)
+	.ajouter(basePiedD3)
+	.ajouter(baseCorps2)
+	.ajouter(baseCorps3)
+	.couleurDeFond(Couleur.GRIS);
+	
+}
+
 
 	/**
 	 * Permet le dessin de la forme de la tête et du visage
@@ -246,7 +300,9 @@ private void dessinerCorps(){
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
-		
+		/*
+		 * trait 1
+		 */
 		public void traitUnGauche() {
 			Point traitUn = new Point(menton.getX()-100, menton.getY()-75);
 			Point traitUnD = new Point(traitUn.getX(), traitUn.getY()-25);
@@ -254,6 +310,18 @@ private void dessinerCorps(){
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(traitUn)
 			.ajouter(traitUnD);
+		}
+		
+		/*
+		 * trait 2
+		 */
+		public void traitDeux() {
+			Point traitDeuxUn = new Point(menton.getX()-125, menton.getY()-75);
+			Point traitDeuxDeux = new Point(traitDeuxUn.getX(), traitDeuxUn.getY()-50);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitDeuxUn)
+			.ajouter(traitDeuxDeux);
 		}
 		
 	
