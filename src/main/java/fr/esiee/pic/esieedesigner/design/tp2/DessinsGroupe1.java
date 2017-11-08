@@ -160,6 +160,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(ce)
 		.couleurDeFond(Couleur.JAUNE)
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//Exemple d'ajout d'une couleur 
 					
 		
 	}
