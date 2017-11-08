@@ -185,6 +185,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point p10 = new Point(12*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(pbo)
 		.ajouter(p1)
 		.ajouter(p2)
 		//RELIER LES 2 POINTS DU BRAS gauche
