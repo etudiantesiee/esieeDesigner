@@ -189,6 +189,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour le bras droit
 		Point p11= new Point(13*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		Point p12= new Point(13*UNITE_HORIZONTALE, 6*UNITE_VERTICALE);
+		//création des points pour l'épaule
+		Point p13= new Point(12*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
+		Point p14= new Point(11*UNITE_HORIZONTALE, 5*UNITE_VERTICALE);		
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(pbo)
@@ -209,8 +212,22 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//RELIER LES 2 POINTS DU BRAS gauche ext
 		.ajouter(p11)
 		.ajouter(p12)
+		//RELIER LES 2 POINTS De l'épaule
+		.ajouter(p13)
+		.ajouter(p14)
 		.nePasRelierLesPointsExtreme();
 		
+		
+		//création des points pour la manche droite
+		Point p15=new Point(1*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+		Point p16=new Point(2*UNITE_HORIZONTALE, 13*UNITE_VERTICALE);
+		//création des points pour la manche gauche
+		//Point p17= new Point(12*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		//Point p18= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
+		//RELIER LES 2 POINTS De l'épaule
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p13)
+		.ajouter(p14);
 		
 			
 	}
