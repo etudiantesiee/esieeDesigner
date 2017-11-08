@@ -39,7 +39,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessiner() {
 		dessinJambes();
 		dessinHautCorps();
+		dessinPoche();
 		interieurTete();
+		contourVisage();
+		
 	}
 	/**
 	 * Permet de dessin l'interieur de la tête
@@ -119,9 +122,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Contour du visage
 	 */
-	public void ContourVisage(){
+	public void contourVisage(){
 		
-		
+	mentonVisage();	
 	}
 	/**
 	 * menton
@@ -132,21 +135,50 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		//Creation des points
 		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		//Creation des points
-		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Creation des points
-		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+		Point basDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(10));
 		//Dessiner 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
-		.ajouter(basGauche)
+		.ajouter(basGauche);
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
+.ajouter(basDroite);
+		
+		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 	
+	}
+	
+	/**
+<<<<<<< HEAD
+	 * cheveux meches
+	 */
+	public void cheveux(){
+	
+		//Creation des points du cheveux
+				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
+				//Creation des points
+				Point hautChGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(0));
+				//Creation des points
+				Point hautChDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(0));
+				//Creation des points
+				Point basChDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(1));
+				
+				// creer points meches
+				Point hautM1=new Point(vraiePositionEnX(7),vraiePositionEnY(0));
+				Point basM1=new Point(vraiePositionEnX(6),vraiePositionEnY(1));
+				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
+				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
+				
 	}
 	
 	/**
 	 * Dessiner jambes
 	 */
 	private void dessinJambes(){
+
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
@@ -169,6 +201,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(jambeDroite)
 		.ajouter(ventre)
 		.ajouter(jambeGauche)
+		.couleurDeFond(Couleur.GRIS)
 		;
 		
 	}
@@ -176,21 +209,42 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin haut du corps
 	 */
 	private void dessinHautCorps(){
+		Point epauleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(8));
+		Point coudeDroite = new Point(vraiePositionEnX(2),vraiePositionEnY(10));
+		Point mancheDroite2 = new Point(vraiePositionEnX(1),vraiePositionEnY(11));
+		Point mancheDroite1 = new Point(vraiePositionEnX(2),vraiePositionEnY(12));
+		Point aisselleDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(11));
+		Point hancheDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
 		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
 		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
 		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
 		Point mancheGauche2 = new Point(vraiePositionEnX(13),vraiePositionEnY(11));
 		Point coudeGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(10));
 		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
+		Point mentonGauche = new Point(vraiePositionEnX(9),vraiePositionEnY(10));
+		Point mentonDroite = new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(epauleDroite)
+		.ajouter(coudeDroite)
+		.ajouter(mancheDroite2)
+		.ajouter(mancheDroite1)
+		.ajouter(aisselleDroite)
+		.ajouter(hancheDroite)
 		.ajouter(hancheGauche)
 		.ajouter(aisselleGauche)
 		.ajouter(mancheGauche1)
 		.ajouter(mancheGauche2)
 		.ajouter(coudeGauche)
 		.ajouter(epauleGauche)
+		.ajouter(mentonGauche)
+		.ajouter(mentonDroite)
+		.couleurDeFond(Couleur.GRIS)
 		;
+	}
+	
+	private void dessinPoche(){
+		
 	}
     /**
 	 * Permet de relier plusieurs points
