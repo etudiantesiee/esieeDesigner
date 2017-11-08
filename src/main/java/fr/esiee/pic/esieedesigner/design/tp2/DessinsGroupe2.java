@@ -118,6 +118,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void contourVisage(){
 		
 	mentonVisage();	
+	cheveux();
 	}
 	/**
 	 * menton
@@ -164,6 +165,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				Point basM1=new Point(vraiePositionEnX(6),vraiePositionEnY(1));
 				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
 				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
+				
+				
+				demarrerNouveauDessinAvecDesPoints().ajouter(basChGauche)
+				.ajouter(hautChGauche).
+				ajouter(hautM1).
+				ajouter(basM1).ajouter(hautM2).ajouter(basM2).ajouter(hautChDroite).
+				ajouter(basChDroite).nePasRelierLesPointsExtreme();
 				
 	}
 	
