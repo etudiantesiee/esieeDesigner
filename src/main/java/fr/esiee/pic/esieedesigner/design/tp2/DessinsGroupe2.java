@@ -124,13 +124,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void contourVisage(){
 		
-	mentonVisage();	
-	cheveux();
+	visage();	
+	
 	}
 	/**
 	 * menton
 	 */
-	public void mentonVisage(){
+	public void visage(){
 		//Creation des points
 		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
 		//Creation des points
@@ -149,14 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
-	
-	}
-	
-	/**
-<<<<<<< HEAD
-	 * cheveux meches
-	 */
-	public void cheveux(){
+
 	
 		//Creation des points du cheveux
 				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
@@ -180,6 +173,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				ajouter(basM1).ajouter(hautM2).ajouter(basM2).ajouter(hautChDroite).
 				ajouter(basChDroite).nePasRelierLesPointsExtreme();
 				
+	
+		
+		Point haut1=new Point(vraiePositionEnX(1),vraiePositionEnY(3));
+		Point bas1=new Point(vraiePositionEnX(1),vraiePositionEnY(5));
+		Point haut2=new Point(vraiePositionEnX(13),vraiePositionEnY(3));
+		Point bas2=new Point(vraiePositionEnX(13),vraiePositionEnY(5));
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(haut1)
+		.ajouter(bas1);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(haut2).
+		ajouter(bas2);
+		//relier cheveux et visage cote
+		demarrerNouveauDessinAvecDesPoints().ajouter(haut1).ajouter(basChGauche);
+		demarrerNouveauDessinAvecDesPoints().ajouter(bas1).ajouter(hautGauche);
+		demarrerNouveauDessinAvecDesPoints().ajouter(haut2).ajouter(basChDroite);
+		demarrerNouveauDessinAvecDesPoints().ajouter(bas2).ajouter(hautDroite);
 	}
 	
 	/**
