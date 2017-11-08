@@ -105,10 +105,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * menton
 	 */
 	public void mentonVisage(){
-		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));//Creation des points
-		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));//Creation des points
-		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));//Creation des points
-		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));//Creation des points
+		//Creation des points
+		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+		//Creation des points
+		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+		//Creation des points
+		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		//Creation des points
+		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Dessiner 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
@@ -117,6 +121,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	}
 	
+	/**
+	 * Dessiner corps
+	 */
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
@@ -125,6 +132,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
 		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
+		Point piedDroit = new Point(vraiePositionEnX(3),vraiePositionEnY(13));
+		Point jambeDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
+		Point ventre = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point jambeGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(13));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
@@ -132,7 +143,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(talonGauche2)
 		.ajouter(fesses)
 		.ajouter(talonDroit)
-		.ajouter(orteilDroit);
+		.ajouter(orteilDroit)
+		.ajouter(piedDroit)
+		.ajouter(jambeDroite)
+		.ajouter(ventre)
+		.ajouter(jambeGauche)
+		;
 		
 	}
 	
