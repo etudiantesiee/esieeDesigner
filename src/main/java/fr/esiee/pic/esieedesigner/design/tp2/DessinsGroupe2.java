@@ -90,9 +90,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-		
-		
-		
+		// Declaration du tableau contenant les points pour le nez
+		Point[] pointsPourLeNez = {
+				new Point(this.vraiePositionEnX(6.8), this.vraiePositionEnY(6.1)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(7.2), this.vraiePositionEnY(6.1))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsPourLeNez).nePasRelierLesPointsExtreme();
 	}
 	/**
 	 * Contour du visage
@@ -151,12 +156,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		;
 		
 	}
-	
-	private void suitePointDessin(Point[] points){
+	/**
+	 * Permet de relier plusieurs points
+	 * @param points Les points à relier dans l'ordre de reliement
+	 * @return CheminDePoints le chemin de points formé par les points relié
+	 */
+	private CheminDePoints suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
 		for(int i = 0; i < points.length; i++){
 			cdp.ajouter(points[i]);
 		}
+		return cdp;
 	}
 	/**
 	 * Permet de connaitre la vraie position en X
