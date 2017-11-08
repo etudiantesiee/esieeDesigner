@@ -37,6 +37,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessiner() {
 		dessinCorps();
 		interieurTete();
+		contourVisage();
+		
 	}
 	/**
 	 * Permet de dessin l'interieur de la tête
@@ -97,9 +99,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Contour du visage
 	 */
-	public void ContourVisage(){
+	public void contourVisage(){
 		
-		
+	mentonVisage();	
 	}
 	/**
 	 * menton
@@ -110,15 +112,35 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		//Creation des points
 		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		//Creation des points
-		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Creation des points
-		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+		Point basDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(10));
 		//Dessiner 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
-		.ajouter(basGauche)
+		.ajouter(basGauche);
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
+.ajouter(basDroite);
+		
+		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 	
+	}
+	
+	/**
+	 * cheveux meches
+	 */
+	public void cheveux(){
+	
+		//Creation des points
+				Point hautChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+				//Creation des points
+				Point hautChGauche2=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+				//Creation des points
+				Point hautChDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+				//Creation des points
+				Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 	}
 	
 	private void dessinCorps(){
