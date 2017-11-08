@@ -40,6 +40,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		formetete();
+		traitUnGauche();
 		formeCheveux();
 		dessinerCorps();
 		yeux();
@@ -239,5 +240,16 @@ private void dessinerCorps(){
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
+		
+		public void traitUnGauche() {
+			Point traitUn = new Point(menton.getX()-100, menton.getY()-75);
+			Point traitUnD = new Point(traitUn.getX(), traitUn.getY()-25);
+			
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(traitUn)
+			.ajouter(traitUnD);
+		}
+		
+	
 }
 		
