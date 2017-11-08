@@ -166,12 +166,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				
 	}
 	
-	private void dessinCorps(){
-=======
+	/**
 	 * Dessiner jambes
 	 */
 	private void dessinJambes(){
->>>>>>> origin/develop
+
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
