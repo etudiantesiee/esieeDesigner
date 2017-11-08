@@ -52,6 +52,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
+		// Création de l'ensemble des points pour le verre de la lunette de gauche
 		Point[] pointsLunetteGauche = {
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
@@ -62,7 +63,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
 		};
+		// Dessin de la lunette de gauche 
 		suitePointDessin(pointsLunetteGauche);
+		// Création de l'ensemble des points pour le verre de la lunette de droite
 		Point[] pointsLunetteDroite = {
 				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
@@ -73,6 +76,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
 		};
+		// Dessin de la lunette de droite
 		suitePointDessin(pointsLunetteDroite);
 	}
 	/**
@@ -86,7 +90,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-
+		
 		
 		
 	}
