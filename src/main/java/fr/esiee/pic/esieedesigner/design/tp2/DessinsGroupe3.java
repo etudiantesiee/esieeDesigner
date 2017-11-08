@@ -33,6 +33,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formeCheveux();
 		dessinerCorps();
 		yeux();
+		bouche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -49,17 +50,43 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point baseLunette4 = new Point(menton.getX()-25*4, menton.getY() - 7*25);
 		Point baseLunette5 = new Point(menton.getX()-25, menton.getY() - 8*25);
 		Point baseLunette6 = new Point(menton.getX() , menton.getY() - 7*25);
+		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); //début yeux
+		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
+		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
+		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
+	
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(baseLunette)
 		.ajouter(baseLunette2)
 		.ajouter(baseLunette3)
 		.ajouter(baseLunette4)
 		.ajouter(baseLunette5)
-		.ajouter(baseLunette6);
+		.ajouter(baseLunette6)		
+		.ajouter(baseLunette7)
+		.ajouter(baseLunette8)	
+		.ajouter(baseLunette9)
+		.ajouter(baseLunette10);
 	}
 		
-
-
+/**
+ * méthode bouche
+ */
+	public void bouche(){
+		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); //début bouche
+		Point b2 = new Point(menton.getX()-50, menton.getY()  - 2*25);
+		Point b3 = new Point(menton.getX()-50, menton.getY()  - 4*25);
+		Point b4 = new Point(menton.getX()+50, menton.getY()  - 4*25);
+		Point b5 = new Point(menton.getX()+50, menton.getY()  - 2*25);
+		Point b6 = new Point(menton.getX()+25, menton.getY()  - 1*25);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(b1)
+		.ajouter(b2)
+		.ajouter(b3)
+		.ajouter(b4)
+		.ajouter(b5)
+		.ajouter(b6);
+	}
 	   
 	
 	
@@ -74,6 +101,10 @@ private void dessinerCorps(){
 	Point baseBrasG = new Point(baseEpauleG.getX(),baseEpauleG.getY()+100);
 	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
 	Point baseBrasG2 = new Point(baseMainG.getX(),baseMainG.getY()-75);
+	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
+	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
+	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	
 	
 	/**
 	 * Construction du dessin
@@ -85,7 +116,10 @@ private void dessinerCorps(){
 	.ajouter(baseBrasG)
 	.ajouter(baseMainG)
 	.ajouter(baseBrasG2)
-	
+	.ajouter(baseMainG)
+	.ajouter(basePiedG)
+	.ajouter(basePiedG2)
+	.ajouter(basePiedG3)
 	.nePasRelierLesPointsExtreme();
 }
 
