@@ -38,6 +38,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void dessiner() {
 		dessinJambes();
 		dessinHautCorps();
+		dessinPoche();
 		interieurTete();
 	}
 	/**
@@ -182,6 +183,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point mancheGauche2 = new Point(vraiePositionEnX(13),vraiePositionEnY(11));
 		Point coudeGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(10));
 		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
+		Point mentonGauche = new Point(vraiePositionEnX(9),vraiePositionEnY(10));
+		Point mentonDroite = new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(epauleDroite)
@@ -196,9 +199,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(mancheGauche2)
 		.ajouter(coudeGauche)
 		.ajouter(epauleGauche)
+		.ajouter(mentonGauche)
+		.ajouter(mentonDroite)
 		.couleurDeFond(Couleur.GRIS)
-		.nePasRelierLesPointsExtreme()
 		;
+	}
+	
+	private void dessinPoche(){
+		
 	}
     /**
 	 * Permet de relier plusieurs points
