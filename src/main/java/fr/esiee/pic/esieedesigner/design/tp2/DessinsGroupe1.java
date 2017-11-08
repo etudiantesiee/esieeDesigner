@@ -118,6 +118,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	}
 	
+	/**
+	 * procedure dessinercorps
+	 */
 	public void dessinerCorps(){
 		//création des points pour le début de l'épaule gauche
 		Point p1 = new Point(2*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
@@ -128,6 +131,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour l'aisselle gauche
 		Point p5 = new Point(2*UNITE_HORIZONTALE,7*UNITE_VERTICALE);
 		Point p6 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		//création des points pour l'aisselle droite
+		Point p7 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		Point p8 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
@@ -138,6 +144,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//RELIER LES 2 POINTS De l'aisselle gauche
 	     .ajouter(p5)
 	     .ajouter(p6)
+	     //RELIER LES 2 POINTS De l'aisselle droite
+	     .ajouter(p7)
+	     .ajouter(p8)
 		.nePasRelierLesPointsExtreme();
 		
 		
@@ -149,35 +158,36 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerJambe(){
 		
 		// Création de points pour dessiner la culotte
-		Point p1 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
-		Point p2 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
-		Point p3 = new Point(10*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
-		Point p4 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
-		Point p5 = new Point(7*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
-		Point p6 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
-		Point p7 = new Point(4*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point p1 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+        Point p2 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+        Point p3 = new Point(10*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point p4 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point p5 = new Point(7*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+        Point p6 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point p7 = new Point(4*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 		
-		// Dessin de la culotte
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(p1)
-		.ajouter(p2)
-		.ajouter(p3)
-		.ajouter(p4)
-		.ajouter(p5)
-		.ajouter(p6)
-		.ajouter(p7);
+        // Dessin de la culotte
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(p1)
+        .ajouter(p2)
+        .ajouter(p3)
+        .ajouter(p4)
+        .ajouter(p5)
+        .ajouter(p6)
+        .ajouter(p7);
 		
+		// Création de points pour dessiner le pied gauche
+        Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point k2 = new Point(6*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point k3 = new Point(3*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point k4 = new Point(5*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 		
-		Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
-		Point k2 = new Point(6*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
-		Point k3 = new Point(3*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
-		Point k4 = new Point(5*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
-		
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(k1)
-		.ajouter(k2)
-		.ajouter(k3)
-		.ajouter(k4);
+        // Dessin du pied gauche
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(k1)
+        .ajouter(k2)
+        .ajouter(k3)
+        .ajouter(k4);
 
 	}
 	
