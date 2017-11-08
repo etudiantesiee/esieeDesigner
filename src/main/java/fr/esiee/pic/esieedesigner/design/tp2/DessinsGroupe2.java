@@ -33,6 +33,35 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
+		interieurTete();
+	}
+	/**
+	 * Permet de dessin l'interieur de la tête
+	 * Nous ne dessinons pas les contours de la tête
+	 */
+	private void interieurTete(){
+		lunette();
+		yeux();
+		nezEtBouche();
+	}
+	/**
+	 * Dessin des lunettes 
+	 * Ne retourne rien
+	 */
+	private void lunette(){
+		
+	}
+	/**
+	 * Dessin des yeux
+	 * Ne retourne rien
+	 */
+	private void yeux(){
+		
+	}
+	/** 
+	 * Dessin du nez et de la bouche.
+	 */
+	private void nezEtBouche(){
 		
 	}
 	
