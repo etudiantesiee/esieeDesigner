@@ -21,21 +21,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * elle permet de calculer la taille en pixel
 	 * Utilisé dans les méthode {@link vraieTailleEnX} et {@link vraieTailleEnY}
 	 */
-	private static final int nbrPixelCarreau = 25;
+	private static final int NBRPIXELCARREAU = 25;
 	/** 
 	 * Permet de connaitre la taille de déplacement en X de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnX = 28;
+	private static final int DECALAGEENX = 28;
 	/** 
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 0;
+	private static final int DECALAGEENY = 0;
 	
 	@Override
 	public void dessiner() {
-		dessinCorps();
+		dessinJambes();
+		dessinHautCorps();
 		interieurTete();
 		contourVisage();
 		
@@ -129,28 +130,44 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	/**
+<<<<<<< HEAD
 	 * cheveux meches
 	 */
 	public void cheveux(){
 	
-		//Creation des points
-				Point hautChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+		//Creation des points du cheveux
+				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
 				//Creation des points
-				Point hautChGauche2=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+				Point hautChGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(0));
 				//Creation des points
-				Point hautChDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+				Point hautChDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(0));
 				//Creation des points
-				Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+				Point basChDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(1));
+				
+				// creer points meches
+				Point hautM1=new Point(vraiePositionEnX(7),vraiePositionEnY(0));
+				Point basM1=new Point(vraiePositionEnX(6),vraiePositionEnY(1));
+				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
+				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
+				
 	}
 	
 	private void dessinCorps(){
+=======
+	 * Dessiner jambes
+	 */
+	private void dessinJambes(){
+>>>>>>> origin/develop
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
 		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
-
 		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
 		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
+		Point piedDroit = new Point(vraiePositionEnX(3),vraiePositionEnY(13));
+		Point jambeDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
+		Point ventre = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point jambeGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(13));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
@@ -158,8 +175,34 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(talonGauche2)
 		.ajouter(fesses)
 		.ajouter(talonDroit)
-		.ajouter(orteilDroit);
+		.ajouter(orteilDroit)
+		.ajouter(piedDroit)
+		.ajouter(jambeDroite)
+		.ajouter(ventre)
+		.ajouter(jambeGauche)
+		;
 		
+	}
+	
+	/*
+	 * Dessin haut du corps
+	 */
+	private void dessinHautCorps(){
+		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
+		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
+		Point mancheGauche2 = new Point(vraiePositionEnX(13),vraiePositionEnY(11));
+		Point coudeGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(10));
+		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(hancheGauche)
+		.ajouter(aisselleGauche)
+		.ajouter(mancheGauche1)
+		.ajouter(mancheGauche2)
+		.ajouter(coudeGauche)
+		.ajouter(epauleGauche)
+		;
 	}
 	
 	private void suitePointDessin(Point[] points){
@@ -175,7 +218,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnX(int nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en X
@@ -184,7 +227,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnX(double nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -193,7 +236,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnY(int nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -202,6 +245,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnY(double nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 }
