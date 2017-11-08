@@ -132,7 +132,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point p5 = new Point(2*UNITE_HORIZONTALE,7*UNITE_VERTICALE);
 		Point p6 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		//création des points pour l'aisselle droite
-		Point p7 = new Point(10*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		Point p7 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		Point p8 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
