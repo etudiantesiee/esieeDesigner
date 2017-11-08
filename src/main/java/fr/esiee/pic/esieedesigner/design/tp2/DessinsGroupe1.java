@@ -246,6 +246,13 @@ public class DessinsGroupe1 extends CreateurDeForme {
         Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        
+        demarrerNouveauDessinAvecDesPoints()
+        .ajouter(d1)
+        .ajouter(d2)
+        .ajouter(d3)
+        .ajouter(d4)
+        .couleurDeFond(Couleur.GRIS);
 	}
 	
 	
