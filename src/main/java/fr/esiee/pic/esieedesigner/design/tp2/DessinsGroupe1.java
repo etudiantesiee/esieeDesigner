@@ -1,6 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -43,8 +44,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerTete(){
 		
 		// Unité des carreaux pour faciliter les calculs
-		double X = UNITE_VERTICALE/2;
-		double Y = UNITE_HORIZONTALE/2;
+		double X = UNITE_VERTICALE;
+		double Y = UNITE_HORIZONTALE;
 		
 		// Dessin des cheveux
 		Point a = new Point (4*X, 0);
@@ -115,6 +116,22 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(ic)
 		.ajouter(jc)
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		// Dessin oeil droit
+		double abscisseOeilDroit = 6*X;
+		double ordonneOeilDroit = 3*Y;
+		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
+				
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+				
+		// Dessin oeil gauche
+		double abscisseOeilGauche = 8*X;
+		double ordonneOeilGauche = 3*Y;
+		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
+				
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	
 	}
 	
@@ -134,11 +151,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour l'aisselle droite
 		Point p7 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		Point p8 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
+		//création des points pour le bras droit
+		Point p9 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
+		Point p10 = new Point(12*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
 		.ajouter(p2)
-		//RELIER LES 2 POINTS DU BRAS
+		//RELIER LES 2 POINTS DU BRAS gauche
 		.ajouter(p3)
 		.ajouter(p4)
 		//RELIER LES 2 POINTS De l'aisselle gauche
@@ -147,6 +167,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	     //RELIER LES 2 POINTS De l'aisselle droite
 	     .ajouter(p7)
 	     .ajouter(p8)
+		//RELIER LES 2 POINTS DU BRAS droit
+		.ajouter(p9)
+		.ajouter(p10)
 		.nePasRelierLesPointsExtreme();
 		
 		
@@ -189,6 +212,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(k3)
         .ajouter(k4);
 
+        Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 	}
 	
 	

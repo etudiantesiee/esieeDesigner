@@ -11,8 +11,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
+
+
+
+	/**
+	 * Permet l'instanciation des dessins
+	 */
 	
 	Point menton = new Point(21*25,15*25);
+
+	
+
 	// Point du menton
 	/**
 	 * Permet l'instanciation des dessins
@@ -22,8 +31,31 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	public void dessiner() {
 		formetete();
 		formeCheveux();
-	    dessinerCorps();
+		dessinerCorps();
+		yeux();
+		// Ajout vos dessins ici
+		// Pensez à désactiver les dessins de la démo 
+		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+
 	}
+	/**
+	 * méthode pour les yeux
+	 */
+	public void yeux()
+	{
+		Point baseLunette = new Point(menton.getX(), menton.getY() +6*25); //début yeux
+		Point baseLunette2 = new Point(menton.getX()-25, menton.getY() -25);
+		Point baseLunette3 = new Point(menton.getX()- 25*4, menton.getY());
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(baseLunette)
+		.ajouter(baseLunette2)
+		.ajouter(baseLunette3);
+	}
+		
+
+
+	   
+	
 	
 /**
  * Fonction pour dessiner le corps
@@ -33,7 +65,8 @@ private void dessinerCorps(){
 	
 	Point baseMenton2 = new Point(menton.getX() - 75 , menton.getY()-50);
 	Point baseEpauleG = new Point(baseMenton2.getX() - 50, baseMenton2.getY());
-	
+	Point baseBrasG = new Point(baseEpauleG.getX(),baseEpauleG.getY()+100);
+	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
 	
 	/**
 	 * Construction du dessin
@@ -41,8 +74,13 @@ private void dessinerCorps(){
 	demarrerNouveauDessinAvecDesPoints()
 	.ajouter(menton)
 	.ajouter(baseMenton2)
-	.ajouter(baseEpauleG);
+	.ajouter(baseEpauleG)
+	.ajouter(baseBrasG)
+	.ajouter(baseMainG)
+	
+	.nePasRelierLesPointsExtreme();
 }
+
 	/**
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
@@ -70,6 +108,7 @@ private void dessinerCorps(){
 			.ajouter(dixD);
 
 		}
+<<<<<<< HEAD
 		/**
 		 * Construction de la forme des cheveux
 		 */
@@ -84,3 +123,5 @@ private void dessinerCorps(){
 			.ajouter(troisC);
 		}
 }
+=======
+		
