@@ -180,11 +180,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour l'aisselle droite
 		Point p7 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		Point p8 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
+		//création des points pour le bras droit
+		Point p9 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
+		Point p10 = new Point(12*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
 		.ajouter(p2)
-		//RELIER LES 2 POINTS DU BRAS
+		//RELIER LES 2 POINTS DU BRAS gauche
 		.ajouter(p3)
 		.ajouter(p4)
 		//RELIER LES 2 POINTS De l'aisselle gauche
@@ -193,6 +196,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	     //RELIER LES 2 POINTS De l'aisselle droite
 	     .ajouter(p7)
 	     .ajouter(p8)
+		//RELIER LES 2 POINTS DU BRAS droit
+		.ajouter(p9)
+		.ajouter(p10)
 		.nePasRelierLesPointsExtreme();
 		
 		
@@ -235,6 +241,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(k3)
         .ajouter(k4);
 
+        Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 	}
 	
 	
