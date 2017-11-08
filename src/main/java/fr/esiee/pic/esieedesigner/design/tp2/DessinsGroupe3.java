@@ -67,7 +67,7 @@ private void dessinerCorps(){
 	Point baseMenton2 = new Point(menton.getX() - 75 , menton.getY()-50);
 	Point baseEpauleG = new Point(baseMenton2.getX() - 50, baseMenton2.getY());
 	Point baseBrasG = new Point(baseEpauleG.getX(),baseEpauleG.getY()+100);
-	
+	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
 	
 	/**
 	 * contrusction du dessin
@@ -76,7 +76,10 @@ private void dessinerCorps(){
 	.ajouter(menton)
 	.ajouter(baseMenton2)
 	.ajouter(baseEpauleG)
-	.ajouter(baseBrasG);
+	.ajouter(baseBrasG)
+	.ajouter(baseMainG)
+	
+	.nePasRelierLesPointsExtreme();
 }
 
 	/**
