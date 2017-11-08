@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import java.lang.reflect.Array;
+
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -29,10 +31,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 28;
+	private static final int decalageEnY = 0;
 	
 	@Override
 	public void dessiner() {
+		dessinCorps();
 		interieurTete();
 	}
 	/**
@@ -49,7 +52,32 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
-		
+		// Création de l'ensemble des points pour le verre de la lunette de gauche
+		Point[] pointsLunetteGauche = {
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
+		};
+		// Dessin de la lunette de gauche 
+		suitePointDessin(pointsLunetteGauche);
+		// Création de l'ensemble des points pour le verre de la lunette de droite
+		Point[] pointsLunetteDroite = {
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsLunetteDroite);
 	}
 	/**
 	 * Dessin des yeux
@@ -63,8 +91,66 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private void nezEtBouche(){
 		
+		
+		
+	}
+	/**
+	 * Contour du visage
+	 */
+	public void ContourVisage(){
+		
+		
+	}
+	/**
+	 * menton
+	 */
+	public void mentonVisage(){
+		//Creation des points
+		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+		//Creation des points
+		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+		//Creation des points
+		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		//Creation des points
+		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+		//Dessiner 
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(hautGauche)
+		.ajouter(basGauche)
+		.ajouter(basDroite).ajouter(hautDroite);
+	
 	}
 	
+	/**
+	 * Dessiner corps
+	 */
+	private void dessinCorps(){
+		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
+		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
+		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
+		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
+
+		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
+		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
+		Point piedDroit = new Point(vraiePositionEnX(3),vraiePositionEnY(13));
+		Point jambeDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
+		Point ventre = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point jambeGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(13));
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(orteilGauche)
+		.ajouter(talonGauche)
+		.ajouter(talonGauche2)
+		.ajouter(fesses)
+		.ajouter(talonDroit)
+		.ajouter(orteilDroit)
+		.ajouter(piedDroit)
+		.ajouter(jambeDroite)
+		.ajouter(ventre)
+		.ajouter(jambeGauche)
+		;
+		
+	}
 	
 	private void suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
