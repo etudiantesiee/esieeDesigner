@@ -33,6 +33,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formeCheveux();
 		dessinerCorps();
 		yeux();
+		nez();
 		bouche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
@@ -87,7 +88,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(b5)
 		.ajouter(b6);
 	}
-	   
+	   /**
+	    * méthode nez
+	    */
+ public void nez(){
+	 Point n1 = new Point(menton.getX()-0.20*25, menton.getY() - 4.75*25);
+	 Point n2 = new Point(menton.getX() , menton.getY() - 5*25);
+	 Point n3 = new Point(menton.getX()+0.20*25, menton.getY() - 4.75*25);
+		
+	 demarrerNouveauDessinAvecDesPoints()
+		.ajouter(n1)
+		.ajouter(n2)
+	    .ajouter(n3)
+	    .nePasRelierLesPointsExtreme();
+ }
 	
 	
 /**
@@ -104,6 +118,9 @@ private void dessinerCorps(){
 	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
 	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
 	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
+	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
+	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
 	
 	
 	/**
@@ -120,6 +137,9 @@ private void dessinerCorps(){
 	.ajouter(basePiedG)
 	.ajouter(basePiedG2)
 	.ajouter(basePiedG3)
+	.ajouter(baseCorps)
+	.ajouter(basePiedD)
+	.ajouter(basePiedD2)
 	.nePasRelierLesPointsExtreme();
 }
 
