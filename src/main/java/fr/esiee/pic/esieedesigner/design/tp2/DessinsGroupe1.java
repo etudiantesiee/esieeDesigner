@@ -14,12 +14,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	/**
 	 * Unité de dessin horizontale
 	 */
-	private static final double UNITE_HORIZONTALE = 50;
+	private static final double UNITE_HORIZONTALE = 25;
 	
 	/**
 	 * Unité de dessin verticale
 	 */
-	private static final double UNITE_VERTICALE = 50;
+	private static final double UNITE_VERTICALE = 25;
 	
 
 	@Override
@@ -27,6 +27,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
+		dessinerCorps();
 	}
 	
 	public void dessinerTete(){
