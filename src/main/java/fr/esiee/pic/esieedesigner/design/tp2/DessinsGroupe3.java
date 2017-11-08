@@ -1,10 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
-<<<<<<< HEAD
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
-=======
->>>>>>> origin/develop
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -50,13 +47,14 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	public void yeux()
 	{
-		Point baseLunette = new Point(menton.getX(), menton.getY() - 6*25); //début yeux
+		//début yeux
+		Point baseLunette = new Point(menton.getX(), menton.getY() - 6*25); 
 		Point baseLunette2 = new Point(menton.getX()-25, menton.getY()  - 5*25);
 		Point baseLunette3 = new Point(menton.getX()- 25*4, menton.getY() - 6*25);
 		Point baseLunette4 = new Point(menton.getX()-25*4, menton.getY() - 7*25);
 		Point baseLunette5 = new Point(menton.getX()-25, menton.getY() - 8*25);
 		Point baseLunette6 = new Point(menton.getX() , menton.getY() - 7*25);
-		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); //début yeux
+		Point baseLunette7 = new Point(menton.getX()+25, menton.getY() - 8*25); 
 		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
 		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
 		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
@@ -71,7 +69,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		
 		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
-		// Remplissage noir		
+			
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	
@@ -94,7 +92,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
  * méthode bouche
  */
 	public void bouche(){
-		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); //début bouche
+		//bouche
+		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); 
 		Point b2 = new Point(menton.getX()-50, menton.getY()  - 2*25);
 		Point b3 = new Point(menton.getX()-50, menton.getY()  - 4*25);
 		Point b4 = new Point(menton.getX()+50, menton.getY()  - 4*25);
