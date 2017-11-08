@@ -310,7 +310,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
        
          
         // création des points pour le pied droit 
+        // coordonnée (horizontale, verticale)
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+       // coordonnée (horizontale, verticale)
         Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
