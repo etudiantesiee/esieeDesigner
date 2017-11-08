@@ -160,6 +160,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(ce)
 		.couleurDeFond(Couleur.JAUNE)
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//Exemple d'ajout d'une couleur 
 					
 		
 	}
@@ -189,9 +191,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point p12= new Point(13*UNITE_HORIZONTALE, 6*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(pbo)
 		.ajouter(p1)
 		.ajouter(p2)
-		.ajouter(pbo)
 		//RELIER LES 2 POINTS DU BRAS gauche
 		.ajouter(p3)
 		.ajouter(p4)
