@@ -21,17 +21,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * elle permet de calculer la taille en pixel
 	 * Utilisé dans les méthode {@link vraieTailleEnX} et {@link vraieTailleEnY}
 	 */
-	private static final int nbrPixelCarreau = 25;
+	private static final int NBRPIXELCARREAU = 25;
 	/** 
 	 * Permet de connaitre la taille de déplacement en X de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnX = 28;
+	private static final int DECALAGEENX = 28;
 	/** 
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 0;
+	private static final int DECALAGEENY = 0;
 	
 	@Override
 	public void dessiner() {
@@ -52,6 +52,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
+		// Création de l'ensemble des points pour le verre de la lunette de gauche
 		Point[] pointsLunetteGauche = {
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
@@ -62,7 +63,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
 		};
+		// Dessin de la lunette de gauche 
 		suitePointDessin(pointsLunetteGauche);
+		// Création de l'ensemble des points pour le verre de la lunette de droite
 		Point[] pointsLunetteDroite = {
 				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
@@ -73,6 +76,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
 		};
+		// Dessin de la lunette de droite
 		suitePointDessin(pointsLunetteDroite);
 	}
 	/**
@@ -86,7 +90,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-
+		
 		
 		
 	}
@@ -95,8 +99,31 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	public void ContourVisage(){
 		
+		
+	}
+	/**
+	 * menton
+	 */
+	public void mentonVisage(){
+		//Creation des points
+		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+		//Creation des points
+		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+		//Creation des points
+		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		//Creation des points
+		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+		//Dessiner 
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(hautGauche)
+		.ajouter(basGauche)
+		.ajouter(basDroite).ajouter(hautDroite);
+	
 	}
 	
+	/**
+	 * Dessiner corps
+	 */
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
@@ -105,6 +132,10 @@ public class DessinsGroupe2 extends CreateurDeForme {
 
 		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
 		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
+		Point piedDroit = new Point(vraiePositionEnX(3),vraiePositionEnY(13));
+		Point jambeDroite = new Point(vraiePositionEnX(3),vraiePositionEnY(12));
+		Point ventre = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point jambeGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(13));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
@@ -112,7 +143,12 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(talonGauche2)
 		.ajouter(fesses)
 		.ajouter(talonDroit)
-		.ajouter(orteilDroit);
+		.ajouter(orteilDroit)
+		.ajouter(piedDroit)
+		.ajouter(jambeDroite)
+		.ajouter(ventre)
+		.ajouter(jambeGauche)
+		;
 		
 	}
 	
@@ -129,7 +165,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnX(int nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en X
@@ -138,7 +174,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en X, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnX(double nbCarreau){
-		return (DessinsGroupe2.decalageEnX + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENX + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -147,7 +183,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private int vraiePositionEnY(int nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 	/**
 	 * Permet de connaitre la vraie position en Y
@@ -156,6 +192,6 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * @return La réel position en Y, comprenant le décalage et le nombre de pixel
 	 */
 	private double vraiePositionEnY(double nbCarreau){
-		return (DessinsGroupe2.decalageEnY + nbCarreau)*DessinsGroupe2.nbrPixelCarreau;
+		return (DessinsGroupe2.DECALAGEENY + nbCarreau)*DessinsGroupe2.NBRPIXELCARREAU;
 	}
 }

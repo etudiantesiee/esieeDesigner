@@ -135,6 +135,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	}
 	
+	/**
+	 * procedure dessinercorps
+	 */
 	public void dessinerCorps(){
 		//création des points pour le début de l'épaule gauche
 		Point p1 = new Point(2*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
@@ -142,14 +145,26 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour le BRAS GAUCHE
 		Point p3 = new Point(1*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		Point p4 = new Point(2*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		//création des points pour l'aisselle gauche
+		Point p5 = new Point(2*UNITE_HORIZONTALE,7*UNITE_VERTICALE);
+		Point p6 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		//création des points pour l'aisselle droite
+		Point p7 = new Point(10*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		Point p8 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
 		.ajouter(p2)
 		//RELIER LES 2 POINTS DU BRAS
 		.ajouter(p3)
-		.ajouter(p4);
-		
+		.ajouter(p4)
+		//RELIER LES 2 POINTS De l'aisselle gauche
+	     .ajouter(p5)
+	     .ajouter(p6)
+	     //RELIER LES 2 POINTS De l'aisselle droite
+	     .ajouter(p7)
+	     .ajouter(p8)
+		.nePasRelierLesPointsExtreme();
 		
 		
 			
