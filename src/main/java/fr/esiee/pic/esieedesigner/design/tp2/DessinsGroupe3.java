@@ -32,6 +32,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		formetete();
 		 dessinerCorps();
 		yeux();
+		bouche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -68,8 +69,25 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(baseLunette10);
 	}
 		
-
-
+/**
+ * méthode bouche
+ */
+	public void bouche(){
+		Point b1 = new Point(menton.getX()-25, menton.getY() - 1*25); //début bouche
+		Point b2 = new Point(menton.getX()-50, menton.getY()  - 2*25);
+		Point b3 = new Point(menton.getX()-50, menton.getY()  - 4*25);
+		Point b4 = new Point(menton.getX()+50, menton.getY()  - 4*25);
+		Point b5 = new Point(menton.getX()+50, menton.getY()  - 2*25);
+		Point b6 = new Point(menton.getX()+25, menton.getY()  - 1*25);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(b1)
+		.ajouter(b2)
+		.ajouter(b3)
+		.ajouter(b4)
+		.ajouter(b5)
+		.ajouter(b6);
+	}
 	   
 	
 	
