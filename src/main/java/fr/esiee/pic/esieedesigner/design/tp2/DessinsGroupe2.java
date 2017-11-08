@@ -3,6 +3,7 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 import java.lang.reflect.Array;
 
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -89,7 +90,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void yeux(){
+		Point oeilGauchePoint = new Point(vraiePositionEnX(5), vraiePositionEnY(5));
+		Ellipse oeilGauche = new Ellipse(oeilGauchePoint, 7,20);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 		
+		Point oeilDroitPoint = new Point(vraiePositionEnX(9), vraiePositionEnY(5));
+		Ellipse oeilDroit = new Ellipse(oeilDroitPoint, 7,20);
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
 	}
 	/** 
 	 * Dessin du nez et de la bouche.
@@ -167,12 +174,11 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				
 	}
 	
-	private void dessinCorps(){
-=======
+	/**
 	 * Dessiner jambes
 	 */
 	private void dessinJambes(){
->>>>>>> origin/develop
+
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
