@@ -52,7 +52,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
-		Point[] points = {
+		Point[] pointsLunetteGauche = {
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
 				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(2)),
@@ -62,7 +62,18 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
 		};
-		suitePointDessin(points);
+		suitePointDessin(pointsLunetteGauche);
+		Point[] pointsLunetteDroite = {
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
+		};
+		suitePointDessin(pointsLunetteDroite);
 	}
 	/**
 	 * Dessin des yeux
