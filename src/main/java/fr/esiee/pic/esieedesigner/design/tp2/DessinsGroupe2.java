@@ -74,12 +74,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-		
-		//Dessin du corps
-		dessinCorps();
+
 		
 		
 	}
+	/**
+	 * Contour du visage
+	 */
+	public void ContourVisage(){
+		
+	}
+
+
+		//Dessin du corps
+		//dessinCorps();
+		
+		
+//	}
 	
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));

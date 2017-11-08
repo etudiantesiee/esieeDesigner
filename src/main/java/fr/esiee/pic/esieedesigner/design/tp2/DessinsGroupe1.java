@@ -32,6 +32,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		dessinerCorps();
 
 		dessinerTete();
+		dessinerJambe();
 	
 
 	}
@@ -111,6 +112,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point p6 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 		Point p7 = new Point(4*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+		.ajouter(p3)
+		.ajouter(p4)
+		.ajouter(p5)
+		.ajouter(p6)
+		.ajouter(p7);
 	}
 	
 	
