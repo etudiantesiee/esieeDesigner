@@ -2,6 +2,7 @@ package fr.esiee.pic.esieedesigner.design.tp2;
 
 import java.lang.reflect.Array;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -148,6 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(jambeDroite)
 		.ajouter(ventre)
 		.ajouter(jambeGauche)
+		.couleurDeFond(Couleur.GRIS)
 		;
 		
 	}
@@ -170,6 +172,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(mancheGauche2)
 		.ajouter(coudeGauche)
 		.ajouter(epauleGauche)
+		.couleurDeFond(Couleur.GRIS)
+		.nePasRelierLesPointsExtreme()
 		;
 	}
 	
