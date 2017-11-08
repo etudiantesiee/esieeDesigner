@@ -225,8 +225,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//Point p18= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS De l'épaule
 		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(p13)
-		.ajouter(p14);
+		.ajouter(p15)
+		.ajouter(p16);
 		
 			
 	}
