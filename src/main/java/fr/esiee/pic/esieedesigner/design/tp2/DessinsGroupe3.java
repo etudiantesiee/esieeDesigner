@@ -46,6 +46,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		yeux();
 		nez();
 		bouche();
+		poche();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
@@ -136,7 +137,24 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	    .ajouter(n3)
 	    .nePasRelierLesPointsExtreme();
  }
-	
+	/**
+	 * Méthode poche
+	 */
+public void poche(){
+	 //points poches
+	 Point p1 = new Point(menton.getX()-2*25, menton.getY() );
+	 Point p2 = new Point(menton.getX() - 2*25, menton.getY()+25 );
+	 Point p3 = new Point(menton.getX()-3*25, menton.getY()+25);
+	 Point p4 = new Point(menton.getX()-3*25, menton.getY());
+	 
+	 //Ajout des points pour la création de la poche
+	 demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2)
+	    .ajouter(p3)
+	    .ajouter(p4)
+	    .nePasRelierLesPointsExtreme();
+}
 	
 /**
  * Fonction pour dessiner le corps
