@@ -161,13 +161,17 @@ private void dessinerCorps(){
 		
 	
 	Point baseMenton2 = new Point(menton.getX() - 75 , menton.getY()-50);
+	//ajout des points pour création du nez
 	Point baseEpauleG = new Point(baseMenton2.getX() - 50, baseMenton2.getY());
+	//ajout des points pour création du nez
 	Point baseBrasG = new Point(baseEpauleG.getX(),baseEpauleG.getY()+100);
 	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
 	Point baseBrasG2 = new Point(baseMainG.getX(),baseMainG.getY()-75);
 	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
+	//ajout des points pour création du nez
 	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
 	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	//ajout des points pour création du nez
 	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
 	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
 	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
@@ -176,7 +180,9 @@ private void dessinerCorps(){
 	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
 	Point baseBrasD = new Point(basePiedD3.getX(),basePiedD3.getY()-75);
 	Point baseMainD = new Point(basePiedD3.getX()+25,basePiedD3.getY()-25);
+	//ajout des points pour création du nez
 	Point baseEpauleD = new Point(baseMainD.getX(),baseMainD.getY()-100);
+	//ajout des points pour création du nez
 	Point baseMenton3 = new Point(baseEpauleD.getX()-50,baseEpauleD.getY());
 	
 
@@ -192,13 +198,20 @@ private void dessinerCorps(){
 	.ajouter(baseMainG)
 	.ajouter(baseBrasG2)
 	.ajouter(baseMainG)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG2)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG3)
+	//ajout des points pour création du nez
 	.ajouter(baseCorps)
+	//ajout des points pour création du nez
+	//ajout des points pour création du nez
 	.ajouter(basePiedD)
 	.ajouter(basePiedD2)
 	.ajouter(basePiedD3)
+	//ajout des points pour création du nez
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
 	.ajouter(baseCorps2)
