@@ -29,7 +29,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Permet de connaitre la taille de déplacement en Y de la figure
 	 * Exemple : Il doit être à 28 (2 x 14) pour l'étape 1
 	 */
-	private static final int decalageEnY = 28;
+	private static final int decalageEnY = 0;
 	
 	@Override
 	public void dessiner() {
@@ -62,7 +62,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-		
+
 		
 		
 	}
@@ -73,6 +73,24 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		
 	}
 
+
+		//Dessin du corps
+		//dessinCorps();
+		
+		
+//	}
+	
+	private void dessinCorps(){
+		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
+		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
+
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(orteilGauche)
+		.ajouter(talonGauche);
+		
+	}
+	
 	private void suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
 		for(int i = 0; i < points.length; i++){
