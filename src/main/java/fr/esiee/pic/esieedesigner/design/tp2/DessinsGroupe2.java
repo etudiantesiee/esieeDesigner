@@ -149,7 +149,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	}
 	/**
-	 * menton
+	 * les points du menton, des cheveux et les meches
 	 */
 	public void visage(){
 		//Creation des points
