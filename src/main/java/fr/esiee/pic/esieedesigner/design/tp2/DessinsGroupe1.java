@@ -52,8 +52,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	}
 	
 	public void dessinerCorps(){
-		
-		
+		//création des points pour le début de l'épaule gauche
+		Point p1 = new Point(2*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
+		Point p2 = new Point(1*UNITE_HORIZONTALE,6*UNITE_VERTICALE);
+		//RELIER LES 2 POINTS DE L'ÉPAULE
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p1)
+		.ajouter(p2);
+			
 	}
 	/**
 	 * Méthode dessinant les jambes.
