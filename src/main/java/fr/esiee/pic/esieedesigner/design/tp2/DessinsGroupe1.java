@@ -148,6 +148,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point bd = new Point (7*x, 4*y +5);
 		Point cd = new Point (7*x + 5, 4*y +10);
 		
+		//Traits non complets, qui ne sont pas sur des carreaux
+		
 		// Ajout des points du nez, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(ad)
@@ -155,11 +157,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(cd)
 		.nePasRelierLesPointsExtreme()
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//On ne ferme pas le nez
+		
+		//Petit nez
 	
 		// Dessin de la bouche
 		Point ae = new Point (6*x, 6*y);
 		Point be = new Point (9*x, 5*y);
 		Point ce = new Point (7*x, 6*y);
+		
+		
 		
 		// Ajout des points de la bouche, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
@@ -168,6 +176,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(ce)
 		.couleurDeFond(Couleur.JAUNE)
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//Personnalisation de la bouche en jaune
 					
 		
 	}
