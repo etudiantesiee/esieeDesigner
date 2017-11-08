@@ -1,5 +1,6 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -32,10 +33,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	
 	}
 	
+	/**
+	 * Méthode pour dessiner la tête en plusieurs parties : les cheveux, le visage, les yeux, le nez, la bouche
+	 */
 	public void dessinerTete(){
+		
+		// Unité des carreaux pour faciliter les calculs
 		double X = UNITE_VERTICALE/2;
 		double Y = UNITE_HORIZONTALE/2;
 		
+		// Dessin des cheveux
 		Point a = new Point (4*X, 0);
 		Point b = new Point (10*X, 0);
 		Point c = new Point (12*X, 2*Y);
@@ -43,11 +50,38 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point e = new Point (9*X, 1*Y);
 		Point f = new Point (7*X, 2*Y);
 		Point g = new Point (5*X, 1*Y);
+		Point h = new Point (1*X, 5*Y);
+		Point i = new Point (2*X, 2*Y);
 		
-		
+		//Ajout des points, couleur de fond grise
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(a)
 		.ajouter(b)
+		.ajouter(c)
+		.ajouter(d)
+		.ajouter(e)
+		.ajouter(f)
+		.ajouter(g)
+		.ajouter(h)
+		.ajouter(i)
+		.couleurDeFond(Couleur.GRIS);
+		
+		// Dessin du contour du visage
+		Point ab = new Point (3*X, 3*Y);
+		Point bb = new Point (3*X, 5*Y);
+		Point cb = new Point (5*X, 7*Y);
+		Point db = new Point (9*X, 7*Y);
+		Point eb = new Point (11*X, 5*Y);
+		Point fb = new Point (11*X, 3*Y);
+		
+		// Ajout des points, pas de couleur de fond
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ab)
+		.ajouter(bb)
+		.ajouter(cb)
+		.ajouter(db)
+		.ajouter(eb)
+		.ajouter(fb)
 		.nePasRelierLesPointsExtreme();
 	
 	}
