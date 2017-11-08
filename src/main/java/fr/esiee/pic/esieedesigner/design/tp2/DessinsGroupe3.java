@@ -78,6 +78,9 @@ private void dessinerCorps(){
 	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
 	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
 	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
+	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
+	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
 	
 	
 	/**
@@ -94,6 +97,9 @@ private void dessinerCorps(){
 	.ajouter(basePiedG)
 	.ajouter(basePiedG2)
 	.ajouter(basePiedG3)
+	.ajouter(baseCorps)
+	.ajouter(basePiedD)
+	.ajouter(basePiedD2)
 	.nePasRelierLesPointsExtreme();
 }
 
