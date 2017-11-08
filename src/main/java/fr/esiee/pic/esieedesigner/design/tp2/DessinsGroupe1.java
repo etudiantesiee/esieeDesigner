@@ -251,17 +251,38 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		//création de la main droite
 		Point p23= new Point(1.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
-		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.6*UNITE_VERTICALE);
+		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p23)
 		.ajouter(p24);
 		
 		//création de la main droite
 		Point p25= new Point(1.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
-		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.9*UNITE_VERTICALE);
+		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p25)
 		.ajouter(p26);
+		
+		//création de la main gauche
+		Point p27= new Point(12.3*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p28= new Point(12.3*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p27)
+		.ajouter(p28);
+		
+		//création de la main gauche
+		Point p29= new Point(12.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p30= new Point(12.6*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p29)
+		.ajouter(p30);
+		
+		//création de la main gauche
+		Point p31= new Point(12.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p32= new Point(12.9*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p31)
+		.ajouter(p32);
 		
 
 			
