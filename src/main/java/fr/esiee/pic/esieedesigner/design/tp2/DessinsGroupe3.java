@@ -167,14 +167,21 @@ public void poche(){
 private void dessinerCorps(){
 		
 	
+
 	Point baseMenton2 = new Point(getMenton().getX() - 75 , getMenton().getY()-50);
+
+
+
 	Point baseEpauleG = new Point(baseMenton2.getX() - 50, baseMenton2.getY());
+	//ajout des points pour création du nez
 	Point baseBrasG = new Point(baseEpauleG.getX(),baseEpauleG.getY()+100);
 	Point baseMainG = new Point(baseBrasG.getX()+25,baseBrasG.getY()+25);
 	Point baseBrasG2 = new Point(baseMainG.getX(),baseMainG.getY()-75);
 	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
+	//ajout des points pour création du nez
 	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
 	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	//ajout des points pour création du nez
 	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
 	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
 	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
@@ -183,6 +190,11 @@ private void dessinerCorps(){
 	Point baseCorps3 = new Point(baseCorps2.getX()-200,baseCorps2.getY());
 	Point baseBrasD = new Point(basePiedD3.getX(),basePiedD3.getY()-75);
 	Point baseMainD = new Point(basePiedD3.getX()+25,basePiedD3.getY()-25);
+	//ajout des points pour création du nez
+	Point baseEpauleD = new Point(baseMainD.getX(),baseMainD.getY()-100);
+	//ajout des points pour création du nez
+	Point baseMenton3 = new Point(baseEpauleD.getX()-50,baseEpauleD.getY());
+	
 
 	
 	/**
@@ -196,13 +208,20 @@ private void dessinerCorps(){
 	.ajouter(baseMainG)
 	.ajouter(baseBrasG2)
 	.ajouter(baseMainG)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG2)
+	//ajout des points pour création du nez
 	.ajouter(basePiedG3)
+	//ajout des points pour création du nez
 	.ajouter(baseCorps)
+	//ajout des points pour création du nez
+	//ajout des points pour création du nez
 	.ajouter(basePiedD)
 	.ajouter(basePiedD2)
 	.ajouter(basePiedD3)
+	//ajout des points pour création du nez
 	.ajouter(baseCorps2)
 	.ajouter(baseCorps3)
 	.ajouter(baseCorps2)
@@ -210,6 +229,9 @@ private void dessinerCorps(){
 	.ajouter(baseBrasD)
 	.ajouter(basePiedD3)
 	.ajouter(baseMainD)
+	.ajouter(baseEpauleD)
+	.ajouter(baseMenton3)
+	
 	.nePasRelierLesPointsExtreme();
 	
 	colorierPantalon(baseBrasG);
@@ -252,14 +274,23 @@ private void colorierPantalon(Point baseBrasG) {
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
 		public void formetete() {
+
 			Point unG = new Point(getMenton().getX()-75, getMenton().getY()-50);
+
 			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			//points poches
 			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			//points poches
 			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			//points poches
 			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			//points poches
 			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			//points poches
 			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			//points poches
 			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+			//points poches
 			Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
 			
 	
@@ -323,13 +354,21 @@ private void colorierPantalon(Point baseBrasG) {
 		 * Construction de la forme des cheveux
 		 */
 		public void formeCheveux() {
+
 			Point unG = new Point(getMenton().getX()-75, getMenton().getY()-50);
+
 			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			//points poches
 			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			//points poches
 			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			//points poches
 			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			//points poches
 			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			//points poches
 			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			//points poches
 			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
 		
 			
@@ -353,11 +392,17 @@ private void colorierPantalon(Point baseBrasG) {
 			
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(unC)
+			//Point 7 Cheveux
 			.ajouter(deuxC)
+			//Point 7 Cheveux
 			.ajouter(troisC)
+			//Point 7 Cheveux
 			.ajouter(quatreC)
+			//Point 7 Cheveux
 			.ajouter(cinqC)
+			//Point 7 Cheveux
 			.ajouter(sixC)
+			//Point 7 Cheveux
 			.ajouter(septC)
 			.ajouter(huitC)
 			.ajouter(neufD)
@@ -370,12 +415,28 @@ private void colorierPantalon(Point baseBrasG) {
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
+
+		
+		/**
+		 * Trait un 
+		 */
+		
+			/*
+			 * trait un gauche
+			 */
+
 		/**
 		 * trait 1
 		 */
 		public void traitUnGauche() {
 			//comment point1
-			Point traitUn = new Point(getMenton().getX()-100, getMenton().getY()-75);
+
+
+			Point traitUn = new Point(menton.getX()-100, menton.getY()-75);
+			/*
+			 * complément
+			 */
+
 			Point traitUnD = new Point(traitUn.getX(), traitUn.getY()-25);
 			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
@@ -387,8 +448,14 @@ private void colorierPantalon(Point baseBrasG) {
 		 * trait 2
 		 */
 		public void traitDeux() {
+
+			//Trait deux gauche
+
 			//comment point1
+
 			Point traitDeuxUn = new Point(getMenton().getX()-125, getMenton().getY()-75);
+
+
 			Point traitDeuxDeux = new Point(traitDeuxUn.getX(), traitDeuxUn.getY()-50);
 			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
@@ -400,8 +467,13 @@ private void colorierPantalon(Point baseBrasG) {
 		 * trait 3
 		 */
 		public void traitUnDroite() {
+
+			//Trait un droite
+
 			//comment point1
+
 			Point traitUnDroite = new Point(getMenton().getX()+100, getMenton().getY()-75);
+
 			Point traitUnDD = new Point(traitUnDroite.getX(), traitUnDroite.getY()-25);
 			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
@@ -413,8 +485,14 @@ private void colorierPantalon(Point baseBrasG) {
 		 * trait 4
 		 */
 		public void traitDeuxDroite() {
+
 			//comment point1
 			Point traitDeuxDroite = new Point(getMenton().getX()+125, getMenton().getY()-75);
+
+			//Trait deux droite
+		//comment point1
+
+
 			Point traitDeuxDD = new Point(traitDeuxDroite.getX(), traitDeuxDroite.getY()-50);
 			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
