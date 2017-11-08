@@ -94,10 +94,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour le début de l'épaule gauche
 		Point p1 = new Point(2*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
 		Point p2 = new Point(1*UNITE_HORIZONTALE,6*UNITE_VERTICALE);
+		//création des points pour le BRAS GAUCHE
+		Point p3 = new Point(1*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p4 = new Point(2*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS DE L'ÉPAULE
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p1)
-		.ajouter(p2);
+		.ajouter(p2)
+		//RELIER LES 2 POINTS DU BRAS
+		.ajouter(p3)
+		.ajouter(p4);
+		
+		
+		
 			
 	}
 	/**
