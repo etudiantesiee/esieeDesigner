@@ -63,9 +63,16 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private void nezEtBouche(){
 		
+		
+		
 	}
-	
-	
+	/**
+	 * Contour du visage
+	 */
+	public void ContourVisage(){
+		
+	}
+
 	private void suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
 		for(int i = 0; i < points.length; i++){
