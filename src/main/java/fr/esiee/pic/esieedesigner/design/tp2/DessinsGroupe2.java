@@ -162,19 +162,19 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Creation des points
 		Point basDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(10));
-		//Dessiner 
+		//Dessiner  le menton
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
 		.ajouter(basGauche);
 		
 		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
-.ajouter(basDroite);
+		.ajouter(basDroite);
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 
 	
-		//Creation des points du cheveux
+	        	//Creation des points du cheveux
 				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
 				//Creation des points
 				Point hautChGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(0));
@@ -189,7 +189,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
 				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
 				
-				
+				//dessin du cheveux plus les meches 
 				demarrerNouveauDessinAvecDesPoints().ajouter(basChGauche)
 				.ajouter(hautChGauche).
 				ajouter(hautM1).
