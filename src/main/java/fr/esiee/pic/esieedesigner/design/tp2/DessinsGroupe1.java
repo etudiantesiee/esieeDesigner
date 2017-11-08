@@ -218,6 +218,10 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(k3)
         .ajouter(k4);
 
+        Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+        Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
+        Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
 	}
 	
 	
