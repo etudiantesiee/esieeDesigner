@@ -46,6 +46,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		// Unité des carreaux pour faciliter les calculs
 		double x = UNITE_VERTICALE;
 		double y = UNITE_HORIZONTALE;
+		//Nous utilisons les variables pour faciliter l'écriture
 		
 		// Dessin des cheveux
 		Point a = new Point (4*x, 0);
@@ -72,6 +73,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.couleurDeFond(Couleur.GRIS)
 		.produireTraitDeLiaisonDePetiteTaille();
 		
+		//Nous avons fait des traits de petites taille
+		
 		// Dessin du contour du visage
 		Point ab = new Point (3*x, 3*y);
 		Point bb = new Point (3*x, 5*y);
@@ -90,6 +93,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(fb)
 		.nePasRelierLesPointsExtreme()
 		.produireTraitDeLiaisonDePetiteTaille();
+		
+		//Nous ne devons pas relier les points extreme : utilisation de la méthode de l'API
 		
 		// Ajout des yeux 
 		Point ac = new Point (5*x, 2*y);
