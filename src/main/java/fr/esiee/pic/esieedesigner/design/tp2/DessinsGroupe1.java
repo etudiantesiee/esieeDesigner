@@ -258,7 +258,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(p5)
         .ajouter(p6)
         .ajouter(p7)
-        .couleurDeFond(Couleur.GRIS);
+        .couleurDeFond(Couleur.GRIS); 
+        //culotte de couleur grise
 		
 		// Création de points pour dessiner le pied gauche
         Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -272,12 +273,14 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(k2)
         .ajouter(k3)
         .ajouter(k4);
-
+         
+        // création des points pour le pied droit 
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
         Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
         
+        // Dessin du pied droit
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(d1)
         .ajouter(d2)
