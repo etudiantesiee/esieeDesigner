@@ -99,6 +99,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		};
 		// Dessin de la lunette de droite
 		suitePointDessin(pointsPourLeNez).nePasRelierLesPointsExtreme();
+		
+		// Creation de la bouche
+		Point[] pointsPourLaBouche = {
+				new Point(this.vraiePositionEnX(5), this.vraiePositionEnY(8)),
+				new Point(this.vraiePositionEnX(9), this.vraiePositionEnY(8))
+		};
+		// Dessin de la lunette de droite
+		suitePointDessin(pointsPourLaBouche);
 	}
 	/**
 	 * Contour du visage
