@@ -242,6 +242,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerJambe(){
 		
 		// Création de points pour dessiner la culotte
+		//coordonnée (horizontale, verticale)
         Point p1 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p2 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p3 = new Point(10*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -252,6 +253,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin de la culotte
         demarrerNouveauDessinAvecDesPoints()
+        // ajouter point p1 et p3
         .ajouter(p1)
         .ajouter(p2)
         .ajouter(p3)
@@ -270,10 +272,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin du pied gauche
         demarrerNouveauDessinAvecDesPoints()
+        // méthode pour ajouter k1 
         .ajouter(k1)
         .ajouter(k2)
         .ajouter(k3)
         .ajouter(k4);
+       
          
         // création des points pour le pied droit 
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -283,6 +287,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         
         // Dessin du pied droit
         demarrerNouveauDessinAvecDesPoints()
+        //appel de la méthode ajouter pour  relier points
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
