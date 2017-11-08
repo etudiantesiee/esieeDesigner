@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import java.lang.reflect.Array;
+
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 import fr.esiee.pic.esieedesigner.api.shapes.*;
@@ -49,7 +51,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
-		
+		Point[] points = {
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
+		};
+		suitePointDessin(points);
 	}
 	/**
 	 * Dessin des yeux
