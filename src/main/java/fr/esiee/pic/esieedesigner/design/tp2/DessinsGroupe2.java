@@ -85,21 +85,35 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Dessin du nez et de la bouche.
 	 */
 	private void nezEtBouche(){
-		
-		//Dessin du corps
-		dessinCorps();
+
 		
 		
 	}
+	/**
+	 * Contour du visage
+	 */
+	public void ContourVisage(){
+		
+	}
+
+
+		//Dessin du corps
+		//dessinCorps();
+		
+		
+//	}
 	
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
-
+		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
+		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
-		.ajouter(talonGauche);
+		.ajouter(talonGauche)
+		.ajouter(talonGauche2)
+		.ajouter(fesses);
 		
 	}
 	
