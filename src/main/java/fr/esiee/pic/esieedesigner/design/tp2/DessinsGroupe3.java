@@ -30,7 +30,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		formetete();
-		 dessinerCorps();
+		formeCheveux();
+		dessinerCorps();
 		yeux();
 		nez();
 		bouche();
@@ -38,8 +39,6 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 
-
-		
 	}
 	/**
 	 * méthode pour les yeux
@@ -119,10 +118,13 @@ private void dessinerCorps(){
 	Point basePiedG = new Point(baseMainG.getX()-50,baseMainG.getY()+25);
 	Point basePiedG2 = new Point(basePiedG.getX()+75,basePiedG.getY());
 	Point basePiedG3 = new Point(basePiedG2.getX(),basePiedG2.getY()-25);
+	Point baseCorps = new Point(basePiedG3.getX()+150,basePiedG3.getY());
+	Point basePiedD = new Point(baseCorps.getX(),baseCorps.getY()+25);
+	Point basePiedD2 = new Point(basePiedD.getX()+75,basePiedD.getY());
 	
 	
 	/**
-	 * contrusction du dessin
+	 * Construction du dessin
 	 */
 	demarrerNouveauDessinAvecDesPoints()
 	.ajouter(menton)
@@ -135,6 +137,9 @@ private void dessinerCorps(){
 	.ajouter(basePiedG)
 	.ajouter(basePiedG2)
 	.ajouter(basePiedG3)
+	.ajouter(baseCorps)
+	.ajouter(basePiedD)
+	.ajouter(basePiedD2)
 	.nePasRelierLesPointsExtreme();
 }
 
@@ -165,5 +170,29 @@ private void dessinerCorps(){
 			.ajouter(dixD);
 
 		}
-		}
 
+		/**
+		 * Construction de la forme des cheveux
+		 */
+		public void formeCheveux() {
+			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
+			Point deuxC = new Point(menton.getX()-150, unC.getY());
+			Point troisC = new Point(deuxC.getX(), deuxC.getY()-125);
+			Point quatreC = new Point(troisC.getX()+50, troisC.getY()-50);
+			Point cinqC = new Point(quatreC.getX()+200, quatreC.getY());
+			Point sixC = new Point(cinqC.getX()+50, cinqC.getY()+50);
+			Point septC = new Point(sixC.getX(), sixC.getY()+125);
+			Point huitC = new Point(menton.getX()+83.3, septC.getY());
+
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(unC)
+			.ajouter(deuxC)
+			.ajouter(troisC)
+			.ajouter(quatreC)
+			.ajouter(cinqC)
+			.ajouter(sixC)
+			.ajouter(septC)
+			.ajouter(huitC);
+		}
+}
+		
