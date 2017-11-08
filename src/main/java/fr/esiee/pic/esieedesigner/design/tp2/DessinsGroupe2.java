@@ -40,6 +40,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessinHautCorps();
 		dessinPoche();
 		interieurTete();
+		contourVisage();
+		
 	}
 	/**
 	 * Permet de dessin l'interieur de la tête
@@ -113,9 +115,9 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	/**
 	 * Contour du visage
 	 */
-	public void ContourVisage(){
+	public void contourVisage(){
 		
-		
+	mentonVisage();	
 	}
 	/**
 	 * menton
@@ -126,21 +128,51 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		//Creation des points
 		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
 		//Creation des points
-		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		Point hautDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Creation des points
-		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
+		Point basDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(10));
 		//Dessiner 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
-		.ajouter(basGauche)
+		.ajouter(basGauche);
+		
+		demarrerNouveauDessinAvecDesPoints().ajouter(basGauche)
+.ajouter(basDroite);
+		
+		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(basDroite).ajouter(hautDroite);
 	
 	}
 	
 	/**
+<<<<<<< HEAD
+	 * cheveux meches
+	 */
+	public void cheveux(){
+	
+		//Creation des points du cheveux
+				Point basChGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(1));
+				//Creation des points
+				Point hautChGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(0));
+				//Creation des points
+				Point hautChDroite=new Point(vraiePositionEnX(9),vraiePositionEnY(0));
+				//Creation des points
+				Point basChDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(1));
+				
+				// creer points meches
+				Point hautM1=new Point(vraiePositionEnX(7),vraiePositionEnY(0));
+				Point basM1=new Point(vraiePositionEnX(6),vraiePositionEnY(1));
+				Point hautM2=new Point(vraiePositionEnX(8),vraiePositionEnY(0));
+				Point basM2=new Point(vraiePositionEnX(7),vraiePositionEnY(2));
+				
+	}
+	
+	private void dessinCorps(){
+=======
 	 * Dessiner jambes
 	 */
 	private void dessinJambes(){
+>>>>>>> origin/develop
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
