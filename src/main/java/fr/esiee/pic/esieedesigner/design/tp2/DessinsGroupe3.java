@@ -11,8 +11,17 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
  *
  */
 public class DessinsGroupe3 extends CreateurDeForme {
+
+
+
+	/**
+	 * Permet l'instanciation des dessins
+	 */
 	
 	Point menton = new Point(21*25,15*25);
+
+	
+
 	// Point du menton
 	/**
 	 * Permet l'instanciation des dessins
@@ -21,11 +30,33 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		formetete();
+		 dessinerCorps();
+		yeux();
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
-	    dessinerCorps();
+
+
+		
 	}
+	/**
+	 * méthode pour les yeux
+	 */
+	public void yeux()
+	{
+		Point baseLunette = new Point(menton.getX(), menton.getY() +6*25);
+		Point baseLunette2 = new Point(menton.getX()-25, menton.getY() -25);
+		Point baseLunette3 = new Point(menton.getX()- 25*4, menton.getY());
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(baseLunette)
+		.ajouter(baseLunette2)
+		.ajouter(baseLunette3);
+	}
+		
+
+
+	   
+	
 	
 /**
  * Fonction pour dessiner le corps
@@ -47,6 +78,7 @@ private void dessinerCorps(){
 	.ajouter(baseEpauleG)
 	.ajouter(baseBrasG);
 }
+
 	/**
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
@@ -74,4 +106,5 @@ private void dessinerCorps(){
 			.ajouter(dixD);
 
 		}
-}
+		}
+
