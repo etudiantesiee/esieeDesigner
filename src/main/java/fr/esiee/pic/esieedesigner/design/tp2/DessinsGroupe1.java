@@ -236,7 +236,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(p4)
         .ajouter(p5)
         .ajouter(p6)
-        .ajouter(p7);
+        .ajouter(p7)
+        .couleurDeFond(Couleur.GRIS);
 		
 		// Création de points pour dessiner le pied gauche
         Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -260,8 +261,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
-        .ajouter(d4)
-        .couleurDeFond(Couleur.GRIS);
+        .ajouter(d4);
 	}
 	
 	
