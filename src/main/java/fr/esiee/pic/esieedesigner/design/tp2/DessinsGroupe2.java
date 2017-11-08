@@ -75,8 +75,22 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 */
 	private void nezEtBouche(){
 		
+		//Dessin du corps
+		dessinCorps();
+		
+		
 	}
 	
+	private void dessinCorps(){
+		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
+		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
+
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(orteilGauche)
+		.ajouter(talonGauche);
+		
+	}
 	
 	private void suitePointDessin(Point[] points){
 		CheminDePoints cdp = demarrerNouveauDessinAvecDesPoints();
