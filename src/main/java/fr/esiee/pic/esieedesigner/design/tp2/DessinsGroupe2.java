@@ -35,7 +35,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
-		dessinCorps();
+		dessinJambes();
+		dessinHautCorps();
 		interieurTete();
 	}
 	/**
@@ -122,14 +123,13 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	/**
-	 * Dessiner corps
+	 * Dessiner jambes
 	 */
-	private void dessinCorps(){
+	private void dessinJambes(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
 		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
-
 		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
 		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
 		Point piedDroit = new Point(vraiePositionEnX(3),vraiePositionEnY(13));
@@ -150,6 +150,27 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(jambeGauche)
 		;
 		
+	}
+	
+	/*
+	 * Dessin haut du corps
+	 */
+	private void dessinHautCorps(){
+		Point hancheGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(12));
+		Point aisselleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(11));
+		Point mancheGauche1 = new Point(vraiePositionEnX(12),vraiePositionEnY(12));
+		Point mancheGauche2 = new Point(vraiePositionEnX(13),vraiePositionEnY(11));
+		Point coudeGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(10));
+		Point epauleGauche = new Point(vraiePositionEnX(11),vraiePositionEnY(8));
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(hancheGauche)
+		.ajouter(aisselleGauche)
+		.ajouter(mancheGauche1)
+		.ajouter(mancheGauche2)
+		.ajouter(coudeGauche)
+		.ajouter(epauleGauche)
+		;
 	}
 	
 	private void suitePointDessin(Point[] points){
