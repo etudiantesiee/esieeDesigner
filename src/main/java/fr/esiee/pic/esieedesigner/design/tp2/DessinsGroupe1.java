@@ -166,6 +166,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		Point k2 = new Point(6*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
 		Point k3 = new Point(3*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
 		Point k4 = new Point(5*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(k1)
+		.ajouter(k2)
+		.ajouter(k3)
+		.ajouter(k4);
 
 	}
 	
