@@ -21,7 +21,15 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 */
 	
 	Point menton = new Point(21*25,15*25);
-
+	Point unG = new Point(menton.getX()-75, menton.getY()-50);
+	Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+	Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+	Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+	Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+	Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+	Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+	Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+	Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
 	
 
 	// Point du menton
@@ -180,15 +188,7 @@ private void dessinerCorps(){
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
 		public void formetete() {
-			Point unG = new Point(menton.getX()-75, menton.getY()-50);
-			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
-			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
-			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
-			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
-			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
-			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
-			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
-			Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
+			
 	
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(menton)
@@ -200,8 +200,7 @@ private void dessinerCorps(){
 			.ajouter(septD)
 			.ajouter(huitD)
 			.ajouter(neufD)
-			.ajouter(dixD)
-			.nePasRelierLesPointsExtreme();
+			.ajouter(dixD);
 
 		}
 
@@ -236,6 +235,13 @@ private void dessinerCorps(){
 			.ajouter(sixC)
 			.ajouter(septC)
 			.ajouter(huitC)
+			.ajouter(neufD)
+			.ajouter(huitD)
+			.ajouter(septD)
+			.ajouter(cinqG)
+			.ajouter(quatreG)
+			.ajouter(troisG)
+			.ajouter(deuxG)
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
