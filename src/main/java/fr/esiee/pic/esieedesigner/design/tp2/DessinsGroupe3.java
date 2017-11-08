@@ -20,17 +20,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * Permet l'instanciation des dessins
 	 */
 	
-	private Point menton = new Point(21*25,15*25);
-	private Point unG = new Point(menton.getX()-75, menton.getY()-50);
-	private Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
-	private Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
-	private Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
-	private Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
-	private Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
-	private Point huitD = new Point(septD.getX()+75, septD.getY()+25);
-	private Point neufD = new Point(huitD.getX(), huitD.getY()+50);
-	private Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
-	
+
+	Point menton = new Point(21*25,15*25);
+
+
 
 	// Point du menton
 	/**
@@ -252,6 +245,15 @@ private void colorierPantalon(Point baseBrasG) {
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
 		public void formetete() {
+			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+			Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
 			
 	
 			demarrerNouveauDessinAvecDesPoints()
@@ -314,6 +316,16 @@ private void colorierPantalon(Point baseBrasG) {
 		 * Construction de la forme des cheveux
 		 */
 		public void formeCheveux() {
+			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+		
+			
 			//Point 1 Cheveux
 			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
 			//Point 2 Cheveux
