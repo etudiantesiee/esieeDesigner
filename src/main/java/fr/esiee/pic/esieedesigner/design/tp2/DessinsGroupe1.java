@@ -222,13 +222,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour la manche droite
 		Point p15=new Point(1*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		Point p16=new Point(2*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
-		//création des points pour la manche gauche
-		//Point p17= new Point(12*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
-		//Point p18= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS De l'épaule
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p15)
 		.ajouter(p16);
+		
+		//création des points pour la manche gauche
+		Point p19= new Point(12*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		Point p20= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p19)
+		.ajouter(p20);
 		
 			
 	}
@@ -254,7 +258,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(p4)
         .ajouter(p5)
         .ajouter(p6)
-        .ajouter(p7);
+        .ajouter(p7)
+        .couleurDeFond(Couleur.GRIS);
 		
 		// Création de points pour dessiner le pied gauche
         Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -278,8 +283,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
-        .ajouter(d4)
-        .couleurDeFond(Couleur.GRIS);
+        .ajouter(d4);
 	}
 	
 	
