@@ -63,7 +63,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(g)
 		.ajouter(h)
 		.ajouter(i)
-		.couleurDeFond(Couleur.GRIS);
+		.couleurDeFond(Couleur.GRIS)
+		.produireTraitDeLiaisonDePetiteTaille();
 		
 		// Dessin du contour du visage
 		Point ab = new Point (3*X, 3*Y);
@@ -81,7 +82,34 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(db)
 		.ajouter(eb)
 		.ajouter(fb)
-		.nePasRelierLesPointsExtreme();
+		.nePasRelierLesPointsExtreme()
+		.produireTraitDeLiaisonDePetiteTaille();
+		
+		// Ajout des yeux 
+		Point ac = new Point (5*X, 2*Y);
+		Point bc = new Point (6*X, 2*Y);
+		Point cc = new Point (8*X, 4*Y);
+		Point dc = new Point (9*X, 4*Y);
+		Point ec = new Point (10*X, 3*Y);
+		Point fc = new Point (9*X, 2*Y);
+		Point gc = new Point (8*X, 2*Y);
+		Point hc = new Point (6*X, 4*Y);
+		Point ic = new Point (5*X, 4*Y);
+		Point jc = new Point (4*X, 3*Y);
+		
+		// Ajout des points, pas de couleur de fond
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(ac)
+		.ajouter(bc)
+		.ajouter(cc)
+		.ajouter(dc)
+		.ajouter(ec)
+		.ajouter(fc)
+		.ajouter(gc)
+		.ajouter(hc)
+		.ajouter(ic)
+		.ajouter(jc)
+		.produireTraitDeLiaisonDePetiteTaille();
 	
 	}
 	
