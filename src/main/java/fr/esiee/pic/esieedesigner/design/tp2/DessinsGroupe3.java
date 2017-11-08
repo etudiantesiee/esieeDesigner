@@ -124,12 +124,21 @@ private void dessinerCorps(){
 			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
 			Point deuxC = new Point(menton.getX()-150, unC.getY());
 			Point troisC = new Point(deuxC.getX(), deuxC.getY()-125);
-			
+			Point quatreC = new Point(troisC.getX()+50, troisC.getY()-50);
+			Point cinqC = new Point(quatreC.getX()+200, quatreC.getY());
+			Point sixC = new Point(cinqC.getX()+50, cinqC.getY()+50);
+			Point septC = new Point(sixC.getX(), sixC.getY()+125);
+			Point huitC = new Point(menton.getX()+83.3, septC.getY());
+
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(unC)
 			.ajouter(deuxC)
-			.ajouter(troisC);
+			.ajouter(troisC)
+			.ajouter(quatreC)
+			.ajouter(cinqC)
+			.ajouter(sixC)
+			.ajouter(septC)
+			.ajouter(huitC);
 		}
-}
 }
 		
