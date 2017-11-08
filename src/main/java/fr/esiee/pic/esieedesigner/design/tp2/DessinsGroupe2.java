@@ -101,10 +101,14 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * menton
 	 */
 	public void mentonVisage(){
-		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));//Creation des points
-		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));//Creation des points
-		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));//Creation des points
-		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));//Creation des points
+		//Creation des points
+		Point hautGauche=new Point(vraiePositionEnX(2),vraiePositionEnY(7));
+		//Creation des points
+		Point basGauche=new Point(vraiePositionEnX(5),vraiePositionEnY(10));
+		//Creation des points
+		Point hautDroite=new Point(vraiePositionEnX(10),vraiePositionEnY(10));
+		//Creation des points
+		Point basDroite=new Point(vraiePositionEnX(12),vraiePositionEnY(7));
 		//Dessiner 
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(hautGauche)
