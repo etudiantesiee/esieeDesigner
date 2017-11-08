@@ -42,7 +42,25 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		dessinHautCorps();
 		interieurTete();
 		contourVisage();
+		dessinerMain();
 		
+	}
+	private void dessinerMain(){
+		Point[] pointsDeLaMainGauche = {
+				new Point(vraiePositionEnX(1.2), vraiePositionEnY(11.2)),
+				new Point(vraiePositionEnX(1.8), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(1.1), vraiePositionEnY(12.5)),
+				new Point(vraiePositionEnX(0.5), vraiePositionEnY(11.8)),
+		};
+		suitePointDessin(pointsDeLaMainGauche);
+		
+		Point[] pointsDeLaMainDroite = {
+				new Point(vraiePositionEnX(12.2), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(12.8), vraiePositionEnY(11.2)),
+				new Point(vraiePositionEnX(13.5), vraiePositionEnY(11.7)),
+				new Point(vraiePositionEnX(12.8), vraiePositionEnY(12.5)),
+		};
+		suitePointDessin(pointsDeLaMainDroite);
 	}
 	/**
 	 * Permet de dessin l'interieur de la tête
