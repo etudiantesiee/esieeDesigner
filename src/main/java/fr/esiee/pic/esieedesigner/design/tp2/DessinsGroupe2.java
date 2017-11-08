@@ -35,6 +35,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
+		dessinCorps();
 		interieurTete();
 	}
 	/**
@@ -51,7 +52,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	 * Ne retourne rien
 	 */
 	private void lunette(){
-		Point[] points = {
+		Point[] pointsLunetteGauche = {
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(3)),
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(2)),
 				new Point(this.vraiePositionEnX(6), this.vraiePositionEnY(2)),
@@ -61,7 +62,18 @@ public class DessinsGroupe2 extends CreateurDeForme {
 				new Point(this.vraiePositionEnX(3), this.vraiePositionEnY(6)),
 				new Point(this.vraiePositionEnX(2), this.vraiePositionEnY(5))
 		};
-		suitePointDessin(points);
+		suitePointDessin(pointsLunetteGauche);
+		Point[] pointsLunetteDroite = {
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(2)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(3)),
+				new Point(this.vraiePositionEnX(7+5), this.vraiePositionEnY(5)),
+				new Point(this.vraiePositionEnX(6+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(3+5), this.vraiePositionEnY(6)),
+				new Point(this.vraiePositionEnX(2+5), this.vraiePositionEnY(5))
+		};
+		suitePointDessin(pointsLunetteDroite);
 	}
 	/**
 	 * Dessin des yeux
@@ -100,22 +112,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 		.ajouter(basDroite).ajouter(hautDroite);
 	
 	}
-
-
-		//Dessin du corps
-		//dessinCorps();
-		
-		
-//	}
 	
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
+		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
+		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
 
+		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
+		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
-		.ajouter(talonGauche);
+		.ajouter(talonGauche)
+		.ajouter(talonGauche2)
+		.ajouter(fesses)
+		.ajouter(talonDroit)
+		.ajouter(orteilDroit);
 		
 	}
 	

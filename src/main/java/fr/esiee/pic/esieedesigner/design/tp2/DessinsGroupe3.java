@@ -14,6 +14,9 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	/**
 	 * Permet l'instanciation des dessins
 	 */
+	
+	Point menton = new Point(21*25,15*25);
+	
 	@Override
 	public void dessiner() {
 		formetete();
@@ -25,14 +28,22 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
 		public void formetete() {
-			Point menton = new Point(37*25,15*25);
 			Point unG = new Point(menton.getX()-75, menton.getY()-50);
 			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			Point quatreG = new Point(troisG.getX(), troisG.getY()-50);
+			Point cinqG = new Point(quatreG.getX()+75, quatreG.getY()-25);
+			Point sixG = new Point(cinqG.getX()+25, cinqG.getY()+25);
 			
+	
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(menton)
 			.ajouter(unG)
-			.ajouter(deuxG);
-			
+			.ajouter(deuxG)
+			.ajouter(troisG)
+			.ajouter(quatreG)
+			.ajouter(cinqG)
+			.ajouter(sixG);
+
 		}
 }
