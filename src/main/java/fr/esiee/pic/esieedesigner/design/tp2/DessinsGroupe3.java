@@ -265,13 +265,21 @@ private void colorierPantalon(Point baseBrasG) {
 	 */
 		public void formetete() {
 			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			//points poches
 			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			//points poches
 			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			//points poches
 			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			//points poches
 			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			//points poches
 			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			//points poches
 			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			//points poches
 			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+			//points poches
 			Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
 			
 	
@@ -336,12 +344,19 @@ private void colorierPantalon(Point baseBrasG) {
 		 */
 		public void formeCheveux() {
 			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			//points poches
 			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			//points poches
 			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			//points poches
 			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			//points poches
 			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			//points poches
 			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			//points poches
 			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			//points poches
 			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
 		
 			
