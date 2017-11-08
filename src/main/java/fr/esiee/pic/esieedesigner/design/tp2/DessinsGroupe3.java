@@ -1,5 +1,7 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
 
+import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
+import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
 import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 
@@ -55,6 +57,20 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point baseLunette8 = new Point(menton.getX()+25*4, menton.getY()  - 7*25);
 		Point baseLunette9 = new Point(menton.getX()+ 25*4, menton.getY() - 6*25);
 		Point baseLunette10 = new Point(menton.getX()+25, menton.getY() - 5*25);
+		
+		double abscisseOeilDroit = menton.getX()+1*25;
+		double ordonneOeilDroit = menton.getY()-6*25;
+		double abscisseOeilGauche = menton.getX()-1*25;
+		double ordonneOeilGauche  = menton.getY()-6*25;
+		
+		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
+		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
+		
+		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
+		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
+		// Remplissage noir		
+		ajouterEllipse(oeilDroit, Couleur.NOIR);
+		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(baseLunette)
@@ -67,6 +83,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		.ajouter(baseLunette8)	
 		.ajouter(baseLunette9)
 		.ajouter(baseLunette10);
+		
+		
 	}
 		
 /**
