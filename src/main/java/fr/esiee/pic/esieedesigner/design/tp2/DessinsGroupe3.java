@@ -1,5 +1,5 @@
 package fr.esiee.pic.esieedesigner.design.tp2;
-
+//On importe les api nécessaires
 import fr.esiee.pic.esieedesigner.api.shapes.Couleur;
 import fr.esiee.pic.esieedesigner.api.shapes.Ellipse;
 import fr.esiee.pic.esieedesigner.api.shapes.Point;
@@ -39,6 +39,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 
 	@Override
 	public void dessiner() {
+		//On lance toutes les fonctions permettant la création des divers éléments du corps
 		formetete();
 		formeCheveux();
 		dessinerCorps();
@@ -72,12 +73,15 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		double abscisseOeilGauche = menton.getX()-1*25;
 		double ordonneOeilGauche  = menton.getY()-6*25;
 		
+		// création des yeux
 		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
 		
 		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
-			
+		
+		
+		//ajout des yeux et des points pour création de la lunette
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 		ajouterEllipse(oeilGauche, Couleur.NOIR);
 	
@@ -108,6 +112,7 @@ public class DessinsGroupe3 extends CreateurDeForme {
 		Point b5 = new Point(menton.getX()+50, menton.getY()  - 2*25);
 		Point b6 = new Point(menton.getX()+25, menton.getY()  - 1*25);
 		
+		//ajout des points pour la création des mains
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(b1)
 		.ajouter(b2)
@@ -123,7 +128,8 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 Point n1 = new Point(menton.getX()-0.20*25, menton.getY() - 4.75*25);
 	 Point n2 = new Point(menton.getX() , menton.getY() - 5*25);
 	 Point n3 = new Point(menton.getX()+0.20*25, menton.getY() - 4.75*25);
-		
+	
+	 //ajout des points pour création du nez
 	 demarrerNouveauDessinAvecDesPoints()
 		.ajouter(n1)
 		.ajouter(n2)
