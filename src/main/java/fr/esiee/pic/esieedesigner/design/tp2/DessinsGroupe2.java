@@ -37,8 +37,8 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	@Override
 	public void dessiner() {
 		dessinJambes();
-		dessinHautCorps();
 		dessinPoche();
+		dessinHautCorps();
 		interieurTete();
 		contourVisage();
 		
@@ -237,6 +237,17 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	}
 	
 	private void dessinPoche(){
+		Point hautDroit = new Point(vraiePositionEnX(9),vraiePositionEnY(10.5));
+		Point basDroit = new Point(vraiePositionEnX(9),vraiePositionEnY(11));
+		Point basGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(11));
+		Point hautGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(10.5));
+		
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(hautDroit)
+		.ajouter(basDroit)
+		.ajouter(basGauche)
+		.ajouter(hautGauche)
+		.nePasRelierLesPointsExtreme();
 		
 	}
     /**
