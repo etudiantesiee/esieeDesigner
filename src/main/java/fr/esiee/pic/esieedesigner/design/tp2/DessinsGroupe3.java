@@ -20,17 +20,10 @@ public class DessinsGroupe3 extends CreateurDeForme {
 	 * Permet l'instanciation des dessins
 	 */
 	
-	private Point menton = new Point(21*25,15*25);
-	private Point unG = new Point(menton.getX()-75, menton.getY()-50);
-	private Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
-	private Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
-	private Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
-	private Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
-	private Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
-	private Point huitD = new Point(septD.getX()+75, septD.getY()+25);
-	private Point neufD = new Point(huitD.getX(), huitD.getY()+50);
-	private Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
-	
+
+	Point menton = new Point(21*25,15*25);
+
+
 
 	// Point du menton
 	/**
@@ -252,6 +245,15 @@ private void colorierPantalon(Point baseBrasG) {
 	 * Permet le dessin de la forme de la tête et du visage
 	 */
 		public void formetete() {
+			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+			Point dixD = new Point(neufD.getX()-25, neufD.getY()+75);
 			
 	
 			demarrerNouveauDessinAvecDesPoints()
@@ -273,41 +275,57 @@ private void colorierPantalon(Point baseBrasG) {
 		 */
 		private void pointil()
 		{
+			//comment point1
 			Point point1 = new Point(menton.getX(),menton.getY());
-			Point point2 = new Point(menton.getX(),menton.getY()+0.20*25);
+			Point point2 = new Point(menton.getX(),menton.getY()+0.2*25);
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(point1)
-			.ajouter(point2);
-			
+			.ajouter(point2)
+			.produireTraitDeLiaisonDePetiteTaille();;
+			//comment point1
 			Point point3 = new Point(menton.getX(),menton.getY()+0.4*25);
-			Point point4 = new Point(menton.getX(),menton.getY()+0.8*25);
+			Point point4 = new Point(menton.getX(),menton.getY()+0.6*25);
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(point3)
-			.ajouter(point4);
-			
-			Point point5 = new Point(menton.getX(),menton.getY()+0.9);
+			.ajouter(point4)
+			.produireTraitDeLiaisonDePetiteTaille();;
+			//comment point1
+			Point point5 = new Point(menton.getX(),menton.getY()+0.9*25);
 			Point point6 = new Point(menton.getX(),menton.getY()+1.1*25);	
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(point5)
-			.ajouter(point6);
-			
+			.ajouter(point6)
+			.produireTraitDeLiaisonDePetiteTaille();;
+			//comment point1
 			Point point7 = new Point(menton.getX(),menton.getY()+1.4*25);
 			Point point8 = new Point(menton.getX(),menton.getY()+1.6*25);	
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(point7)
-			.ajouter(point8);
-			
+			.ajouter(point8)
+			.produireTraitDeLiaisonDePetiteTaille();
+			//comment point1
 			Point point9 = new Point(menton.getX(),menton.getY()+1.8*25);
 			Point point10 = new Point(menton.getX(),menton.getY()+2*25);
-			
+			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(point9)
-			.ajouter(point10);
+			.ajouter(point10)
+			.produireTraitDeLiaisonDePetiteTaille();;
 		}
 		/**
 		 * Construction de la forme des cheveux
 		 */
 		public void formeCheveux() {
+			Point unG = new Point(menton.getX()-75, menton.getY()-50);
+			Point deuxG = new Point(unG.getX()-25, unG.getY()-75);
+			Point troisG = new Point(deuxG.getX(), deuxG.getY()-50);
+			Point quatreG = new Point(troisG.getX()+75, troisG.getY()-25);
+			Point cinqG = new Point(quatreG.getX()+25, quatreG.getY()+25);
+			Point septD = new Point(cinqG.getX()+25, cinqG.getY()-25);
+			Point huitD = new Point(septD.getX()+75, septD.getY()+25);
+			Point neufD = new Point(huitD.getX(), huitD.getY()+50);
+		
+			
 			//Point 1 Cheveux
 			Point unC = new Point(menton.getX()-83.3, menton.getY()-75);
 			//Point 2 Cheveux
@@ -345,49 +363,53 @@ private void colorierPantalon(Point baseBrasG) {
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
-		/*
+		/**
 		 * trait 1
 		 */
 		public void traitUnGauche() {
+			//comment point1
 			Point traitUn = new Point(menton.getX()-100, menton.getY()-75);
 			Point traitUnD = new Point(traitUn.getX(), traitUn.getY()-25);
-			
+			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(traitUn)
 			.ajouter(traitUnD);
 		}
 		
-		/*
+		/**
 		 * trait 2
 		 */
 		public void traitDeux() {
+			//comment point1
 			Point traitDeuxUn = new Point(menton.getX()-125, menton.getY()-75);
 			Point traitDeuxDeux = new Point(traitDeuxUn.getX(), traitDeuxUn.getY()-50);
-			
+			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(traitDeuxUn)
 			.ajouter(traitDeuxDeux);
 		}
 		
-		/*
+		/**
 		 * trait 3
 		 */
 		public void traitUnDroite() {
+			//comment point1
 			Point traitUnDroite = new Point(menton.getX()+100, menton.getY()-75);
 			Point traitUnDD = new Point(traitUnDroite.getX(), traitUnDroite.getY()-25);
-			
+			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(traitUnDroite)
 			.ajouter(traitUnDD);
 		}
 		
-		/*
+		/**
 		 * trait 4
 		 */
 		public void traitDeuxDroite() {
+			//comment point1
 			Point traitDeuxDroite = new Point(menton.getX()+125, menton.getY()-75);
 			Point traitDeuxDD = new Point(traitDeuxDroite.getX(), traitDeuxDroite.getY()-50);
-			
+			//comment point1
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(traitDeuxDroite)
 			.ajouter(traitDeuxDD);

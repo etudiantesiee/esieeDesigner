@@ -261,17 +261,38 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		//création de la main droite
 		Point p23= new Point(1.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
-		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.6*UNITE_VERTICALE);
+		Point p24= new Point(1.6*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p23)
 		.ajouter(p24);
 		
 		//création de la main droite
 		Point p25= new Point(1.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
-		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.9*UNITE_VERTICALE);
+		Point p26= new Point(1.9*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p25)
 		.ajouter(p26);
+		
+		//création de la main gauche
+		Point p27= new Point(12.3*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p28= new Point(12.3*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p27)
+		.ajouter(p28);
+		
+		//création de la main gauche
+		Point p29= new Point(12.6*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p30= new Point(12.6*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p29)
+		.ajouter(p30);
+		
+		//création de la main gauche
+		Point p31= new Point(12.9*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+		Point p32= new Point(12.9*UNITE_HORIZONTALE, 11.3*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p31)
+		.ajouter(p32);
 		
 
 			
@@ -282,6 +303,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerJambe(){
 		
 		// Création de points pour dessiner la culotte
+		//coordonnée (horizontale, verticale)
         Point p1 = new Point(3*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p2 = new Point(11*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
         Point p3 = new Point(10*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -292,6 +314,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin de la culotte
         demarrerNouveauDessinAvecDesPoints()
+        // ajouter point p1 et p3
         .ajouter(p1)
         .ajouter(p2)
         .ajouter(p3)
@@ -310,10 +333,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
         // Dessin du pied gauche
         demarrerNouveauDessinAvecDesPoints()
+        // méthode pour ajouter k1 
         .ajouter(k1)
         .ajouter(k2)
         .ajouter(k3)
         .ajouter(k4);
+       
          
         // création des points pour le pied droit 
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -323,6 +348,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
         
         // Dessin du pied droit
         demarrerNouveauDessinAvecDesPoints()
+        //appel de la méthode ajouter pour  relier points
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
