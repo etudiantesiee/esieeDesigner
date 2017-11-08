@@ -44,19 +44,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
 	public void dessinerTete(){
 		
 		// Unité des carreaux pour faciliter les calculs
-		double X = UNITE_VERTICALE;
-		double Y = UNITE_HORIZONTALE;
+		double x = UNITE_VERTICALE;
+		double y = UNITE_HORIZONTALE;
 		
 		// Dessin des cheveux
-		Point a = new Point (4*X, 0);
-		Point b = new Point (10*X, 0);
-		Point c = new Point (12*X, 2*Y);
-		Point d = new Point (13*X, 5*Y);
-		Point e = new Point (9*X, 1*Y);
-		Point f = new Point (7*X, 2*Y);
-		Point g = new Point (5*X, 1*Y);
-		Point h = new Point (1*X, 5*Y);
-		Point i = new Point (2*X, 2*Y);
+		Point a = new Point (4*x, 0);
+		Point b = new Point (10*x, 0);
+		Point c = new Point (12*x, 2*y);
+		Point d = new Point (13*x, 5*y);
+		Point e = new Point (9*x, 1*y);
+		Point f = new Point (7*x, 2*y);
+		Point g = new Point (5*x, 1*y);
+		Point h = new Point (1*x, 5*y);
+		Point i = new Point (2*x, 2*y);
 		
 		//Ajout des points, couleur de fond grise
 		demarrerNouveauDessinAvecDesPoints()
@@ -73,12 +73,12 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.produireTraitDeLiaisonDePetiteTaille();
 		
 		// Dessin du contour du visage
-		Point ab = new Point (3*X, 3*Y);
-		Point bb = new Point (3*X, 5*Y);
-		Point cb = new Point (5*X, 7*Y);
-		Point db = new Point (9*X, 7*Y);
-		Point eb = new Point (11*X, 5*Y);
-		Point fb = new Point (11*X, 3*Y);
+		Point ab = new Point (3*x, 3*y);
+		Point bb = new Point (3*x, 5*y);
+		Point cb = new Point (5*x, 7*y);
+		Point db = new Point (9*x, 7*y);
+		Point eb = new Point (11*x, 5*y);
+		Point fb = new Point (11*x, 3*y);
 		
 		// Ajout des points, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
@@ -92,16 +92,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.produireTraitDeLiaisonDePetiteTaille();
 		
 		// Ajout des yeux 
-		Point ac = new Point (5*X, 2*Y);
-		Point bc = new Point (6*X, 2*Y);
-		Point cc = new Point (8*X, 4*Y);
-		Point dc = new Point (9*X, 4*Y);
-		Point ec = new Point (10*X, 3*Y);
-		Point fc = new Point (9*X, 2*Y);
-		Point gc = new Point (8*X, 2*Y);
-		Point hc = new Point (6*X, 4*Y);
-		Point ic = new Point (5*X, 4*Y);
-		Point jc = new Point (4*X, 3*Y);
+		Point ac = new Point (5*x, 2*y);
+		Point bc = new Point (6*x, 2*y);
+		Point cc = new Point (8*x, 4*y);
+		Point dc = new Point (9*x, 4*y);
+		Point ec = new Point (10*x, 3*y);
+		Point fc = new Point (9*x, 2*y);
+		Point gc = new Point (8*x, 2*y);
+		Point hc = new Point (6*x, 4*y);
+		Point ic = new Point (5*x, 4*y);
+		Point jc = new Point (4*x, 3*y);
 		
 		// Ajout des points, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
@@ -119,16 +119,16 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.produireTraitDeLiaisonDePetiteTaille();
 		
 		// Dessin oeil droit
-		double abscisseOeilDroit = 6*X;
-		double ordonneOeilDroit = 3*Y;
+		double abscisseOeilDroit = 6*x;
+		double ordonneOeilDroit = 3*y;
 		Point centreOeilDroit = new Point(abscisseOeilDroit, ordonneOeilDroit);
 		Ellipse oeilDroit = new Ellipse(centreOeilDroit, 10, 10);
 		// Remplissage noir		
 		ajouterEllipse(oeilDroit, Couleur.NOIR);
 				
 		// Dessin oeil gauche
-		double abscisseOeilGauche = 8*X;
-		double ordonneOeilGauche = 3*Y;
+		double abscisseOeilGauche = 8*x;
+		double ordonneOeilGauche = 3*y;
 		Point centreOeilGauche = new Point(abscisseOeilGauche, ordonneOeilGauche);
 		Ellipse oeilGauche = new Ellipse(centreOeilGauche, 10, 10);
 		// Remplissage noir				
@@ -136,9 +136,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		
 		
 		// Dessin du nez
-		Point ad = new Point (6*X + 20, 4*Y + 10 );
-		Point bd = new Point (7*X, 4*Y +5);
-		Point cd = new Point (7*X + 5, 4*Y +10);
+		Point ad = new Point (6*x + 20, 4*y + 10 );
+		Point bd = new Point (7*x, 4*y +5);
+		Point cd = new Point (7*x + 5, 4*y +10);
 		
 		// Ajout des points du nez, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
@@ -149,9 +149,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.produireTraitDeLiaisonDePetiteTaille();
 	
 		// Dessin de la bouche
-		Point ae = new Point (6*X, 6*Y);
-		Point be = new Point (9*X, 5*Y);
-		Point ce = new Point (7*X, 6*Y);
+		Point ae = new Point (6*x, 6*y);
+		Point be = new Point (9*x, 5*y);
+		Point ce = new Point (7*x, 6*y);
 		
 		// Ajout des points de la bouche, pas de couleur de fond
 		demarrerNouveauDessinAvecDesPoints()
@@ -160,8 +160,6 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		.ajouter(ce)
 		.couleurDeFond(Couleur.JAUNE)
 		.produireTraitDeLiaisonDePetiteTaille();
-		
-		//Exemple d'ajout d'une couleur 
 					
 		
 	}
@@ -173,7 +171,8 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour le début de l'épaule gauche
 		Point p1 = new Point(2*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
 		Point p2 = new Point(1*UNITE_HORIZONTALE,6*UNITE_VERTICALE);
-		Point pbo=new Point(3*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
+		Point pbo = new Point(3*UNITE_HORIZONTALE,5*UNITE_VERTICALE);
+
 		//création des points pour le BRAS GAUCHE
 		Point p3 = new Point(1*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		Point p4 = new Point(2*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
@@ -186,6 +185,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour le bras droit
 		Point p9 = new Point(12*UNITE_HORIZONTALE,8*UNITE_VERTICALE);
 		Point p10 = new Point(12*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
+
 		//création des points pour le bras droit
 		Point p11= new Point(13*UNITE_HORIZONTALE,12*UNITE_VERTICALE);
 		Point p12= new Point(13*UNITE_HORIZONTALE, 6*UNITE_VERTICALE);
@@ -209,6 +209,7 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//RELIER LES 2 POINTS DU BRAS droit
 		.ajouter(p9)
 		.ajouter(p10)
+
 		//RELIER LES 2 POINTS DU BRAS gauche ext
 		.ajouter(p11)
 		.ajouter(p12)
@@ -221,13 +222,17 @@ public class DessinsGroupe1 extends CreateurDeForme {
 		//création des points pour la manche droite
 		Point p15=new Point(1*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
 		Point p16=new Point(2*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
-		//création des points pour la manche gauche
-		//Point p17= new Point(12*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
-		//Point p18= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
 		//RELIER LES 2 POINTS De l'épaule
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(p15)
 		.ajouter(p16);
+		
+		//création des points pour la manche gauche
+		Point p19= new Point(12*UNITE_HORIZONTALE,11*UNITE_VERTICALE);
+		Point p20= new Point(13*UNITE_HORIZONTALE, 11*UNITE_VERTICALE);
+		demarrerNouveauDessinAvecDesPoints()
+		.ajouter(p19)
+		.ajouter(p20);
 		
 			
 	}
@@ -253,7 +258,9 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(p4)
         .ajouter(p5)
         .ajouter(p6)
-        .ajouter(p7);
+        .ajouter(p7)
+        .couleurDeFond(Couleur.GRIS); 
+        //culotte de couleur grise
 		
 		// Création de points pour dessiner le pied gauche
         Point k1 = new Point(6*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
@@ -267,18 +274,19 @@ public class DessinsGroupe1 extends CreateurDeForme {
         .ajouter(k2)
         .ajouter(k3)
         .ajouter(k4);
-
+         
+        // création des points pour le pied droit 
         Point d1 = new Point(8*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
         Point d2 = new Point(8*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d3 = new Point(11*UNITE_HORIZONTALE,14*UNITE_VERTICALE);
         Point d4 = new Point(9*UNITE_HORIZONTALE,13*UNITE_VERTICALE);
         
+        // Dessin du pied droit
         demarrerNouveauDessinAvecDesPoints()
         .ajouter(d1)
         .ajouter(d2)
         .ajouter(d3)
-        .ajouter(d4)
-        .couleurDeFond(Couleur.GRIS);
+        .ajouter(d4);
 	}
 	
 	
