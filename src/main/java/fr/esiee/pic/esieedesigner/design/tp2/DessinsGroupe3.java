@@ -340,11 +340,17 @@ private void colorierPantalon(Point baseBrasG) {
 			
 			demarrerNouveauDessinAvecDesPoints()
 			.ajouter(unC)
+			//Point 7 Cheveux
 			.ajouter(deuxC)
+			//Point 7 Cheveux
 			.ajouter(troisC)
+			//Point 7 Cheveux
 			.ajouter(quatreC)
+			//Point 7 Cheveux
 			.ajouter(cinqC)
+			//Point 7 Cheveux
 			.ajouter(sixC)
+			//Point 7 Cheveux
 			.ajouter(septC)
 			.ajouter(huitC)
 			.ajouter(neufD)
@@ -357,11 +363,18 @@ private void colorierPantalon(Point baseBrasG) {
 			.couleurDeFond(Couleur.GRIS)
 			.nePasRelierLesPointsExtreme();
 		}
-		/*
-		 * trait 1
+		
+		/**
+		 * Trait un 
 		 */
 		public void traitUnGauche() {
+			/*
+			 * trait un gauche
+			 */
 			Point traitUn = new Point(menton.getX()-100, menton.getY()-75);
+			/*
+			 * complément
+			 */
 			Point traitUnD = new Point(traitUn.getX(), traitUn.getY()-25);
 			
 			demarrerNouveauDessinAvecDesPoints()
@@ -369,10 +382,11 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(traitUnD);
 		}
 		
-		/*
+		/**
 		 * trait 2
 		 */
 		public void traitDeux() {
+			//Trait deux gauche
 			Point traitDeuxUn = new Point(menton.getX()-125, menton.getY()-75);
 			Point traitDeuxDeux = new Point(traitDeuxUn.getX(), traitDeuxUn.getY()-50);
 			
@@ -381,10 +395,11 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(traitDeuxDeux);
 		}
 		
-		/*
+		/**
 		 * trait 3
 		 */
 		public void traitUnDroite() {
+			//Trait un droite
 			Point traitUnDroite = new Point(menton.getX()+100, menton.getY()-75);
 			Point traitUnDD = new Point(traitUnDroite.getX(), traitUnDroite.getY()-25);
 			
@@ -393,10 +408,11 @@ private void colorierPantalon(Point baseBrasG) {
 			.ajouter(traitUnDD);
 		}
 		
-		/*
+		/**
 		 * trait 4
 		 */
 		public void traitDeuxDroite() {
+			//Trait deux droite
 			Point traitDeuxDroite = new Point(menton.getX()+125, menton.getY()-75);
 			Point traitDeuxDD = new Point(traitDeuxDroite.getX(), traitDeuxDroite.getY()-50);
 			
