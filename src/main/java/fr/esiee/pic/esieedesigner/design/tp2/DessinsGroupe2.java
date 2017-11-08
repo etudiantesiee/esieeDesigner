@@ -35,6 +35,7 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	
 	@Override
 	public void dessiner() {
+		dessinCorps();
 		interieurTete();
 	}
 	/**
@@ -84,25 +85,23 @@ public class DessinsGroupe2 extends CreateurDeForme {
 	public void ContourVisage(){
 		
 	}
-
-
-		//Dessin du corps
-		//dessinCorps();
-		
-		
-//	}
 	
 	private void dessinCorps(){
 		Point orteilGauche = new Point(vraiePositionEnX(12),vraiePositionEnY(14));
 		Point talonGauche = new Point(vraiePositionEnX(10),vraiePositionEnY(14));
 		Point talonGauche2 = new Point(vraiePositionEnX(10),vraiePositionEnY(13));
 		Point fesses = new Point(vraiePositionEnX(4),vraiePositionEnY(13));
+
+		Point talonDroit = new Point(vraiePositionEnX(4),vraiePositionEnY(14));
+		Point orteilDroit = new Point(vraiePositionEnX(2),vraiePositionEnY(14));
 		
 		demarrerNouveauDessinAvecDesPoints()
 		.ajouter(orteilGauche)
 		.ajouter(talonGauche)
 		.ajouter(talonGauche2)
-		.ajouter(fesses);
+		.ajouter(fesses)
+		.ajouter(talonDroit)
+		.ajouter(orteilDroit);
 		
 	}
 	
