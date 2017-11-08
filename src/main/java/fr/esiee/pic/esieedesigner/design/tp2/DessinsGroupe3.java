@@ -12,21 +12,20 @@ import fr.esiee.pic.esieedesigner.api.tools.CreateurDeForme;
 public class DessinsGroupe3 extends CreateurDeForme {
 
 	
-	Point menton = new Point(37*25,15*25);
+	
 	@Override
 	public void dessiner() {
 		// Ajout vos dessins ici
 		// Pensez à désactiver les dessins de la démo 
 		// en commentant initDemo dans le méthode init()de la classe fr.esiee.pic.esieedesigner.ui.scene.EcranPrincipal
 	}
-
+	/**
+	 * fonction forme tete
+	 */
+		public void formetete() {
+			Point menton = new Point(37*25,15*25);
+			demarrerNouveauDessinAvecDesPoints()
+			.ajouter(menton);
+			
+		}
 }
-/**
- * fonction forme tete
- */
-	public void formetete{
-		
-		demarrerNouveauDessinAvecDesPoints()
-		.ajouter(menton);
-		
-	}
